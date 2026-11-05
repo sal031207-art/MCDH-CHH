@@ -1,0 +1,4065 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="九個香港初中中國歷史互動故事：楚漢相爭、赤壁之戰、安史之亂、靖康之難、明太祖統一全國、第一次鴉片戰爭、辛亥革命、國民革命軍北伐、抗日戰爭。">
+  <meta name="theme-color" content="#1f1b18">
+  <title>歷史風雲錄｜中國歷史互動故事</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink-950: #171411;
+      --ink-900: #24201c;
+      --ink-800: #3c332b;
+      --ink-700: #584a3d;
+      --ink-600: #746556;
+      --ink-500: #8c7b68;
+      --paper-50: #fbf8f0;
+      --paper-100: #f4eddf;
+      --paper-200: #e9ddc8;
+      --paper-300: #d8c6a8;
+      --cinnabar: #9f3328;
+      --cinnabar-dark: #74231b;
+      --vermilion-soft: #e9c4b7;
+      --jade: #24594e;
+      --jade-soft: #cadcd3;
+      --gold: #bb8b3d;
+      --gold-soft: #ead6aa;
+      --danger: #8f2f2b;
+      --success: #2f6456;
+      --shadow-sm: 0 2px 8px rgba(37, 27, 17, .09);
+      --shadow-md: 0 16px 44px rgba(37, 27, 17, .13);
+      --shadow-lg: 0 26px 80px rgba(25, 19, 13, .22);
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --serif: "Noto Serif TC", "PMingLiU", "MingLiU", serif;
+      --sans: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+      --measure: 68ch;
+      --header-height: 72px;
+      --ease: cubic-bezier(.22, .72, .22, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink-900);
+      background:
+        radial-gradient(circle at 8% 5%, rgba(187, 139, 61, .13), transparent 27rem),
+        radial-gradient(circle at 94% 24%, rgba(159, 51, 40, .08), transparent 34rem),
+        linear-gradient(180deg, #f8f3e9 0%, #efe5d4 100%);
+      font-family: var(--sans);
+      line-height: 1.7;
+      min-height: 100vh;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: .22;
+      background-image:
+        repeating-linear-gradient(90deg, transparent 0 96px, rgba(72, 54, 35, .055) 96px 97px),
+        repeating-linear-gradient(0deg, transparent 0 96px, rgba(72, 54, 35, .035) 96px 97px);
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    button, input, select { font: inherit; }
+    button { color: inherit; touch-action: manipulation; }
+    a { color: var(--cinnabar-dark); text-underline-offset: .2em; }
+    a:hover { color: var(--jade); }
+    img { max-width: 100%; display: block; }
+    [hidden] { display: none !important; }
+
+    :focus-visible {
+      outline: 3px solid #dcae4f;
+      outline-offset: 3px;
+      box-shadow: 0 0 0 6px rgba(23, 20, 17, .28);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: var(--paper-50);
+      color: var(--ink-950);
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: var(--header-height);
+      border-bottom: 1px solid rgba(216, 198, 168, .7);
+      background: rgba(250, 246, 237, .88);
+      backdrop-filter: blur(18px) saturate(120%);
+    }
+    .site-header__inner {
+      width: min(1180px, calc(100% - 32px));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-right: auto;
+      border: 0;
+      background: none;
+      padding: 5px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .brand__seal {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #fff8e9;
+      background: var(--cinnabar);
+      border: 2px solid rgba(255, 248, 233, .62);
+      box-shadow: inset 0 0 0 2px var(--cinnabar);
+      font: 900 23px/1 var(--serif);
+      writing-mode: vertical-rl;
+      transform: rotate(-2deg);
+    }
+    .brand__text { display: grid; line-height: 1.2; }
+    .brand__text strong { font: 700 18px/1.2 var(--serif); letter-spacing: .12em; }
+    .brand__text small { color: var(--ink-600); font-size: 11px; letter-spacing: .16em; margin-top: 4px; }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink-600);
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+    .header-meta__line { width: 42px; height: 1px; background: var(--paper-300); }
+
+    main { width: 100%; overflow: clip; }
+    .container { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+    .hero {
+      position: relative;
+      min-height: min(740px, calc(100svh - var(--header-height)));
+      display: grid;
+      align-items: center;
+      padding: clamp(56px, 9vw, 110px) 0 82px;
+      isolation: isolate;
+    }
+    .hero::after {
+      content: "史";
+      position: absolute;
+      z-index: -1;
+      right: clamp(-60px, 1vw, 22px);
+      top: 10%;
+      color: rgba(68, 51, 34, .038);
+      font: 900 min(52vw, 620px)/.8 var(--serif);
+      writing-mode: vertical-rl;
+      user-select: none;
+    }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, .72fr);
+      align-items: end;
+      gap: clamp(40px, 7vw, 96px);
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 22px;
+      color: var(--cinnabar-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .22em;
+    }
+    .eyebrow::before { content: ""; width: 42px; height: 2px; background: currentColor; }
+    .hero h1 {
+      max-width: 780px;
+      margin: 0;
+      font: 900 clamp(46px, 8.2vw, 104px)/.96 var(--serif);
+      letter-spacing: -.04em;
+      color: var(--ink-950);
+    }
+    .hero h1 .accent {
+      display: inline-block;
+      color: var(--cinnabar);
+      font-weight: 700;
+      transform: translateX(-.04em);
+    }
+    .hero__lead {
+      max-width: 62ch;
+      margin: 28px 0 0;
+      color: var(--ink-700);
+      font: 500 clamp(16px, 1.5vw, 19px)/1.9 var(--serif);
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .button {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .04em;
+      transition: transform .2s var(--ease), background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button:active { transform: translateY(0); }
+    .button--primary {
+      color: #fffaf0;
+      background: var(--ink-950);
+      box-shadow: 0 10px 24px rgba(23, 20, 17, .2);
+    }
+    .button--primary:hover { background: var(--cinnabar-dark); box-shadow: 0 13px 30px rgba(116, 35, 27, .24); }
+    .button--secondary {
+      border-color: var(--paper-300);
+      color: var(--ink-900);
+      background: rgba(251, 248, 240, .58);
+    }
+    .button--secondary:hover { border-color: var(--ink-600); background: var(--paper-50); }
+    .button--quiet {
+      min-height: 44px;
+      padding: 9px 14px;
+      background: transparent;
+      color: var(--ink-700);
+    }
+    .button--quiet:hover { background: rgba(216, 198, 168, .26); }
+    .button svg { width: 18px; height: 18px; flex: 0 0 auto; }
+    .hero__note {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26px 0 4px 28px;
+      border-left: 1px solid var(--paper-300);
+    }
+    .timeline-mark {
+      width: 10px;
+      height: 10px;
+      margin-bottom: 18px;
+      border: 2px solid var(--cinnabar);
+      border-radius: 50%;
+      box-shadow: 0 0 0 7px rgba(159, 51, 40, .08);
+    }
+    .timeline-mark::after { content: ""; display: block; width: 1px; height: 120px; margin: 16px 0 0 2px; background: linear-gradient(var(--paper-300), transparent); }
+    .hero__note p { margin: 0; color: var(--ink-600); font-size: 14px; }
+    .hero__note strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink-900);
+      font: 700 25px/1.45 var(--serif);
+    }
+    .hero__count {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .hero__count div { border-top: 1px solid var(--paper-300); padding-top: 10px; }
+    .hero__count b { display: block; font: 700 22px/1 var(--serif); color: var(--ink-900); }
+    .hero__count span { color: var(--ink-600); font-size: 11px; letter-spacing: .1em; }
+
+    .library { padding: 40px 0 100px; }
+    .library__head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--paper-300);
+    }
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--cinnabar-dark);
+      font-size: 12px;
+      letter-spacing: .2em;
+      font-weight: 700;
+    }
+    .library h2 {
+      margin: 0;
+      font: 700 clamp(30px, 4vw, 48px)/1.22 var(--serif);
+      letter-spacing: -.02em;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .filter-button {
+      min-height: 44px;
+      padding: 9px 16px;
+      border: 1px solid var(--paper-300);
+      border-radius: 999px;
+      background: transparent;
+      cursor: pointer;
+      color: var(--ink-700);
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color .2s, color .2s, border-color .2s;
+    }
+    .filter-button:hover { border-color: var(--ink-500); }
+    .filter-button[aria-pressed="true"] {
+      color: #fffaf0;
+      border-color: var(--ink-950);
+      background: var(--ink-950);
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+      padding-top: 30px;
+    }
+    .story-card {
+      grid-column: span 4;
+      position: relative;
+      min-height: 328px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      border: 1px solid rgba(160, 137, 106, .34);
+      border-radius: var(--radius-md);
+      background:
+        linear-gradient(160deg, rgba(255,255,255,.58), transparent 52%),
+        var(--paper-50);
+      box-shadow: var(--shadow-sm);
+      transition: transform .28s var(--ease), box-shadow .28s ease, border-color .28s ease;
+    }
+    .story-card::before {
+      content: attr(data-number);
+      position: absolute;
+      right: 16px;
+      top: -22px;
+      color: rgba(98, 70, 41, .055);
+      font: 900 118px/1 var(--serif);
+      letter-spacing: -.08em;
+      pointer-events: none;
+    }
+    .story-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(159, 51, 40, .34);
+      box-shadow: var(--shadow-md);
+    }
+    .story-card__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .grade-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--jade-soft);
+      color: var(--jade);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .09em;
+    }
+    .grade-tag[data-grade="S2"] { background: var(--gold-soft); color: #714d16; }
+    .grade-tag[data-grade="S3"] { background: var(--vermilion-soft); color: var(--cinnabar-dark); }
+    .story-card__time { color: var(--ink-500); font-size: 12px; }
+    .story-card h3 {
+      position: relative;
+      margin: 30px 0 9px;
+      font: 700 29px/1.3 var(--serif);
+      letter-spacing: -.02em;
+    }
+    .story-card__period {
+      margin: 0 0 17px;
+      color: var(--cinnabar-dark);
+      font: 600 13px/1.5 var(--serif);
+      letter-spacing: .06em;
+    }
+    .story-card__blurb {
+      position: relative;
+      margin: 0 0 24px;
+      color: var(--ink-600);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    .story-card__footer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(216, 198, 168, .72);
+    }
+    .story-card__status {
+      margin-right: auto;
+      color: var(--ink-500);
+      font-size: 12px;
+    }
+    .story-card__status.is-complete { color: var(--success); font-weight: 700; }
+    .story-card__button {
+      min-height: 44px;
+      padding: 9px 15px;
+      border: 0;
+      border-radius: 9px;
+      background: var(--ink-950);
+      color: #fffaf0;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color .2s, transform .2s;
+    }
+    .story-card__button:hover { background: var(--cinnabar-dark); }
+    .story-card__button:active { transform: scale(.98); }
+
+    .source-strip {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 32px;
+      padding: 22px 24px;
+      border: 1px solid var(--paper-300);
+      border-radius: var(--radius-sm);
+      background: rgba(251, 248, 240, .56);
+      color: var(--ink-600);
+      font-size: 13px;
+    }
+    .source-strip strong { color: var(--ink-900); font-family: var(--serif); }
+    .source-strip p { margin: 0; }
+
+    .intro-view { min-height: calc(100svh - var(--header-height)); padding: clamp(34px, 6vw, 70px) 0 76px; }
+    .intro-shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid rgba(173, 151, 121, .48);
+      border-radius: var(--radius-lg);
+      background: var(--paper-50);
+      box-shadow: var(--shadow-lg);
+    }
+    .intro-visual {
+      position: relative;
+      min-height: 390px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(187, 139, 61, .35), transparent 34%),
+        linear-gradient(145deg, #315147, #201a16);
+      isolation: isolate;
+    }
+    .intro-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(16, 13, 10, .08) 20%, rgba(16, 13, 10, .88) 100%),
+        linear-gradient(90deg, rgba(16, 13, 10, .5), transparent 66%);
+    }
+    .intro-visual img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: #171411;
+      filter: sepia(.22) saturate(.78) contrast(1.05);
+    }
+    .intro-visual.image-error img { opacity: 0; }
+    .intro-visual__fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 30px;
+      color: #fff8e9;
+      text-align: center;
+      font: 500 15px/1.8 var(--serif);
+    }
+    .intro-visual.image-error .intro-visual__fallback { display: grid; }
+    .intro-visual__caption {
+      position: absolute;
+      z-index: 2;
+      right: 24px;
+      bottom: 22px;
+      left: 24px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      color: #fff8e9;
+    }
+    .intro-visual__caption p { max-width: 68ch; margin: 0; font: 500 12px/1.6 var(--serif); text-shadow: 0 1px 5px #000; }
+    .intro-visual__caption a { flex: 0 0 auto; color: #fff8e9; font-size: 10px; }
+    .intro-body { padding: clamp(28px, 5vw, 56px); }
+    .intro-body__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(270px, .7fr);
+      gap: clamp(30px, 6vw, 72px);
+      align-items: start;
+    }
+    .intro-body h1 {
+      max-width: 12ch;
+      margin: 0;
+      font: 700 clamp(38px, 6vw, 68px)/1.18 var(--serif);
+      letter-spacing: -.035em;
+    }
+    .intro-body__copy {
+      max-width: 65ch;
+      margin-top: 25px;
+      color: var(--ink-800);
+      font: 500 17px/2 var(--serif);
+    }
+    .intro-body__copy p { margin: 0 0 1em; }
+    .intro-persona {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 7px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: var(--jade);
+      background: var(--jade-soft);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .intro-aside {
+      padding: 22px;
+      border: 1px solid var(--paper-300);
+      border-radius: 14px;
+      background: rgba(244, 237, 223, .58);
+    }
+    .intro-aside h2 { margin: 0 0 13px; font: 700 15px/1.5 var(--sans); letter-spacing: .09em; }
+    .intro-facts { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
+    .intro-facts li { position: relative; padding-left: 18px; color: var(--ink-700); font-size: 13px; line-height: 1.75; }
+    .intro-facts li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; border: 1px solid var(--cinnabar); border-radius: 50%; }
+    .intro-question { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--paper-300); color: var(--cinnabar-dark); font: 600 15px/1.75 var(--serif); }
+    .intro-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--paper-300); }
+    .intro-completion { margin: 17px 0 0; color: var(--ink-500); font-size: 12px; }
+
+    .music-toggle {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border: 1px solid rgba(140, 123, 104, .28);
+      border-radius: 9px;
+      background: rgba(251, 248, 240, .7);
+      cursor: pointer;
+      color: var(--ink-700);
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .music-toggle:hover { background: var(--paper-50); border-color: var(--gold); }
+    .music-toggle svg { width: 17px; height: 17px; }
+    .music-toggle[aria-pressed="false"] { color: var(--ink-500); opacity: .75; }
+
+    .game-view { min-height: calc(100svh - var(--header-height)); }
+    .game-topbar {
+      position: sticky;
+      top: var(--header-height);
+      z-index: 40;
+      border-bottom: 1px solid rgba(216, 198, 168, .75);
+      background: rgba(244, 237, 223, .94);
+      backdrop-filter: blur(14px);
+    }
+    .game-topbar__inner {
+      width: min(1180px, calc(100% - 32px));
+      min-height: 66px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .game-topbar__title { margin-right: auto; min-width: 0; }
+    .game-topbar__title small { display: block; color: var(--ink-500); font-size: 11px; letter-spacing: .12em; }
+    .game-topbar__title strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 700 18px/1.45 var(--serif); }
+    .persona-badge {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 11px;
+      border: 1px solid rgba(36, 89, 78, .24);
+      border-radius: 999px;
+      color: var(--jade);
+      background: rgba(202, 220, 211, .5);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+      white-space: nowrap;
+    }
+    .persona-badge::before {
+      content: "你";
+      width: 23px;
+      height: 23px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      color: #fff8e9;
+      background: var(--jade);
+      font: 700 12px/1 var(--serif);
+    }
+    .persona-badge strong { font-weight: 700; }
+    .topbar-stats { display: flex; gap: 9px; }
+    .mini-stat {
+      min-width: 74px;
+      padding: 6px 10px;
+      border: 1px solid rgba(140, 123, 104, .25);
+      border-radius: 8px;
+      background: rgba(251, 248, 240, .68);
+    }
+    .mini-stat span { display: block; color: var(--ink-500); font-size: 10px; letter-spacing: .08em; }
+    .mini-stat strong { display: block; font: 700 15px/1.35 var(--serif); font-variant-numeric: tabular-nums; }
+    .progress-track { width: 100%; height: 3px; overflow: hidden; background: rgba(216, 198, 168, .7); }
+    .progress-track > span { display: block; height: 100%; width: 0; background: var(--cinnabar); transition: width .4s var(--ease); }
+
+    .game-shell { padding: 38px 0 86px; }
+    .game-grid {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 286px;
+      align-items: start;
+      gap: 28px;
+    }
+    .story-stage { min-width: 0; }
+    .scene-frame {
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      background:
+        linear-gradient(145deg, rgba(36, 89, 78, .92), rgba(31, 27, 24, .92)),
+        var(--ink-900);
+      box-shadow: var(--shadow-md);
+      isolation: isolate;
+    }
+    .scene-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, transparent 45%, rgba(16, 13, 10, .78) 100%),
+        linear-gradient(90deg, rgba(16, 13, 10, .34), transparent 55%);
+    }
+    .scene-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: #171411;
+      filter: sepia(.19) saturate(.78) contrast(1.06);
+      transition: opacity .25s ease, transform .7s var(--ease);
+    }
+    .scene-frame:hover .scene-image { transform: scale(1.012); }
+    .scene-caption {
+      position: absolute;
+      z-index: 2;
+      right: 20px;
+      bottom: 18px;
+      left: 20px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      color: #fff8e9;
+    }
+    .scene-caption p { max-width: 70ch; margin: 0; font: 500 13px/1.6 var(--serif); text-shadow: 0 1px 5px #000; }
+    .scene-caption a {
+      flex: 0 0 auto;
+      padding: 6px 9px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 7px;
+      color: #fff8e9;
+      background: rgba(23, 20, 17, .58);
+      font-size: 10px;
+      text-decoration: none;
+      backdrop-filter: blur(5px);
+    }
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      color: rgba(255, 248, 233, .86);
+      text-align: center;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(187, 139, 61, .33), transparent 40%),
+        linear-gradient(145deg, #315147, #211b17);
+      font: 500 15px/1.8 var(--serif);
+    }
+    .scene-frame.image-error .scene-image { opacity: 0; }
+    .scene-frame.image-error .image-fallback { display: grid; }
+
+    .story-panel {
+      position: relative;
+      margin-top: -1px;
+      padding: clamp(26px, 5vw, 52px);
+      border: 1px solid rgba(173, 151, 121, .44);
+      border-top: 0;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      background:
+        linear-gradient(90deg, transparent 0 31px, rgba(159,51,40,.07) 31px 32px, transparent 32px),
+        var(--paper-50);
+      box-shadow: var(--shadow-md);
+    }
+    .scene-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: var(--cinnabar-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .11em;
+    }
+    .scene-meta span + span::before { content: ""; display: inline-block; width: 18px; height: 1px; margin: 0 10px 3px 0; background: var(--paper-300); }
+    .node-title {
+      max-width: 20ch;
+      margin: 0;
+      font: 700 clamp(30px, 5vw, 48px)/1.3 var(--serif);
+      letter-spacing: -.025em;
+      color: var(--ink-950);
+    }
+    .story-prose {
+      max-width: var(--measure);
+      margin-top: 28px;
+      color: var(--ink-800);
+      font: 500 17px/2.02 var(--serif);
+      letter-spacing: .015em;
+    }
+    .story-prose p { margin: 0 0 1.15em; }
+    .story-prose p:first-child::first-letter {
+      float: left;
+      margin: .1em .12em 0 0;
+      color: var(--cinnabar-dark);
+      font: 900 3.2em/.9 var(--serif);
+    }
+    .story-carry {
+      max-width: var(--measure);
+      margin: 23px 0 0;
+      padding: 12px 15px;
+      border: 1px solid rgba(36, 89, 78, .22);
+      border-radius: 9px;
+      color: var(--jade);
+      background: rgba(202, 220, 211, .24);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .story-carry strong { font-weight: 700; }
+    .divergence-banner {
+      max-width: var(--measure);
+      margin: 23px 0 0;
+      padding: 13px 15px;
+      border: 1px solid rgba(159, 51, 40, .3);
+      border-radius: 9px;
+      color: var(--danger);
+      background: rgba(159, 51, 40, .06);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .divergence-banner strong { display: block; margin-bottom: 3px; letter-spacing: .08em; }
+    .story-quote {
+      position: relative;
+      max-width: var(--measure);
+      margin: 30px 0;
+      padding: 25px 26px 22px 34px;
+      border-left: 3px solid var(--cinnabar);
+      background: linear-gradient(90deg, rgba(159, 51, 40, .075), transparent);
+      color: var(--ink-700);
+      font: 500 18px/1.9 var(--serif);
+    }
+    .story-quote::before {
+      content: "「";
+      position: absolute;
+      left: 10px;
+      top: 4px;
+      color: rgba(159,51,40,.24);
+      font: 700 48px/1 var(--serif);
+    }
+    .story-quote cite { display: block; margin-top: 8px; color: var(--ink-500); font: 600 11px/1.5 var(--sans); letter-spacing: .1em; }
+    .inline-figure {
+      max-width: var(--measure);
+      margin: 30px 0;
+      overflow: hidden;
+      border: 1px solid var(--paper-300);
+      border-radius: 12px;
+      background: var(--paper-100);
+      box-shadow: var(--shadow-sm);
+    }
+    .inline-figure__image-wrap {
+      position: relative;
+      min-height: 250px;
+      background: linear-gradient(145deg, #ddd0ba, #f6efe2);
+    }
+    .inline-figure img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: #e4d8c4;
+      filter: sepia(.16) saturate(.82) contrast(1.03);
+    }
+    .inline-figure__fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 20px;
+      color: var(--ink-600);
+      text-align: center;
+      font: 500 13px/1.7 var(--serif);
+    }
+    .inline-figure.image-error img { opacity: 0; }
+    .inline-figure.image-error .inline-figure__fallback { display: grid; }
+    .inline-figure figcaption {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 15px;
+      color: var(--ink-600);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+    .inline-figure figcaption a { flex: 0 0 auto; font-size: 10px; }
+
+    .consequence-stage {
+      padding: clamp(28px, 5vw, 54px);
+      border: 1px solid rgba(173, 151, 121, .44);
+      border-radius: var(--radius-md);
+      background: var(--paper-50);
+      box-shadow: var(--shadow-md);
+    }
+    .consequence-kicker {
+      color: var(--cinnabar-dark);
+      font: 700 12px/1.5 var(--sans);
+      letter-spacing: .16em;
+    }
+    .consequence-stage h2 { max-width: 18ch; margin: 13px 0 0; font: 700 clamp(32px, 5.5vw, 50px)/1.3 var(--serif); }
+    .consequence-stage[data-branch="divergent"] { border-color: rgba(159, 51, 40, .48); }
+    .consequence-stage[data-branch="divergent"] .consequence-kicker { color: var(--danger); }
+    .consequence-stage[data-branch="speculative"] { border-color: rgba(187, 139, 61, .5); }
+    .branch-note {
+      margin: 18px 0 0;
+      padding: 11px 14px;
+      border-radius: 8px;
+      color: var(--ink-700);
+      background: var(--paper-100);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .consequence-stage[data-branch="divergent"] .branch-note { color: var(--danger); background: rgba(159, 51, 40, .075); }
+    .consequence-choice {
+      margin: 24px 0;
+      padding: 20px 22px;
+      border-left: 3px solid var(--cinnabar);
+      background: rgba(159, 51, 40, .06);
+      color: var(--ink-800);
+      font: 600 17px/1.85 var(--serif);
+    }
+    .consequence-next { margin: 18px 0 0; color: var(--ink-600); font: 500 14px/1.8 var(--serif); }
+    .consequence-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+    .consequence-stats span { padding: 5px 9px; border-radius: 999px; background: var(--paper-100); color: var(--ink-700); font-size: 11px; }
+    .consequence-actions { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--paper-300); }
+
+    .history-note {
+      max-width: var(--measure);
+      display: grid;
+      grid-template-columns: 32px minmax(0, 1fr);
+      gap: 12px;
+      margin: 32px 0 0;
+      padding: 16px 18px;
+      border: 1px solid rgba(187, 139, 61, .3);
+      border-radius: 10px;
+      background: rgba(234, 214, 170, .2);
+    }
+    .history-note__mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff8e9;
+      background: var(--gold);
+      font: 700 12px/1 var(--serif);
+    }
+    .history-note strong { display: block; margin-bottom: 2px; color: var(--ink-900); font-size: 12px; letter-spacing: .09em; }
+    .history-note p { margin: 0; color: var(--ink-700); font-size: 13px; line-height: 1.75; }
+
+    .choice-section {
+      margin-top: 36px;
+      padding-top: 26px;
+      border-top: 1px solid var(--paper-300);
+    }
+    .choice-section__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .choice-section__head h3 { margin: 0; font: 700 14px/1.5 var(--sans); letter-spacing: .1em; color: var(--ink-700); }
+    .choice-section__head span { color: var(--ink-500); font-size: 11px; }
+    .choices { display: grid; gap: 10px; }
+    .choice-button {
+      position: relative;
+      width: 100%;
+      min-height: 64px;
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr) 22px;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border: 1px solid rgba(174, 151, 121, .52);
+      border-radius: 10px;
+      background: rgba(255, 253, 247, .73);
+      cursor: pointer;
+      text-align: left;
+      transition: transform .18s var(--ease), border-color .18s, background-color .18s, box-shadow .18s;
+    }
+    .choice-button:hover {
+      transform: translateX(4px);
+      border-color: rgba(159, 51, 40, .5);
+      background: #fffdf7;
+      box-shadow: var(--shadow-sm);
+    }
+    .choice-button:active { transform: translateX(1px) scale(.995); }
+    .choice-button__num {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--cinnabar-dark);
+      background: rgba(159, 51, 40, .09);
+      font: 700 13px/1 var(--serif);
+      font-variant-numeric: tabular-nums;
+    }
+    .choice-button__text { font: 600 15px/1.62 var(--serif); }
+    .choice-button__arrow { color: var(--ink-500); transition: transform .18s, color .18s; }
+    .choice-button:hover .choice-button__arrow { transform: translateX(3px); color: var(--cinnabar-dark); }
+    .choice-button__arrow svg { width: 19px; height: 19px; }
+
+    .journal {
+      position: sticky;
+      top: calc(var(--header-height) + 86px);
+      display: grid;
+      gap: 14px;
+    }
+    .journal-card {
+      overflow: hidden;
+      border: 1px solid rgba(173, 151, 121, .42);
+      border-radius: 14px;
+      background: rgba(251, 248, 240, .74);
+      box-shadow: var(--shadow-sm);
+    }
+    .journal-card__head {
+      padding: 15px 17px;
+      border-bottom: 1px solid rgba(216, 198, 168, .7);
+    }
+    .journal-card__head h3 { margin: 0; font: 700 14px/1.5 var(--serif); letter-spacing: .08em; }
+    .journal-card__head p { margin: 3px 0 0; color: var(--ink-500); font-size: 11px; }
+    .journal-card__body { padding: 15px 17px; }
+    .stat-list { display: grid; gap: 14px; }
+    .stat-row__label { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 6px; color: var(--ink-700); font-size: 12px; }
+    .stat-row__label strong { color: var(--ink-900); font-variant-numeric: tabular-nums; }
+    .stat-bar { height: 5px; overflow: hidden; border-radius: 999px; background: var(--paper-200); }
+    .stat-bar i { display: block; height: 100%; width: 50%; border-radius: inherit; transition: width .45s var(--ease); }
+    .stat-bar--truth i { background: var(--cinnabar); }
+    .stat-bar--people i { background: var(--jade); }
+    .stat-bar--resolve i { background: var(--gold); }
+    .route-log { max-height: 226px; overflow: auto; padding: 0; margin: 0; list-style: none; scrollbar-width: thin; }
+    .route-log li { position: relative; padding: 0 0 16px 18px; color: var(--ink-600); font-size: 12px; line-height: 1.65; }
+    .route-log li::before { content: ""; position: absolute; left: 0; top: .5em; width: 7px; height: 7px; border: 1px solid var(--cinnabar); border-radius: 50%; background: var(--paper-50); }
+    .route-log li:not(:last-child)::after { content: ""; position: absolute; left: 3px; top: calc(.5em + 10px); bottom: 3px; width: 1px; background: var(--paper-300); }
+    .route-log .empty { padding: 0; font-style: italic; color: var(--ink-500); }
+    .route-log .empty::before, .route-log .empty::after { display: none; }
+    .journal-details { border-top: 1px solid rgba(216, 198, 168, .7); }
+    .journal-details summary {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 17px;
+      cursor: pointer;
+      list-style: none;
+      color: var(--ink-700);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .journal-details summary::-webkit-details-marker { display: none; }
+    .journal-details[open] summary { border-bottom: 1px solid rgba(216, 198, 168, .7); }
+    .journal-details summary::after { content: "+"; color: var(--cinnabar-dark); font-size: 17px; }
+    .journal-details[open] summary::after { content: "−"; }
+    .journal-details__content { padding: 14px 17px; color: var(--ink-600); font-size: 12px; }
+    .journal-details__content p { margin: 0 0 10px; }
+    .journal-details__content p:last-child { margin-bottom: 0; }
+
+    .ending-stage {
+      padding: clamp(26px, 5vw, 52px);
+      border: 1px solid rgba(173, 151, 121, .44);
+      border-radius: var(--radius-md);
+      background: var(--paper-50);
+      box-shadow: var(--shadow-md);
+    }
+    .ending-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: var(--success);
+      background: var(--jade-soft);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+    .ending-badge[data-type="bad"] { color: var(--danger); background: var(--vermilion-soft); }
+    .ending-badge[data-type="whatif"] { color: #735019; background: var(--gold-soft); }
+    .ending-stage h2 { margin: 20px 0 0; font: 700 clamp(34px, 6vw, 60px)/1.2 var(--serif); }
+    .ending-lead { max-width: 62ch; margin: 17px 0 0; color: var(--ink-600); font: 500 17px/1.9 var(--serif); }
+    .truth-compare {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 30px 0;
+    }
+    .truth-compare > div { padding: 18px; border-radius: 10px; background: var(--paper-100); }
+    .truth-compare h3 { margin: 0 0 9px; font: 700 14px/1.4 var(--sans); letter-spacing: .08em; }
+    .truth-compare p { margin: 0; color: var(--ink-700); font: 500 14px/1.85 var(--serif); }
+    .divergence-review {
+      margin: 0 0 26px;
+      padding: 18px 20px;
+      border: 1px solid rgba(159, 51, 40, .32);
+      border-radius: 10px;
+      background: rgba(159, 51, 40, .055);
+    }
+    .divergence-review h3 { margin: 0 0 10px; color: var(--danger); font: 700 14px/1.5 var(--sans); letter-spacing: .07em; }
+    .divergence-review ol { margin: 0; padding-left: 1.3em; color: var(--ink-700); }
+    .divergence-review li { margin: 7px 0; padding-left: 3px; font: 500 14px/1.75 var(--serif); }
+    .history-reference {
+      margin-top: 24px;
+      border-top: 1px solid var(--paper-300);
+    }
+    .history-reference summary {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      cursor: pointer;
+      color: var(--ink-700);
+      font-size: 13px;
+      font-weight: 700;
+      list-style: none;
+    }
+    .history-reference summary::-webkit-details-marker { display: none; }
+    .history-reference summary::after { content: "+"; color: var(--cinnabar-dark); font-size: 18px; }
+    .history-reference[open] summary::after { content: "−"; }
+    .history-reference__body {
+      padding: 14px 16px 16px;
+      border-radius: 9px;
+      background: var(--paper-100);
+      color: var(--ink-700);
+      font: 500 14px/1.85 var(--serif);
+    }
+    .history-reference__body p { margin: 0 0 12px; }
+    .ending-stage .story-prose { margin-top: 24px; }
+    .outcome-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--paper-300);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+    .modal__scrim { position: absolute; inset: 0; background: rgba(20, 16, 12, .72); backdrop-filter: blur(6px); }
+    .modal__panel {
+      position: relative;
+      width: min(720px, 100%);
+      max-height: min(86svh, 860px);
+      overflow: auto;
+      border: 1px solid rgba(255, 246, 223, .52);
+      border-radius: var(--radius-md);
+      background:
+        linear-gradient(90deg, transparent 0 38px, rgba(159,51,40,.06) 38px 39px, transparent 39px),
+        var(--paper-50);
+      box-shadow: var(--shadow-lg);
+      overscroll-behavior: contain;
+    }
+    .modal__head {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--paper-300);
+      background: rgba(251, 248, 240, .96);
+      backdrop-filter: blur(10px);
+    }
+    .modal__head h2 { margin: 0; margin-right: auto; font: 700 22px/1.4 var(--serif); }
+    .modal__close {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--paper-300);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+    }
+    .modal__close:hover { background: var(--paper-100); }
+    .modal__close svg { width: 18px; height: 18px; }
+    .modal__body { padding: 24px 30px 30px; }
+    .truth-callout {
+      margin-bottom: 22px;
+      padding: 18px;
+      border-left: 3px solid var(--cinnabar);
+      background: rgba(159, 51, 40, .065);
+    }
+    .truth-callout strong { display: block; margin-bottom: 5px; color: var(--cinnabar-dark); font: 700 14px/1.5 var(--sans); letter-spacing: .08em; }
+    .truth-callout p { margin: 0; font: 500 17px/1.9 var(--serif); }
+    .fact-list, .impact-list { margin: 12px 0 22px; padding-left: 1.3em; color: var(--ink-700); }
+    .fact-list li, .impact-list li { margin: 8px 0; padding-left: 3px; font: 500 15px/1.8 var(--serif); }
+    .fact-list li::marker { color: var(--cinnabar); }
+    .impact-list li::marker { color: var(--jade); }
+    .modal__section-title { margin: 24px 0 0; padding-top: 20px; border-top: 1px solid var(--paper-300); font: 700 15px/1.5 var(--sans); letter-spacing: .08em; }
+    .modal__sources { margin-top: 18px; color: var(--ink-500); font-size: 12px; }
+    .modal__sources a { margin-right: 12px; }
+
+    .toast {
+      position: fixed;
+      z-index: 300;
+      left: 50%;
+      bottom: 24px;
+      width: min(560px, calc(100% - 32px));
+      transform: translate(-50%, 140%);
+      padding: 13px 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
+      background: rgba(23, 20, 17, .94);
+      color: #fff8e9;
+      box-shadow: var(--shadow-lg);
+      font-size: 13px;
+      line-height: 1.6;
+      transition: transform .35s var(--ease), opacity .25s;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .toast.is-visible { transform: translate(-50%, 0); opacity: 1; }
+
+    .site-footer {
+      padding: 30px 0 40px;
+      border-top: 1px solid var(--paper-300);
+      color: var(--ink-500);
+      font-size: 12px;
+    }
+    .site-footer__inner { display: flex; justify-content: space-between; gap: 18px; }
+
+    @media (max-width: 980px) {
+      .hero__grid { grid-template-columns: 1fr; align-items: start; }
+      .hero__note { max-width: 620px; border-left: 0; border-top: 1px solid var(--paper-300); padding: 24px 0 0; }
+      .timeline-mark::after { display: none; }
+      .intro-body__grid { grid-template-columns: 1fr; }
+      .story-card { grid-column: span 6; }
+      .game-grid { grid-template-columns: 1fr; }
+      .journal { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .journal-card:nth-child(3) { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 680px) {
+      :root { --header-height: 64px; }
+      .site-header__inner, .container, .game-topbar__inner, .game-grid { width: min(100% - 22px, 1180px); }
+      .brand__text small, .header-meta { display: none; }
+      .hero { min-height: auto; padding: 56px 0 66px; }
+      .hero h1 { font-size: clamp(47px, 15vw, 74px); }
+      .hero__lead { font-size: 16px; line-height: 1.9; }
+      .hero__count b { font-size: 19px; }
+      .library__head { grid-template-columns: 1fr; }
+      .filters { justify-content: flex-start; }
+      .story-grid { gap: 13px; }
+      .story-card { grid-column: 1 / -1; min-height: 310px; padding: 21px; }
+      .source-strip { grid-template-columns: 1fr; gap: 7px; padding: 18px; }
+      .intro-shell { width: min(100% - 22px, 1120px); border-radius: 16px; }
+      .intro-visual { min-height: 225px; }
+      .intro-visual img { height: 245px; }
+      .intro-visual__caption { right: 14px; bottom: 13px; left: 14px; }
+      .intro-visual__caption p { font-size: 10px; }
+      .intro-body { padding: 26px 20px 30px; }
+      .intro-body h1 { font-size: clamp(36px, 11vw, 52px); }
+      .intro-body__copy { font-size: 16px; line-height: 1.95; }
+      .intro-actions .button { width: 100%; }
+      .music-toggle { min-width: 60px; justify-content: center; padding-inline: 8px; }
+      .game-topbar__inner { min-height: 0; flex-wrap: wrap; gap: 6px 8px; padding: 8px 0; }
+      #homeButton { order: 1; flex: 0 0 auto; white-space: nowrap; padding-inline: 8px; }
+      .game-topbar__title { order: 2; flex: 1 1 0; }
+      .music-toggle { order: 3; }
+      .persona-badge { order: 4; width: 100%; justify-content: center; white-space: normal; text-align: center; }
+      .topbar-stats { order: 5; width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+      .game-topbar__title small { display: none; }
+      .game-topbar__title strong { font-size: 15px; }
+      .mini-stat { min-width: 0; padding: 5px 7px; text-align: center; }
+      .mini-stat span { font-size: 9px; letter-spacing: 0; }
+      .mini-stat strong { font-size: 13px; }
+      .game-shell { padding-top: 18px; }
+      .scene-frame { min-height: 230px; border-radius: 14px 14px 0 0; }
+      .scene-image { height: 240px; }
+      .scene-caption { right: 13px; left: 13px; bottom: 12px; align-items: end; }
+      .scene-caption p { font-size: 11px; line-height: 1.5; }
+      .scene-caption a { padding: 4px 6px; font-size: 9px; }
+      .story-panel { padding: 26px 20px 30px; background: var(--paper-50); }
+      .node-title { font-size: clamp(29px, 9vw, 40px); }
+      .story-prose { margin-top: 22px; font-size: 16px; line-height: 1.95; }
+      .story-prose p:first-child::first-letter { font-size: 2.7em; }
+      .story-quote { padding: 21px 18px 19px 28px; font-size: 16px; }
+      .inline-figure { margin: 24px 0; }
+      .inline-figure img { height: 240px; }
+      .inline-figure figcaption { display: block; }
+      .inline-figure figcaption a { display: inline-block; margin-top: 5px; }
+      .consequence-stage { padding: 26px 20px 30px; }
+      .history-note { grid-template-columns: 27px minmax(0, 1fr); padding: 14px; }
+      .history-note__mark { width: 27px; height: 27px; }
+      .choice-button { grid-template-columns: 31px minmax(0, 1fr) 18px; padding: 13px 12px; }
+      .choice-button__text { font-size: 14px; }
+      .choice-section__head span { display: none; }
+      .journal { grid-template-columns: 1fr; }
+      .journal-card:nth-child(3) { grid-column: auto; }
+      .ending-stage { padding: 25px 20px 30px; }
+      .truth-compare { grid-template-columns: 1fr; }
+      .outcome-actions .button { width: 100%; }
+      .modal { padding: 8px; }
+      .modal__panel { max-height: 94svh; border-radius: 14px; }
+      .modal__head { padding: 14px 16px; }
+      .modal__head h2 { font-size: 18px; }
+      .modal__body { padding: 20px 19px 25px; }
+      .truth-callout { padding: 15px; }
+      .site-footer__inner { display: block; }
+      .site-footer__inner p + p { margin-top: 7px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .scene-frame:hover .scene-image { transform: none; }
+      .choice-button:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <button class="brand" id="brandHome" type="button" aria-label="返回歷史風雲錄主頁">
+        <span class="brand__seal" aria-hidden="true">史</span>
+        <span class="brand__text">
+          <strong>歷史風雲錄</strong>
+          <small>中國歷史互動故事</small>
+        </span>
+      </button>
+      <div class="header-meta" aria-label="課程範圍">
+        <span>初中中國歷史</span>
+        <span class="header-meta__line" aria-hidden="true"></span>
+        <span>九卷長篇劇本</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section id="homeView" aria-labelledby="homeTitle">
+      <div class="hero">
+        <div class="container hero__grid">
+          <div>
+            <p class="eyebrow">跨越兩千年的抉擇</p>
+            <h1 id="homeTitle">歷史不是<br><span class="accent">已寫好的答案</span></h1>
+            <p class="hero__lead">你將走進九個決定中國命運的時刻。烽火中的一句話、朝堂上的一次沉默、戰場上的一條命令，都可能改變眼前人物的命運。每逢結局，歷史真相會揭開另一頁：你的選擇，與真實發生了甚麼距離？</p>
+            <div class="hero__actions">
+              <button class="button button--primary" id="beginJourney" type="button">
+                開始第一段旅程
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              </button>
+              <a class="button button--secondary" href="#storyLibrary">選擇歷史卷宗</a>
+            </div>
+          </div>
+          <aside class="hero__note" aria-label="遊戲特色">
+            <span class="timeline-mark" aria-hidden="true"></span>
+            <p><strong>每一次選擇，<br>都有歷史的重量。</strong>每個劇本包含二十個資料節點、交錯分支、三個結局方向，以及一張可重讀的歷史真相卷。</p>
+            <div class="hero__count" aria-label="內容數量">
+              <div><b>9</b><span>歷史劇本</span></div>
+              <div><b>180</b><span>劇情節點</span></div>
+              <div><b>10+</b><span>分鐘每卷</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <section class="library" id="storyLibrary" aria-labelledby="libraryTitle">
+        <div class="container">
+          <div class="library__head">
+            <div>
+              <p class="section-kicker">九卷劇本</p>
+              <h2 id="libraryTitle">從秦漢烽煙，走向全民抗戰</h2>
+            </div>
+            <div class="filters" role="group" aria-label="按年級篩選劇本">
+              <button class="filter-button" type="button" data-filter="all" aria-pressed="true">全部</button>
+              <button class="filter-button" type="button" data-filter="S1" aria-pressed="false">中一</button>
+              <button class="filter-button" type="button" data-filter="S2" aria-pressed="false">中二</button>
+              <button class="filter-button" type="button" data-filter="S3" aria-pressed="false">中三</button>
+            </div>
+          </div>
+          <div class="story-grid" id="storyGrid"></div>
+          <div class="source-strip">
+            <strong>閱讀說明</strong>
+            <p>本遊戲以香港初中中國歷史課程的基礎史事為骨幹，加入虛構見證者與小說化場景。人物的內心、部分對白及環境細節屬敘事創作；真實年代、制度、事件因果與結局，會在「歷史真相解說」中清楚區分。圖片來自維基共享資源，逐張列明中文圖說、來源與授權，不以嵌入式圖片編碼增加檔案體積。</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="intro-view" id="introView" hidden aria-labelledby="introTitle">
+      <div class="intro-shell">
+        <div class="intro-visual" id="introVisual">
+          <img id="introImage" src="" alt="" decoding="async">
+          <div class="intro-visual__fallback">這幅歷史圖像暫時未能載入。<br>可按下方連結前往原始館藏頁。</div>
+          <div class="intro-visual__caption">
+            <p id="introImageCredit"></p>
+            <a id="introImageSource" href="#" target="_blank" rel="noopener noreferrer">圖片來源</a>
+          </div>
+        </div>
+        <div class="intro-body">
+          <div class="intro-body__grid">
+            <div>
+              <p class="section-kicker" id="introDates"></p>
+              <h1 id="introTitle"></h1>
+              <p class="intro-persona" id="introPersona"></p>
+              <div class="intro-body__copy" id="introCopy"></div>
+              <div class="intro-actions">
+                <button class="button button--primary" id="introPrimary" type="button">
+                  進入歷史
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </button>
+                <button class="button button--secondary" id="introRestart" type="button" hidden>由第一幕重新開始</button>
+                <button class="button button--quiet" id="introHome" type="button">返回主選單</button>
+              </div>
+              <p class="intro-completion" id="introCompletion" hidden></p>
+            </div>
+            <aside class="intro-aside">
+              <h2>入卷前須知</h2>
+              <ul class="intro-facts" id="introFacts"></ul>
+              <p class="intro-question" id="introQuestion"></p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-view" id="gameView" hidden aria-labelledby="nodeTitle">
+      <div class="game-topbar">
+        <div class="game-topbar__inner">
+          <button class="button button--quiet" id="homeButton" type="button" aria-label="返回主選單">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            主選單
+          </button>
+          <div class="game-topbar__title">
+            <small id="storyGrade">歷史卷宗</small>
+            <strong id="gameStoryTitle">尚未選擇劇本</strong>
+          </div>
+          <button class="music-toggle" id="musicToggle" type="button" aria-pressed="true" aria-label="暫停背景音樂">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 14v-4h4l5-4v12l-5-4H4Z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>
+            <span>音樂</span>
+          </button>
+          <div class="persona-badge" id="personaBadge" aria-live="polite">你的身份：等待入卷</div>
+          <div class="topbar-stats" aria-label="目前數值">
+            <div class="mini-stat"><span>史識</span><strong id="miniTruth">50</strong></div>
+            <div class="mini-stat"><span>民心</span><strong id="miniPeople">50</strong></div>
+            <div class="mini-stat"><span>決斷</span><strong id="miniResolve">50</strong></div>
+          </div>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="劇本進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressBar"></span></div>
+      </div>
+
+      <div class="game-shell">
+        <div class="game-grid">
+          <div class="story-stage" id="storyStage"></div>
+          <aside class="journal" aria-label="旅途紀錄">
+            <div class="journal-card">
+              <div class="journal-card__head">
+                <h3>局勢刻度</h3>
+                <p>選擇會改變你對局勢的把握</p>
+              </div>
+              <div class="journal-card__body">
+                <div class="stat-list">
+                  <div class="stat-row">
+                    <div class="stat-row__label"><span>史識</span><strong id="statTruth">50</strong></div>
+                    <div class="stat-bar stat-bar--truth"><i id="barTruth"></i></div>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat-row__label"><span>民心</span><strong id="statPeople">50</strong></div>
+                    <div class="stat-bar stat-bar--people"><i id="barPeople"></i></div>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat-row__label"><span>決斷</span><strong id="statResolve">50</strong></div>
+                    <div class="stat-bar stat-bar--resolve"><i id="barResolve"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="journal-card">
+              <div class="journal-card__head">
+                <h3>你的選擇</h3>
+                <p>結局時將回望這條路</p>
+              </div>
+              <ol class="route-log" id="routeLog"></ol>
+            </div>
+            <div class="journal-card">
+              <details class="journal-details">
+                <summary>本卷閱讀提示</summary>
+                <div class="journal-details__content" id="readingHint"></div>
+              </details>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>歷史風雲錄 · 初中中國歷史互動閱讀遊戲</p>
+      <p>史實以校本教材與通行史學敘述為據；小說化對白與虛構人物的心理描寫不作史料引用。</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="truthModal" hidden role="dialog" aria-modal="true" aria-labelledby="truthModalTitle">
+    <div class="modal__scrim" data-close-modal></div>
+    <div class="modal__panel" role="document">
+      <div class="modal__head">
+        <h2 id="truthModalTitle">歷史真相解說</h2>
+        <button class="modal__close" id="modalClose" type="button" aria-label="關閉歷史真相解說" data-close-modal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    "use strict";
+
+    const story = (scene, title, image, body, extra = {}) => ({ scene, title, image, body, ...extra });
+    const choice = (label, next, truth = 0, people = 0, resolve = 0, echo = "", flag = "", options = {}) => ({
+      label, next, truth, people, resolve, echo, flag, ...options
+    });
+    const wiki = (file, credit, license) => {
+      const licenses = {
+        "公眾領域": "公眾領域",
+        "共享署名—相同方式共享 4.0": "共享署名—相同方式共享 4.0",
+        "共享署名—相同方式共享 3.0": "共享署名—相同方式共享 3.0",
+        "共享署名 2.0": "共享署名 2.0",
+        "公共領域貢獻": "公共領域貢獻"
+      };
+      return {
+        file,
+        src: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=1400`,
+        source: `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replaceAll(" ", "_"))}?uselang=zh-hant`,
+        credit,
+        license: licenses[license] || license
+      };
+    };
+
+    const STORY_INTROS = {
+      "chu-han": {
+        background: [
+          "秦始皇死後，秦二世與趙高把持朝政，嚴刑、重役與苛稅使天下動盪。陳勝、吳廣率先起事，項羽與劉邦各自率領反秦力量進入關中。秦王子嬰向劉邦投降，但真正強大的楚軍仍在項羽率領下逼近咸陽。",
+          "劉邦先在關中約法安民，項羽卻準備以軍功主宰分封。兩人的差異不只在兵力，也在如何對待秦朝留下的官吏、百姓與制度。鴻門宴將成為第一個分岔點：劉邦能否活着離開，直接改變此後的天下。"
+        ],
+        facts: [
+          "劉邦先入咸陽，項羽其後率大軍入關。",
+          "鴻門宴見於《史記》，劉邦最終成功離開。",
+          "劉邦退居漢中後重用韓信，逐步反攻項羽。"
+        ],
+        question: "你是楚軍糧道小吏陸禾。身處軍營與百姓之間，你會如何衡量軍功、糧食與民心？"
+      },
+      "red-cliffs": {
+        background: [
+          "東漢末年，曹操先後擊敗呂布、袁紹，控制北方並挾持漢獻帝。公元 208 年，荊州形勢驟變，曹操率軍南下，劉備在長坂敗退，孫權則必須決定江東是否獨自面對曹軍。",
+          "魯肅與諸葛亮促成孫劉聯盟，周瑜則在長江赤壁一帶布置水軍。曹操兵力雖多，卻受疫病、水戰經驗不足與漫長補給線限制。火攻、風向和船陣將決定這場戰役，也決定三國鼎立的未來。"
+        ],
+        facts: [
+          "曹操軍隊以北方士兵為主，不熟悉長江水戰。",
+          "孫劉聯軍由不同利益結合，合作並不穩固。",
+          "黃蓋詐降與火攻是史書記載的赤壁戰術。"
+        ],
+        question: "你是江東水軍書吏沈舟。面對強大的曹軍，你會相信兵力數字，還是相信江面上的細節？"
+      },
+      "an-lushan": {
+        background: [
+          "唐玄宗前期開創開元盛世，後期卻逐漸怠於政事，把朝政交給李林甫、楊國忠。為加強邊防，唐廷大量設置節度使，使邊鎮掌握軍政財權；安祿山身兼三鎮節度使，勢力迅速膨脹。",
+          "公元 755 年，安祿山以討伐楊國忠為名起兵。叛軍攻陷洛陽並威脅長安，唐玄宗倉皇入蜀。戰事延續八年，最終平定，卻留下藩鎮割據、宦官專權、北方殘破與經濟重心南移等深遠影響。"
+        ],
+        facts: [
+          "李林甫排斥異己，玄宗晚年逐漸失去諫言與制衡。",
+          "中央兵力少於邊鎮，形成外重內輕的局面。",
+          "安史之亂後，唐廷以節度使安置降將，藩鎮問題加深。"
+        ],
+        question: "你是長安尚書省糧籍小吏李衡。當你發現邊鎮兵額與軍費異常，你會冒險呈報，還是先保護自己？"
+      },
+      jingkang: {
+        background: [
+          "北宋末年，汴京商業繁盛，書畫藝術也達到高峰；可是宋徽宗後期沉迷享樂，寵信蔡京等權臣，花石綱與軍費令百姓負擔沉重。宋廷聯金滅遼後，反而讓金國看清宋軍虛弱。",
+          "1126 年金軍第一次圍攻汴京，李綱等軍民奮力守城，金軍暫退。北宋卻沒有利用喘息時間整軍備戰；1127 年金軍再度南下，汴京失守，徽宗、欽宗及大批宗室與官員被擄，北宋滅亡。"
+        ],
+        facts: [
+          "宋徽宗的藝術成就不能代替對其施政失誤的檢討。",
+          "北宋聯金滅遼的外交安排暴露了宋軍弱點。",
+          "靖康之難後，趙構在南方建立南宋。"
+        ],
+        question: "你是汴京太學生周硯。盛世表象與邊境危機同時出現在你眼前，你能分辨哪一個才是真正迫近的危險嗎？"
+      },
+      "ming-unification": {
+        background: [
+          "元末黃河泛濫、賦役沉重、紙鈔貶值，百姓生活困苦。紅巾軍起事後，各地群雄割據；朱元璋從皇覺寺僧人步入軍營，投奔郭子興，憑着嚴整軍紀、屯田與吸納人才逐步建立勢力。",
+          "他以應天為根據地，先後擊敗陳友諒、張士誠，再於 1368 年稱帝、建國號明，派軍北伐推翻元朝。明朝重建統一與社會秩序，同時形成廢相、錦衣衛與高度皇權的統治方式。"
+        ],
+        facts: [
+          "朱元璋以應天為根據地，重視糧食、戶籍與人才。",
+          "1368 年明軍北伐，元順帝北逃。",
+          "明太祖廢除丞相並使用錦衣衛，皇權高度集中。"
+        ],
+        question: "你是應天糧吏沈稼。你見過饑荒，也見過戰爭；你會協助朱元璋建立能養活百姓的根據地，還是只追求最快稱帝？"
+      },
+      "opium-war": {
+        background: [
+          "十九世紀前期，清朝限制對外貿易，外商主要在廣州經公行交易。英國為平衡購買茶葉的逆差，大量輸入鴉片，造成白銀外流、成癮與社會問題。清廷多次禁煙，地方執行卻受腐敗和利益牽制。",
+          "1839 年，林則徐在虎門銷毀鴉片。英國以武力回應，戰爭沿廣東、浙江與長江展開。清廷海防、軍備和外交準備不足，1842 年被迫簽訂《南京條約》，開始被納入不平等條約體系。"
+        ],
+        facts: [
+          "虎門銷煙得到百姓支持，卻引發英國軍事與外交回應。",
+          "《南京條約》與其後補充條約的內容須分開理解。",
+          "英軍海軍優勢和清廷制度弱點共同造成戰敗。"
+        ],
+        question: "你是林則徐麾下文書陳澍。禁煙是正義的，但海面上已出現戰艦；你會如何保護百姓、海防與國家尊嚴？"
+      },
+      xinhai: {
+        background: [
+          "清末列強侵略、改革受挫與財政危機使清廷威信低落。孫中山於 1894 年創立興中會，1905 年同盟會成立，提出民族、民權、民生三民主義，並在全國與海外多次發動起義。",
+          "1911 年，清廷鐵路國有政策激起四川保路運動，湖北新軍被抽調入川。革命黨人原定稍後起事，卻因漢口製彈意外與名冊洩露被迫提前。10 月 10 日武昌起義爆發，各省響應，清朝與君主專制最終結束。"
+        ],
+        facts: [
+          "武昌起義是多年革命宣傳、組織與起義累積的結果。",
+          "同盟會《民報》宣傳三民主義，促成革命思想傳播。",
+          "民國成立後，袁世凱掌權，共和制度建設仍未完成。"
+        ],
+        question: "你是湖北新軍文書方競。革命與清廷搜捕同時逼近，你會等待完美時機，還是承擔提前行動的後果？"
+      },
+      "northern-expedition": {
+        background: [
+          "袁世凱死後，北洋軍閥分裂，直系、皖系、奉系等勢力輪流控制北京政府。軍閥徵稅擴軍、混戰不休，列強又扶植不同派系維護在華利益。孫中山改組國民黨，把打倒軍閥與反帝國主義列為目標。",
+          "1926 年，廣州國民政府成立國民革命軍並誓師北伐。北伐軍先擊敗吳佩孚、孫傳芳，再向北方推進。1927 年清黨與寧漢分裂使北伐中斷；1928 年恢復北伐，張學良宣布東北易幟，全國在形式上統一。"
+        ],
+        facts: [
+          "北伐前期採用集中力量、逐個擊破軍閥的策略。",
+          "工農運動與地方運輸支持北伐，也帶來政治矛盾。",
+          "1928 年形式統一不等於中央能有效控制所有地方。"
+        ],
+        question: "你是國民革命軍政治部文書程望。你要記錄勝利、群眾運動與聯盟裂痕；你會如何理解「統一」？"
+      },
+      "war-of-resistance": {
+        background: [
+          "1931 年九一八事變後，日本侵占中國東北，中國人民展開局部抗戰。1937 年七七事變後，國共合作與全國各界投入抗日，戰爭進入全面抗戰階段。中國工業與軍備較弱，卻擁有廣闊國土和持久抵抗的空間。",
+          "淞滬抗戰粉碎日本短期速勝計畫，南京淪陷後發生南京大屠殺；台兒莊、武漢會戰、敵後游擊及香港淪陷構成戰爭的不同側面。1941 年太平洋戰爭後中國加入同盟國，1945 年日本無條件投降。"
+        ],
+        facts: [
+          "中國抗戰由 1931 年局部抗戰發展至 1937 年全面抗戰。",
+          "正面戰場與敵後戰場在不同地區牽制日軍。",
+          "南京大屠殺等戰爭罪行須以嚴謹史料保存。"
+        ],
+        question: "你是香港學生記者林瀾。你從安全的報館走進戰火與淪陷區，會如何保存真相、勇氣與人性？"
+      }
+    };
+
+    const TRUE_REQUIREMENTS = {
+      "chu-han": ["leaveHongmen", "empowerHanxin", "rememberAll"],
+      "red-cliffs": ["shareSupply", "weatherSense", "truthfulRecord"],
+      "an-lushan": ["auditFrontier", "longWar", "balancedHistory"],
+      jingkang: ["trueNumbers", "repairDefense", "completeJingkang"],
+      "ming-unification": ["stabilizeBase", "secureSouth", "fullMing"],
+      "opium-war": ["prepareCoast", "focusDefense", "treatyTruth"],
+      xinhai: ["spotOpening", "seizeMoment", "xinhaiBalance"],
+      "northern-expedition": ["peopleFirst", "recordSplit", "northernTruth"],
+      "war-of-resistance": ["witnessWar", "preserveTestimony", "rememberWithTruth"]
+    };
+
+    const STORIES = [
+      {
+        id: "chu-han",
+        grade: "S1",
+        gradeLabel: "中一級",
+        title: "楚漢相爭",
+        period: "公元前 206—前 202 年",
+        dates: "秦亡・鴻門・垓下・西漢建立",
+        minutes: 14,
+        blurb: "秦宮火未熄，楚漢兩軍已隔着關中彼此猜疑。你是一名楚軍糧吏，將由咸陽走到鴻門、滎陽與垓下，見證一場決定天下歸屬的角力。",
+        role: "楚軍糧道小吏「陸禾」，虛構見證者",
+        readingHint: "留意劉邦如何用民心、人才與後方支持抵銷項羽的軍事優勢。鴻門宴、分封、滎陽相持與垓下合圍，是理解楚漢勝負的四個關鍵。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          banquet: wiki("Feast at Hong Gate.jpg", "《鴻門宴》傳統歷史畫，佚名畫家。", "公眾領域"),
+          illustration: wiki("漢高滅楚（廿一史通俗衍義）.jpg", "《漢高滅楚》歷史木刻插圖，出自《廿一史通俗衍義》。", "公眾領域"),
+          xiang: wiki("Portraits of Famous Men - Xiang Wang.jpg", "《名人像冊》中的項羽像，佚名中國畫師。", "公眾領域"),
+          liu: wiki("Portraits of Famous Men - Liu Bang.jpg", "《名人像冊》中的劉邦像，佚名中國畫師。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "劉邦在垓下擊敗項羽，建立西漢；勝利來自民心、人才與多方力量的結合。", actual: "公元前 202 年，項羽在垓下戰敗，突圍至烏江後自刎，劉邦建立漢朝。", impact: "西漢重建統一，漢初以休養生息與郡國並行穩定社會，也留下功臣與地方王侯問題。" },
+          bad: { lead: "你只記錄勝者的功績，卻沒有理解一個新王朝如何取得百姓合作。", actual: "歷史上的劉邦在垓下取得勝利並建立西漢，但勝利並不代表所有政治矛盾自動消失。", impact: "楚漢相爭顯示軍事優勢不能代替政治秩序；糧道、人才和民心會改變長期結果。" },
+          whatif: { lead: "你選擇了一條沒有發生的歷史，卻尚未說明它與史實的距離。", actual: "真實歷史中，劉邦離開鴻門，退居漢中，最終反攻項羽並建立西漢。", impact: "假想不能取代史實，但能幫助我們看見每個關鍵選擇所排除的其他可能。" }
+        },
+        nodes: {
+          n1: story(
+            "公元前 206 年・咸陽",
+            "兩軍入關，誰能得到秦人的信任",
+            "liu",
+            [
+              "秦王子嬰向劉邦投降後，劉邦封存府庫，召集關中父老，宣布殺人、傷人及盜竊者依法治罪。秦人第一次覺得，新政權也許不必再用嚴刑維持恐懼。",
+              "你身為楚軍糧道小吏，正奉命清點咸陽的倉庫與戶籍。城外傳來消息：項羽率四十萬大軍逼近，對劉邦先入關中十分不滿。軍需官催你把金銀裝車，卻沒有人問城中百姓明日的糧食從何而來。"
+            ],
+            {
+              note: "劉邦先入咸陽後與百姓約法三章，並封存秦朝府庫。項羽其後率強大兵力入關，雙方在政治號召和軍紀上呈現明顯差異。",
+              choices: [
+                choice("先保護戶籍、糧冊與官府文書，讓關中百姓維持正常生活。", "n2", 4, 4, 2, "你留下秦朝戶籍與糧冊，也讓百姓知道新政權不會把整座城搬空。", "protectPeople"),
+                choice("只替楚軍運走金銀財物，百姓的處境與你無關。", "n2", -4, -4, 1, "車隊載滿財物，卻沒有一本冊子能說明明日誰來耕田。")
+              ]
+            }
+          ),
+          n2: story(
+            "項羽入關前夜",
+            "一封密報，促成鴻門相見",
+            "illustration",
+            [
+              "劉邦軍中有人向項羽密報，說劉邦想在關中稱王。范增認為劉邦入關後不取財物、不近女色，反而比貪婪的人更危險，勸項羽及早除掉他。軍帳內因此決定加強攻勢。",
+              "為避免立即交戰，劉邦派張良聯絡項伯，表示自己只願向項羽解釋，不敢背棄楚軍。項羽的使者隨後帶回消息：劉邦明日親赴鴻門。軍帳裡的人都在猜，他究竟敢不敢來；你則被派去準備宴席與軍需。"
+            ],
+            {
+              note: "《史記》記載劉邦親赴鴻門向項羽解釋。鴻門宴不是一場偶然相遇，而是在兵力懸殊、猜疑升高及雙方避免立刻決戰的背景下發生。",
+              next: "n3"
+            }
+          ),
+          n3: story(
+            "公元前 206 年・鴻門",
+            "酒席上的刀光",
+            "banquet",
+            [
+              "劉邦只帶百餘騎抵達鴻門，入帳後解釋自己封存府庫、等待項羽，只為避免關中混亂。項羽聽了他的話，神色稍緩，甚至說出了告密者的名字。",
+              "范增多次舉起玉玦，示意項羽下決心。項莊起身舞劍，項伯也拔劍相對，用身體隔開劉邦。樊噲其後闖入軍帳，直言劉邦有功而遭猜忌。帳中一時只有酒器和劍鞘碰撞的聲音。"
+            ],
+            {
+              quote: { text: "如今人方為刀俎，我為魚肉。", by: "《史記・項羽本紀》記樊噲於鴻門宴所言" },
+              inline: [{ after: 1, image: "banquet", caption: "《鴻門宴》歷史畫：宴席、劍舞與政治危機交織。" }],
+              choices: [
+                choice("暗中維持出口與衛隊，讓劉邦有機會離席返回軍營。", "n4", 4, 2, 3, "劉邦借如廁離席，在樊噲等人護衛下返回霸上。", "leaveHongmen"),
+                choice("示意項莊立即殺死劉邦，以武力除去未來對手。", "hongmenTyrantEnd", -5, -3, 2, "劍鋒落下，劉邦死在鴻門；楚軍卻要面對更難收拾的天下。", "killLiu")
+              ]
+            }
+          ),
+          hongmenTyrantEnd: {
+            ending: "whatif",
+            endingTone: "bad",
+            endingLabel: "假想失敗結局",
+            scene: "假想結局・鴻門宴後",
+            title: "霸王一統，民不聊生",
+            lead: "劉邦死在鴻門。假想中的項羽以軍力壓服諸侯，完成短暫統一，百姓卻在徵兵、報復與叛亂中難以生活。",
+            body: [
+              "劉邦倒下後，跟隨他入關的漢軍失去領袖，劉邦的家人與部將遭到追捕。項羽不必再面對一個能吸納秦地吏民、聯合各方諸侯的對手，咸陽與關中迅速落入楚軍控制。",
+              "項羽其後以武力主持分封，不服者被逐一擊破。天下表面歸楚，糧道卻需要更多軍隊看守，地方也需要更多降將安撫。每一次增兵都加重徭役，每一次猜疑又製造新的敵人。",
+              "這個假想局面沒有穩定制度承接軍事勝利。百姓在反覆徵發與報復中失去田產，各諸侯表面臣服、暗中再起。劉邦之死消除了一個對手，卻沒有替項羽消除治理天下的難題。"
+            ],
+            history: {
+              verdict: "劉邦在鴻門宴後成功離席，最終建立西漢；若他當場被殺，楚漢局勢會進入另一條假想道路。",
+              yourChoice: "你支持項莊在鴻門宴刺殺劉邦，讓項羽以武力清除最強的政治競爭者。",
+              actual: "史實中劉邦在張良、樊噲、項伯協助下離席，返回霸上。此後他退居漢中、重用韓信，最終在垓下擊敗項羽。",
+              facts: ["鴻門宴時劉邦兵力與政治地位都處於劣勢。", "劉邦最終成功離開鴻門。", "項羽其後分封諸侯，但未能消除各地矛盾。", "劉邦以漢中為基礎，依靠韓信等人才逐步反攻。"],
+              impacts: ["假想中項羽可能以武力短期稱霸，卻缺乏穩定治理基礎。", "歷史上的西漢建立，但其後仍需處理功臣與地方王侯問題。"],
+              sources: [{ label: "維基共享資源：鴻門宴歷史圖像", url: "https://commons.wikimedia.org/wiki/File:Feast_at_Hong_Gate.jpg" }]
+            }
+          },
+          n4: story(
+            "鴻門宴後・咸陽",
+            "勝利者如何處置一座舊都",
+            "xiang",
+            [
+              "劉邦離開後，項羽率軍進入咸陽，殺秦王子嬰，焚燒秦宮。你跟着運送糧草，看到火焰照亮宮牆，也看到宮中官吏與工匠四散逃走。",
+              "項羽不打算以秦都為新的政治中心，而要回到東方，以自己的軍威分封諸侯。你被派去協助登記封賞，發現不少將領的功勞與封地並不相稱；被冷落的諸侯開始私下抱怨。"
+            ],
+            {
+              note: "項羽入關後焚燒秦宮，尊楚懷王為義帝，自稱西楚霸王並分封諸侯。劉邦受封漢王，領地偏遠。",
+              next: "n5"
+            }
+          ),
+          n5: story(
+            "公元前 206 年・南鄭",
+            "漢中困局與一條通往關中的路",
+            "illustration",
+            [
+              "劉邦受封漢王後退往巴蜀、漢中，軍中不少人因前途渺茫而逃亡。山道險峻，糧車常因雨塌方停在半途。你被派到南鄭整理漢軍糧冊，看到倉中糧食只夠撐過數月。",
+              "蕭何極力挽留一名曾受胯下之辱的年輕人韓信，向劉邦保證他能統領全軍。劉邦最終設壇拜將。韓信研究關中道路，提出先修棧道迷惑楚軍，再從小路突襲陳倉。"
+            ],
+            {
+              note: "劉邦退居漢中後重用韓信。韓信其後協助漢軍重返關中，並在北方開拓戰場，逐步改變楚漢力量對比。",
+              choices: [
+                choice("先補足糧食、修好山道，再依韓信計畫秘密出關。", "n6", 4, 4, 3, "糧車與道路準備妥當，漢軍在楚軍不注意時重返關中。", "carefulLogistics"),
+                choice("不等補給完成，立即催全軍衝出秦嶺求勝。", "n6", -4, -2, 3, "前鋒雖快，後方車隊卻被困在雨中。")
+              ]
+            }
+          ),
+          n6: story(
+            "公元前 205 年・楚漢邊境",
+            "韓信開拓北方戰場",
+            "illustration",
+            [
+              "漢軍重返關中後，劉邦與項羽在滎陽、成皋一線相持。韓信另率軍北上，連續擊敗魏、代、趙等勢力，項羽的側翼與盟友被逐步切斷。",
+              "你在後方收到韓信的軍報，要求增加糧草與兵員。軍情顯示，北方勝利並非一路順利：長途補給、陌生地形與降卒安置都需要時間。劉邦則在正面承受項羽最強大的攻勢。"
+            ],
+            {
+              note: "楚漢戰爭是多線消耗戰。韓信在北方的勝利與劉邦在滎陽的堅守互相配合，使項羽不得不在多個方向調兵。",
+              next: "n7"
+            }
+          ),
+          n7: story(
+            "滎陽前線",
+            "一封請求封王的軍報",
+            "liu",
+            [
+              "劉邦被項羽圍困於滎陽，糧道屢遭截斷。某日，韓信派使者送來書信，請求代理齊王，以穩定剛平定的齊地。劉邦聽罷大怒，認為自己在前線苦撐，韓信卻趁機要權。",
+              "張良與陳平在旁提醒劉邦：此刻若拒絕，北方軍隊可能立即生變。劉邦改口，派張良正式封韓信為齊王，要他繼續南下合擊項羽。你站在帳外，明白一封回信足以改變整個戰場。"
+            ],
+            {
+              note: "韓信平定齊地後請為假齊王。劉邦接受張良、陳平建議，正式封王以穩住北方兵權。",
+              choices: [
+                choice("先承認韓信的地位，穩住北方軍隊，再以制度處理日後的權力問題。", "n8", 4, 2, 3, "韓信接受封號，北方漢軍繼續牽制楚軍。", "empowerHanxin"),
+                choice("堅拒韓信要求，立即派親信奪回齊地兵權。", "n8", -5, -2, 2, "軍中猜忌加深，齊地與滎陽之間出現新的不信任。")
+              ]
+            }
+          ),
+          n8: story(
+            "公元前 204 年・滎陽",
+            "斷糧與反間",
+            "liu",
+            [
+              "楚軍圍城日久，漢軍開始以稀粥度日。陳平建議離間項羽與范增，讓項羽懷疑最重要的謀士。使者往來之間，范增最終憤而離去，病發途中。",
+              "項羽的攻勢沒有立刻停止，但他失去了一個能在關鍵時刻糾正判斷的人。你在糧冊上記下最後一批粟米，知道戰爭正從戰場延伸到信任與耐心的較量。"
+            ],
+            {
+              note: "陳平利用反間計使項羽懷疑范增。項羽雖仍擁有強大軍隊，卻逐漸失去穩定的謀臣團隊。",
+              next: "n9"
+            }
+          ),
+          n9: story(
+            "滎陽城外",
+            "把敵人困在更長的補給線上",
+            "illustration",
+            [
+              "韓信在北方的勝利、彭越在楚軍後方的襲擾，以及英布在南方牽制，使項羽不得不在滎陽、齊地與彭城之間奔波。漢軍雖屢敗，卻始終沒有被徹底消滅。",
+              "你知道正面決戰不是唯一方法。只要漢軍保住糧道與盟友，項羽的兵力就會被距離、補給和多線作戰逐漸磨薄。這是劉邦與項羽不同的戰爭方式。"
+            ],
+            {
+              choices: [
+                choice("守住糧道，聯絡韓信、彭越與英布從不同方向牽制楚軍。", "n10", 4, 3, 3, "楚軍被迫分散，漢軍贏得重整與追擊的時間。", "holdSupply"),
+                choice("集中最後兵力在滎陽城下與項羽決一死戰。", "n10", -4, -1, 3, "決戰令下，全部風險被壓在同一個清晨。")
+              ]
+            }
+          ),
+          n10: story(
+            "公元前 203 年・鴻溝",
+            "以河為界的盟約",
+            "illustration",
+            [
+              "連年戰爭使雙方疲憊，劉邦與項羽約定以鴻溝為界，東歸楚、西歸漢。使者交換盟書，項羽釋放劉邦家人，軍中一度以為可以回家。",
+              "張良和陳平卻認為漢軍已得天下大半，楚軍糧盡兵疲，此時退兵等於把機會交還項羽。劉邦沉思後決定追擊。你重新整理軍糧，知道一紙盟約未必能阻止下一場戰事。"
+            ],
+            {
+              note: "鴻溝議和後，劉邦採納張良、陳平建議追擊項羽。盟約未能結束戰爭，力量對比與盟友選擇繼續左右局勢。",
+              choices: [
+                choice("協調韓信與彭越出兵，以封賞換取合圍，先結束戰爭。", "n11", 4, 2, 3, "各路軍隊重新集結，楚軍被逐步逼向垓下。", "coalition"),
+                choice("拒絕再向任何擁兵者讓步，只靠直屬漢軍追擊。", "n11", -4, 0, 4, "漢軍決心堅定，卻在漫長追擊中失去合圍速度。")
+              ]
+            }
+          ),
+          n11: story(
+            "公元前 202 年・垓下",
+            "四面楚歌之前的黑夜",
+            "illustration",
+            [
+              "劉邦整合韓信、彭越與英布等軍隊，逐步在垓下形成包圍。你被派去查驗東面道路，發現雨後泥濘會使兩翼遲到；任何一個缺口都可能讓項羽再次突圍。",
+              "夜裡，漢軍唱起楚地歌曲。楚軍以為漢軍已盡得楚地，士氣大受打擊。項羽在營中與虞姬訣別，率八百騎突圍。歌聲不是單靠聲音戰勝敵軍，而是包圍、糧盡與心理壓力共同作用的結果。"
+            ],
+            {
+              quote: { text: "力拔山兮氣蓋世，時不利兮騅不逝。", by: "《史記・項羽本紀》所載項羽垓下歌" },
+              inline: [{ after: 1, image: "illustration", caption: "《漢高滅楚》木刻插圖：後世對垓下與楚漢結局的圖像敘述。" }],
+              next: "n12"
+            }
+          ),
+          n12: story(
+            "烏江之後",
+            "勝利的代價",
+            "liu",
+            [
+              "項羽突圍至烏江，亭長備船請他渡江，他卻說無顏見江東父老，最終自刎。楚漢相爭結束，劉邦取得天下。你在戰場上收拾名冊，發現許多名字已無法再回到故鄉。",
+              "劉邦在定陶附近即皇帝位，史稱漢高祖。他問群臣自己為何得天下，承認張良、蕭何、韓信各有所長，而自己能任用他們，才是最關鍵的原因。"
+            ],
+            {
+              note: "公元前 202 年項羽戰敗自刎，劉邦建立漢朝。漢高祖劉邦重視用人，但其後仍需處理功臣與地方王侯的權力。",
+              next: "n13"
+            }
+          ),
+          n13: story(
+            "漢初・關中",
+            "天下初定，百姓仍在等待",
+            "liu",
+            [
+              "新朝建立後，劉邦命人整理秦制，又保留部分封國，形成郡國並行。你被派去恢復戶籍與農田。經過多年戰亂，人口散失、土地荒廢，地方官吏互相推諉。",
+              "軍功封賞與地方利益都要求朝廷給予回應，百姓則只希望減輕賦役、重新耕種。你在奏報中寫下：勝利已經結束，治理才剛剛開始。"
+            ],
+            {
+              note: "漢初採取休養生息，恢復農業，同時以郡國並行安置功臣和地方力量。",
+              choices: [
+                choice("先恢復生產與戶籍，同時公平處理軍功封賞。", "n14", 4, 4, 2, "地方糧田重新有人耕種，軍隊也看到封賞有章可循。", "restoreLivelihood"),
+                choice("把全部資源用於封賞功臣，百姓的問題日後再處理。", "n14", -2, -2, 2, "功臣歡喜，荒田與流民卻仍在城外。")
+              ]
+            }
+          ),
+          n14: story(
+            "未央宮的清晨",
+            "歷史要記得誰",
+            "liu",
+            [
+              "你被留在尚書機構抄錄地方文書。竹簡上有人口、田畝、災害與盜賊，卻沒有一欄記錄戰爭中失去名字的人。劉邦的功業將由史官寫下，百姓卻只記得誰讓田地重新長出糧食。",
+              "一名老吏說，若只寫皇帝如何取勝，楚漢相爭會失去另一半真實。你想起鴻門的劍、滎陽的粥和垓下的歌，決定把勝敗、準備、民心與代價放在同一份紀錄裡。"
+            ],
+            {
+              choices: [
+                choice("承認劉邦善用人才與民心，也記錄戰爭和功臣政治的代價。", "n15", 4, 3, 3, "你選擇讓歷史同時容納功業與陰影。", "rememberAll"),
+                choice("只記載勝利者的英明，刪去百姓與功臣的犧牲。", "n15", -3, -1, 1, "卷宗變得整齊，卻少了真正的重量。")
+              ]
+            }
+          ),
+          n15: story(
+            "公元前 202 年之後",
+            "西漢的開始",
+            "xiang",
+            [
+              "你完成史稿時，天下已歸漢。劉邦建立西漢，項羽的故事則化為歌謠與警示。你清楚兩人都不是單純的善人或惡人：一個善於用人，一個以勇武震懾天下；一個勝利，一個自刎。",
+              "真正決定結果的，是糧道能否維持、人才是否被接納、百姓是否相信新秩序，以及盟友能否在同一面旗下合作。現在，請你為這卷歷史寫下最後的判斷。"
+            ],
+            {
+              note: "楚漢相爭以劉邦建立西漢告終。政治秩序、民心與人才，是理解劉邦勝利與項羽失敗的重要線索。",
+              choices: [
+                choice("保存完整紀錄，承認勝利與代價並存。", "trueEnd", 4, 3, 3, "你讓歷史不只屬於勝利者。", "rememberAll"),
+                choice("只宣告勝利者正確，不再追問其他人的處境。", "badEnd", -3, -2, 1, "一個王朝被記住了，百姓卻再次失去名字。"),
+                choice("設想項羽在江東重新起兵，扭轉整個局勢。", "whatIfEnd", 0, 1, 1, "你開始設想另一條路，但也知道它尚未發生。")
+              ]
+            }
+          ),
+          trueEnd: {
+            ending: "true",
+            scene: "史實結局",
+            title: "漢家天下，亦是未完成的秩序",
+            lead: "劉邦由漢中崛起，在垓下擊敗項羽，建立西漢。",
+            body: [
+              "劉邦的勝利來自多方條件的結合。他願意重用韓信、蕭何、張良，能夠接受暫時的讓步，也知道百姓需要穩定的生活。項羽擁有強大軍力，卻在分封、用人與政治信用上失分。",
+              "西漢建立後，漢初推行休養生息，並以郡國並行容納功臣與地方力量。可是功臣與中央的矛盾仍未消失，韓信、彭越等人其後遭到清算。勝利的秩序並不完美，卻使天下重新走向長期統一。"
+            ],
+            history: {
+              verdict: "劉邦最終擊敗項羽，建立西漢；勝利取決於人才、民心、糧道與聯盟，而非單純兵力。",
+              yourChoice: "你選擇離開鴻門，重視補給與盟友，並保留對歷史代價的記憶。",
+              actual: "公元前 202 年，項羽在垓下戰敗，突圍至烏江後自刎。劉邦建立漢朝，史稱漢高祖。",
+              facts: ["劉邦先入咸陽，與民約法三章。", "韓信在北方屢勝，改變楚漢力量對比。", "垓下之戰後，項羽自刎，劉邦建立西漢。"],
+              impacts: ["漢朝奠定此後漢文化與國家制度的重要基礎。", "漢初休養生息有助社會恢復。", "功臣與地方王侯問題仍困擾漢初政治。"],
+              sources: [{ label: "維基共享資源：鴻門宴歷史圖像", url: "https://commons.wikimedia.org/wiki/File:Feast_at_Hong_Gate.jpg" }]
+            }
+          },
+          badEnd: {
+            ending: "bad",
+            scene: "假想失敗結局",
+            title: "勝利被記憶成單一英雄故事",
+            lead: "你保住了劉邦的勝績，卻沒有保存天下為何被重新治理的答案。",
+            body: ["只把劉邦寫成仁厚英雄、把項羽寫成暴烈失敗者，會抹去糧道、人才、聯盟與制度的複雜作用。", "歷史需要記得勝利，也需要記得百姓和失敗者；否則後人只能背誦名字，卻無法理解天下如何改變。"],
+            history: { verdict: "楚漢相爭的結果不能只用善惡概括。", yourChoice: "你把複雜歷史壓成單一英雄故事。", actual: "劉邦最終建立西漢，項羽在垓下戰敗後自刎。", facts: ["劉邦善用人才與民心。", "項羽因分封、用人和長期戰爭失去優勢。"], impacts: ["西漢建立後，天下重新走向統一。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif",
+            scene: "假想結局",
+            title: "如果楚漢永久分治",
+            lead: "你設想劉邦與項羽長期以鴻溝為界，但這也是另一條沒有發生的歷史。",
+            body: ["分治或許能帶來短期安穩，卻仍要面對諸侯兵權、邊界衝突與繼承問題。", "歷史上劉邦選擇追擊，項羽最終在垓下敗亡；假想不能取代真實結果。"],
+            history: { verdict: "鴻溝議和後，劉邦繼續追擊，最終於垓下取勝。", yourChoice: "你設想長期分治，但這不是史實。", actual: "項羽在垓下戰敗，劉邦建立西漢。", facts: ["鴻溝曾成為楚漢議和的分界。", "劉邦最終完成統一。"], impacts: ["統一王朝延續並重塑政治與文化。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "red-cliffs",
+        grade: "S1",
+        gradeLabel: "中一級",
+        title: "赤壁之戰",
+        period: "公元 208 年",
+        dates: "曹操南下・孫劉結盟・三國前夜",
+        minutes: 13,
+        blurb: "秋霧籠罩長江，曹操的船隊遮住北岸。你是周瑜麾下管理江面與糧道的書吏沈舟，必須在聯軍、疫病、船陣與風向之間，讀出一場大戰的真正變數。",
+        role: "江東水軍書吏「沈舟」，虛構見證者",
+        readingHint: "留意地理、疫病和聯盟與兵力同樣重要。史書記載黃蓋火攻；後世小說則把「借東風」和草船借箭寫得更神奇。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          woodblock: wiki("新刊校正古本大字音释三国志通俗演义 明万历十九年书林周曰校刊本 098.jpg", "明代《三國志通俗演義》赤壁故事木刻插圖，周曰校刊本。", "公眾領域"),
+          fire: wiki("新刊校正古本大字音释三国志通俗演义 明万历十九年书林周曰校刊本 100.jpg", "明代《三國志通俗演義》火攻故事木刻插圖，周曰校刊本。", "公眾領域"),
+          cao: wiki("Cao Cao Portrait ROTK.jpg", "傳統三國人物畫中的曹操像，佚名畫家。", "公眾領域"),
+          opera: wiki("Battle of Red Cliffs Peking Opera 1.jpg", "以赤壁之戰為題材的京劇演出，攝影陳文。", "共享署名 2.0"),
+          river: wiki("Chibi.jpg", "長江赤壁一帶景觀，維基共享資源用戶拍攝。", "共享署名—相同方式共享 3.0")
+        },
+        endings: {
+          true: { lead: "火船乘風撞入曹軍船陣，曹操退還北方，孫劉勢力得以延續。", actual: "公元 208 年孫劉聯軍在赤壁擊敗曹操，曹操北返，劉備與孫權分別擴張勢力。", impact: "赤壁阻止曹操迅速統一南方，為三國鼎立奠定基礎，也留下孫劉荆州爭議。" },
+          bad: { lead: "你把戰爭寫成單一計策的勝利，忽略了聯盟、疫病、補給與地理。", actual: "赤壁勝利是多項條件共同作用的結果，並非只靠「借東風」。", impact: "理解戰爭需要看清條件和代價，不能只記住傳奇故事。" },
+          whatif: { lead: "你避開了實際發生的赤壁戰局，選擇相信另一條假想道路。", actual: "歷史上的曹操在赤壁失利後退還北方，三國分立趨勢增強。", impact: "假想可以幫助分析變數，但不能取代已發生的歷史。" }
+        },
+        nodes: {
+          n1: story("公元 208 年秋・長江", "曹操南下，江東被迫選擇", "cao", [
+            "曹操在北方站穩勢力後率軍南下。荊州局勢迅速崩解，劉備在長坂敗退，孫權則收到曹軍要求臣服的消息。長江上的商船與漁船都被徵作軍用，江東的市場開始搶購糧食。",
+            "你在周瑜軍中整理船隻與糧冊，發現曹軍聲勢雖大，真正能渡江作戰的船隻與熟悉水性的士兵卻有限。軍報同時提到曹營有疫病。你想把這些情況呈報，但營中許多人已被「八十萬大軍」嚇住。"
+          ], {
+            note: "曹操南下時兵力強大，但北方士兵不習水戰，軍中疫病也削弱戰力。孫權陣營對投降或抵抗意見不一。",
+            choices: [
+              choice("核實船隻、糧秣與曹軍疫病情報，先判斷實際戰力。", "n2", 4, 2, 3, "你把虛張聲勢與真正戰力分開記錄，周瑜開始重視你的報告。", "countShips"),
+              choice("相信曹軍勢不可擋，勸江東將領準備投降。", "n2", -4, -2, 1, "投降的耳語蔓延，尚未交戰，軍心已先鬆動。")
+            ]
+          }),
+          n2: story("柴桑・江東議堂", "孫權面前的和與戰", "cao", [
+            "孫權召集文武商議。張昭等人認為曹操挾天子、據荆州，江東難以抗衡；魯肅卻私下提醒孫權，臣下投降仍可保有官位，君主投降卻無退路。",
+            "魯肅把劉備的使者諸葛亮引入討論。孫權仍未立即決斷，只命周瑜統籌軍務。你第一次明白，聯盟不是一句承諾，而是各方在恐懼、利益與生存之間找到共同點。"
+          ], { note: "孫權在魯肅、周瑜等人推動下決定抵抗曹操，並與劉備結成聯盟。", next: "n3" }),
+          n3: story("赤壁南岸", "聯盟從爭執開始", "woodblock", [
+            "孫劉聯軍在長江南岸集結。江東水軍熟悉水勢，劉備軍則剛經歷敗退。兩軍共用渡口與糧倉，第一天就因誰應先領取軍糧而爭吵。",
+            "諸葛亮希望保留劉備的獨立指揮，周瑜則要求江東掌握水軍主力與戰後荆州利益。你在兩方之間傳遞清冊，知道只要糧道與指揮混亂，曹操不必進攻也能靠等待取勝。"
+          ], {
+            note: "孫劉聯軍因共同威脅而成立，但雙方在兵權與荆州利益上一直存在矛盾。",
+            choices: [
+              choice("公開兩軍糧秣分配與渡口輪值，先建立最小限度的互信。", "n4", 4, 3, 2, "糧倉帳目公開後，雙方至少知道彼此不是暗中奪權。", "shareSupply"),
+              choice("讓江東水軍獨佔主要渡口，防備劉備軍變動。", "n4", -4, -3, 2, "渡口被江東控制，劉備軍開始懷疑自己只是誘餌。")
+            ]
+          }),
+          n4: story("曹軍水寨對岸", "江水讓強大軍隊失去優勢", "river", [
+            "你與斥候隔着江面觀察曹營。北方士兵把濕衣晾在桅杆上，馬匹縮在船艙附近，軍醫每天報告發熱與嘔吐的人數。曹操為減少暈船，下令把戰船以木板和鐵鏈連接。",
+            "這樣可讓士兵在船上如履平地，也讓船陣失去靈活性。你記錄風向與水流，發現一旦火勢蔓延，相連的船隻將難以拆開。這不是可以輕率譏笑的部署，而是一個可以被利用的風險。"
+          ], { note: "曹操連接戰船以減少搖晃，但船陣變得遲緩；疫病和北方士兵不習水戰削弱曹軍。", next: "n5" }),
+          n5: story("黃蓋軍帳", "一封假投降信", "opera", [
+            "黃蓋向周瑜提出：由他假意投降，率火船靠近曹軍，再點燃船上的乾柴與油脂。計畫需要曹軍相信降書，也需要風向和船速配合。",
+            "周瑜命你協助準備火船與後備路線。軍中有人把勝負全寄望於「東風」，你卻把水手對潮汐和雲層的觀察逐項記錄。真正的戰術不能排除運氣，更不能沒有應變。"
+          ], {
+            note: "黃蓋詐降與火攻見於史書。後世把東風寫成神蹟，但風向是自然條件，需要觀察與判斷。",
+            choices: [
+              choice("準備多條火船路線，按實測風向分批出擊。", "n6", 4, 2, 3, "火船、掩護船與撤退路線各有安排，計畫不再只靠一個奇蹟。", "weatherSense"),
+              choice("把所有船集中在同一時刻出發，不必準備備用方案。", "n6", -4, -1, 3, "船隊排成整齊一線，任何風向改變都會使全軍同時受困。")
+            ]
+          }),
+          n6: story("江霧漸散", "風向正在改變", "fire", [
+            "夜裡，江霧漸散，岸邊旗幟轉向東南。老水手判斷風勢可維持一段時間。黃蓋命船隊升起降旗，緩緩向曹軍水寨靠近。",
+            "曹軍有人到岸邊觀看，以為黃蓋真的來降。你守在後方的小船上，看着火船距離敵陣越來越近。江面沒有傳來英雄式號角，只有槳聲、風聲與許多人壓低的呼吸。"
+          ], { note: "火攻需要船速、風向、敵方船陣和聯軍配合。赤壁的勝利不能只歸因於一個計謀。", next: "n7" }),
+          n7: story("赤壁之夜", "火船撞入船陣", "fire", [
+            "黃蓋下令點火。第一束火焰從船首升起，順着風勢撲向曹軍，相連的戰船一船接一船燃燒。濃煙遮蔽江面，士兵跳江、呼喊，岸上的營寨也被火勢波及。",
+            "孫劉聯軍乘勢追擊。你在後方一艘小船上接應傷兵，看到勝利與災難同時降臨。曹操下令燒毀剩餘船隻，沿華容道向北方撤退。"
+          ], {
+            quote: { text: "東風不與周郎便，銅雀春深鎖二喬。", by: "杜牧〈赤壁〉，後世詩歌對東風與戰局的想像" },
+            inline: [{ after: 1, image: "fire", caption: "明代《三國志通俗演義》火攻插圖：文學敘事中的赤壁火船。" }],
+            next: "n8"
+          }),
+          n8: story("長江追擊線", "勝利之後，荆州留下空白", "river", [
+            "曹操退還北方，聯軍開始清點俘虜與物資。劉備軍迅速南下荆州，孫權則要求江東掌握南郡與江夏。雙方仍稱盟友，卻已開始爭奪戰後地盤。",
+            "你站在被煙熏黑的地圖前，知道赤壁只是阻止曹操南下，還沒有決定誰能填補荆州。江東老將說聯盟的目的已經完成；你卻看到另一個問題剛剛開始。"
+          ], { note: "赤壁戰後，孫權、劉備與曹操三方在荆州利益交錯。", next: "n9" }),
+          n9: story("戰後糧倉", "先救百姓，還是先搶地盤", "river", [
+            "江岸村落被戰火與潰兵破壞，難民向軍營求糧。軍需官希望把所有餘糧留給聯軍，免得下一戰不夠用。你翻看受災戶籍，發現若錯過播種，秋天會有更多人逃離。",
+            "曹操仍掌握北方，孫劉若立刻為荆州互相牽制，只會讓強大外敵得到機會。你需要決定眼前的軍糧與百姓的明天哪一個先處理。"
+          ], {
+            note: "聯軍在戰後面臨軍需與民生的雙重壓力，荆州歸屬也開始影響孫劉合作。",
+            choices: [
+              choice("先撥出種糧與救濟，再安排兩軍共同守衛荆州。", "n10", 4, 4, 2, "難民重新得到種子，兩軍也知道彼此必須繼續合作。", "protectRefugees"),
+              choice("把餘糧全部留給江東軍，立刻搶佔荆州城鎮。", "n10", -4, -3, 3, "城門先被接管，百姓卻帶着空袋離開。")
+            ]
+          }),
+          n10: story("柴桑與江陵之間", "勝利如何分配", "opera", [
+            "赤壁後，周瑜病重，孫權與劉備仍就荆州談判。魯肅希望維持聯盟，認為曹操未滅，不能因土地使盟友反目。劉備則需要荆州作為立國基地。",
+            "你負責記錄兩軍邊界與糧道。你提出先把共同防線、稅收與撤軍訊號寫清楚，再處理具體城池。這不能消除矛盾，至少能讓下一次危機不因誤會立刻變成戰爭。"
+          ], {
+            note: "孫劉聯盟在荊州問題上長期摩擦，但共同面對曹操仍是合作基礎。",
+            choices: [
+              choice("先維持共同糧道與抗曹聯盟，將荆州爭議留在談判桌。", "n11", 4, 3, 3, "兩軍保留聯絡，沒有讓邊界摩擦立刻變成內戰。", "keepAlliance"),
+              choice("以江東安全為先，準備武力奪回荊州。", "n11", -4, -2, 3, "邊界烽火升起，曹軍反倒得到觀望的機會。")
+            ]
+          }),
+          n11: story("丹陽軍營", "英雄故事與戰爭代價", "opera", [
+            "軍中開始傳頌各種神奇故事。有人說諸葛亮作法借來東風，有人說聯軍只憑火船便打敗八十萬大軍。你整理軍械與名冊，知道勝利還包括疫病、水手、工匠與後方百姓的付出。",
+            "一名登記火船船夫的老卒要求把同伴名字寫進戰報。他不在乎故事是否神奇，只希望死者不至於成為無人記得的海浪。你決定把準備、傷亡與聯盟矛盾也寫進紀錄。"
+          ], {
+            note: "赤壁的歷史敘述後來被《三國演義》大量文學化。史實應與小說加工分開理解。",
+            choices: [
+              choice("保存多種證據，區分史書記載、戰爭條件和後世文學。", "n12", 4, 3, 2, "你讓赤壁的火既照亮勝利，也照見準備和代價。", "complexHistory"),
+              choice("刪去疫病、補給與傷亡，只留下神機妙算的故事。", "n12", -3, -1, 1, "故事更動人，卻不再能教人判斷下一次戰爭。")
+            ]
+          }),
+          n12: story("建業府庫", "一場勝利能維持多久", "cao", [
+            "曹操敗後仍保有北方，江東與劉備則各自擴張。你看到的不是天下立刻三分，而是三方開始重新劃定邊界、囤積軍糧與調整聯盟。",
+            "赤壁的勝利給江東時間，也給劉備立足機會。這時間如何被使用，取決於後來的人：擴張、治理、合作或爭奪，每一項都會改變勝利留下的形狀。"
+          ], { note: "赤壁後，曹操仍控制北方，劉備與孫權分別擴張；三國正式建立仍在其後。", next: "n13" }),
+          n13: story("江東書院", "勝利者要留下甚麼", "river", [
+            "多年後，學生問你赤壁為何重要。有人只想知道火船如何點燃，有人想知道曹操是否真的號稱八十萬。你讓他們先把地圖、疫病與補給資料放在一起。",
+            "你指出，曹操的失敗不是單一錯誤；孫劉勝利也不是沒有代價。赤壁改變了南方政治版圖，但其後荆州爭議使盟友走向衝突。歷史的答案要同時容納勝利和後續。"
+          ], {
+            choices: [
+              choice("以多重條件講述赤壁，並說明聯盟的脆弱。", "n14", 4, 3, 3, "學生開始明白，戰爭不是只靠一個人借來東風。", "distinguishLegend"),
+              choice("只講最傳奇的借東風與連環計，讓故事更易流傳。", "n14", -3, 0, 1, "教室裡充滿驚嘆，地圖、疫病與百姓卻被放在一旁。")
+            ]
+          }),
+          n14: story("長江再望", "赤壁留下了甚麼", "river", [
+            "你回到江邊，看到漁船重新下水，岸上仍有舊戰船的焦木。赤壁使曹操短期內不能南下，也讓孫權和劉備得到發展空間；但荊州之後成為新的戰場。",
+            "你把史稿寫成三層：事件本身、參與者的選擇、後世如何記憶。每一層都需要不同證據。真正的勝利不只在戰後慶功，而在後人是否理解它為何發生。"
+          ], { note: "赤壁阻止曹操迅速南下，是東漢末年政治局勢的重要轉折。", next: "n15" }),
+          n15: story("史稿末頁", "如何評價赤壁", "woodblock", [
+            "曹操北返、孫劉擴張、荆州爭議與三國趨勢，都在你的卷宗之中。你沒有把周瑜、諸葛亮寫成能預知一切的人，也沒有把曹操寫成只會犯錯的敵人。",
+            "你準備為赤壁寫下最後評價：它是弱者利用地理、情報與聯盟取勝的案例，也是勝利無法解決所有政治矛盾的故事。"
+          ], {
+            choices: [
+              choice("保留戰爭條件、人物判斷及後續矛盾，完成史實分析。", "trueEnd", 4, 3, 3, "你把赤壁寫成一場可以被理解、而不只是被崇拜的勝利。", "truthfulRecord"),
+              choice("把功勞全部歸於一個計謀，讓歷史變成英雄傳說。", "badEnd", -3, -1, 1, "傳說留下來了，戰爭真正的代價卻再次消失。"),
+              choice("設想曹操即使火攻失敗，也能立刻重整完成統一。", "whatIfEnd", 0, 1, 1, "你提出另一個可能，但沒有把推演誤寫成史實。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "赤壁火熄，三分局勢初成",
+            lead: "曹操在赤壁戰敗北返，孫劉勢力得以延續，三國鼎立的趨勢逐漸形成。",
+            body: ["孫劉聯軍以火攻擊退曹操。黃蓋的詐降、江東水軍、長江地形、曹軍疫病與北方士兵不習水戰，共同造成曹操的失敗。", "赤壁之後，曹操仍掌握北方，劉備取得荆州部分地區並向西發展，孫權則鞏固江東。勝利沒有穩固聯盟，反而使荆州利益成為下一場衝突的來源。"],
+            history: { verdict: "赤壁之戰以曹操北返、孫劉勝利告終，是東漢末年形勢的重大轉折。", yourChoice: "你重視補給、風向與聯盟合作，並拒絕把歷史寫成神話。", actual: "公元 208 年，孫劉聯軍於赤壁大敗曹軍，曹操退還北方。", facts: ["曹軍不習水戰且受疫病影響。", "黃蓋以詐降與火船攻擊曹軍。", "赤壁後孫劉勢力保存並擴張。"], impacts: ["三國鼎立趨勢增強。", "赤壁成為後世文學與戲曲的重要題材。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "只留下傳說的赤壁",
+            lead: "你保存了勝利故事，卻失去理解勝利的方法。",
+            body: ["把赤壁全部歸於「借東風」或一個奇計，會忽略疫病、補給、水軍與聯盟的作用。", "戰爭需要被記住，但更需要被理解；否則後人只會崇拜英雄，無法判斷下一個危機。"],
+            history: { verdict: "赤壁的勝利來自多項條件，不能簡化為單一計策。", yourChoice: "你用傳說取代歷史分析。", actual: "孫劉聯軍在火攻、疫病與水戰條件共同作用下擊敗曹操。", facts: ["曹軍北方士兵較多。", "黃蓋執行火攻。"], impacts: ["三國鼎立逐步形成。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果赤壁沒有一場火",
+            lead: "你走進赤壁未按史實發生的推演，曹操與孫劉的後果仍無法確定。",
+            body: ["沒有火攻，戰爭可能延長，但疫病和補給線仍會限制曹操。孫劉聯軍也可能退守江東，等待下一次機會。", "歷史上曹操確實退還北方；這個假想只提醒我們地理、疫病和聯盟的價值，不能取代真實驗證。"],
+            history: { verdict: "赤壁火攻是史實；假想結果不能當成已發生的歷史。", yourChoice: "你選擇想像一個沒有赤壁火攻的世界。", actual: "公元 208 年曹軍在赤壁戰敗並北返。", facts: ["火攻需要風向與船陣配合。", "曹軍受疫病和水戰條件限制。"], impacts: ["曹操短期內失去統一南方機會。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "an-lushan",
+        grade: "S1",
+        gradeLabel: "中一級",
+        title: "安史之亂",
+        period: "公元 755—763 年",
+        dates: "天寶危機・范陽起兵・藩鎮割據",
+        minutes: 14,
+        blurb: "開元盛世的餘光仍在，范陽的軍鼓卻已越過山河。你是長安尚書省一名糧籍小吏，將在朝堂沉默、邊鎮兵權與百姓流亡之間，追查盛唐崩裂的原因。",
+        role: "長安尚書省小吏「李衡」，虛構見證者",
+        readingHint: "不要只記住楊貴妃。玄宗晚年怠政、李林甫與楊國忠專權、節度使坐大、中央兵弱，才是亂事爆發的重要背景。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          map: wiki("An Lushan Rebellion-zh-hant.png", "安史之亂形勢圖（繁體中文），維基共享資源用戶繪製。", "共享署名—相同方式共享 4.0"),
+          guifei: wiki("Yang Guifei Adjusting her Hair LACMA M.84.31.521.jpg", "《楊貴妃調髮圖》，河鍋曉齋繪。", "公眾領域"),
+          xuanzong: wiki("Audience by Emperor Tang Xuanzong.jpg", "《唐玄宗接見群臣圖》，任仁發繪。", "公眾領域"),
+          journey: wiki("Emperor Minghuang's Journey to Sichuan, Freer Gallery of Art.jpg", "《明皇幸蜀圖》，仇英繪。", "公眾領域"),
+          guo: wiki("Portraits of Famous Men - Guo Ziyi.jpg", "《名人像冊》中的郭子儀像，佚名中國畫師。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "安史之亂在 763 年平定，但唐朝中央權威、地方軍政與社會經濟都已改變。", actual: "安史之亂後，唐室仍延續百餘年，卻面對藩鎮割據、宦官弄權、北方殘破與經濟重心南移。", impact: "安史之亂是唐代由盛轉衰的關鍵，其影響延續至唐末。" },
+          bad: { lead: "你把亂事只歸咎於宮廷人物，忽略制度與兵權。", actual: "安史之亂的爆發涉及玄宗晚年施政、宰相專權、節度使坐大及中央軍力不足。", impact: "單一歸因會使後人看不見制度性危機。" },
+          whatif: { lead: "你選擇了一個沒有發生的唐代未來。", actual: "真實歷史中的唐室在八年戰爭後平定亂事，卻無法恢復盛唐中央權威。", impact: "假想可以幫助思考，但不能取代史實。" }
+        },
+        nodes: {
+          n1: story("天寶年間・長安", "盛世背面的一張戶籍", "xuanzong", [
+            "你記得開元初年的長安：諫臣敢言，地方水利受到重視，百姓仍然相信朝廷會處理災情。玄宗晚年卻深居宮中，與楊貴妃宴樂，把政事交給宰相。",
+            "你送交一份河北戶籍：許多壯丁被編入邊軍，村中只剩老人耕作。奏報經過宰相府後被修改，刪去了「逃戶日增」四字。你面前有兩個選擇：保留原文，或讓它成為一份漂亮的文書。"
+          ], {
+            note: "唐玄宗前期有開元之治，後期漸怠政事，寵信李林甫、楊國忠並重用邊鎮節度使。",
+            choices: [
+              choice("如實附上流民與軍餉記錄，設法讓皇帝知道地方實況。", "n2", 4, 3, 3, "你另抄一份軍民實錄藏入舊檔，至少讓真相還有入口。", "reportTruth"),
+              choice("刪去所有可能令宰相不悅的內容，保住官位。", "n2", -3, -2, 1, "奏報順利送出，你卻知道它沒有說出百姓的處境。")
+            ]
+          }),
+          n2: story("宰相府", "沒有人反對，不代表人人同意", "xuanzong", [
+            "李林甫任相多年，擅長迎合皇帝，也善於讓諫臣沉默。你見過御史因直言被調往邊地，也見過官員在朝會上把真話吞回去。",
+            "李林甫又主張用不識漢字的胡人出任節度使，認為這樣既可守邊，又不會入朝為相。你聽出其中的私心：邊將權力更大，中央卻未必有能力控制。"
+          ], { note: "李林甫排斥異己並推動胡人任節度使，令邊鎮軍政力量更難受中央制衡。", next: "n3" }),
+          n3: story("范陽軍報抵京", "邊軍比中央更強大", "map", [
+            "安祿山身兼范陽、平盧、河東三鎮節度使，兵馬合計十八萬。他多次入朝，向玄宗與楊貴妃獻上珍寶，皇帝對他十分信任。",
+            "你在尚書省核對兵籍，發現中央可調兵力遠不及邊鎮總數。若數個大鎮聯合，長安便非常危險。你寫下「外重內輕」，深知這四個字可能令宰相不悅。"
+          ], {
+            note: "玄宗時十大兵鎮兵力合計遠多於中央軍，安祿山掌三鎮後擁有強大邊軍。",
+            choices: [
+              choice("秘密核實三鎮兵籍與軍費，尋找可信任的大臣呈報。", "n4", 4, 2, 3, "你把邊軍數字分別核對，留下無可否認的書面證據。", "auditFrontier"),
+              choice("相信安祿山只是善於討好皇帝，停止追查以免惹禍。", "n4", -4, -2, 1, "你合上帳冊，范陽的軍隊卻仍在繼續集結。")
+            ]
+          }),
+          n4: story("公元 755 年・范陽", "叛軍以清君側為名", "map", [
+            "安祿山在范陽起兵，宣稱奉密詔討伐楊國忠。這個口號令地方官一時猶疑：若起兵真是皇帝旨意，抵抗者豈非造反？",
+            "叛軍久經訓練，很快攻陷洛陽。你從驛站收到一封又一封失守軍報，烽火接力的速度卻追不上敵軍。長安距離潼關只隔一道關口。"
+          ], { note: "755 年安祿山以討楊國忠為名起兵，叛軍迅速攻陷洛陽，威脅長安。", next: "n5" }),
+          n5: story("潼關軍議", "守關，還是出關", "map", [
+            "潼關地勢險要，守將哥舒翰主張憑險堅守，等叛軍疲弊。楊國忠卻擔心哥舒翰擁兵自重，催促玄宗下令出關迎戰。",
+            "軍中糧草只夠支持一個月，守與戰都要付出代價。你知道出關會放棄地形優勢，但皇帝的御旨已送到城門。"
+          ], {
+            note: "玄宗在楊國忠影響下催促哥舒翰出關，唐軍其後在靈寶大敗，潼關失守。",
+            choices: [
+              choice("一邊準備撤退與疏散，一邊盡力勸諫延後出關。", "n6", 4, 4, 2, "你未能改變所有命令，卻為長安百姓準備了疏散糧道。", "planEvacuation"),
+              choice("把全部軍糧交給出關部隊，相信前線必定速勝。", "n6", -3, -1, 2, "車馬隨軍出關，城內再沒有足夠糧食接應敗退。")
+            ]
+          }),
+          n6: story("馬嵬驛・雨", "將士的怒氣與皇帝的選擇", "guifei", [
+            "潼關失守，玄宗倉皇逃往蜀地。護駕將士又餓又累，把戰敗的怒氣指向楊國忠。馬嵬驛外雨聲不斷，將士要求處死楊貴妃才肯繼續前進。",
+            "白居易後來以「六軍不發無奈何」描寫這場悲劇。你知道楊國忠的專權與玄宗的怠政才是更深的原因，但也看見將士需要皇帝承認失敗，而不只是把責任推給一個沒有軍權的人。"
+          ], {
+            note: "馬嵬驛之變中楊國忠被殺，楊貴妃被賜死。安史之亂的原因遠不止宮廷愛情。",
+            inline: [{ after: 1, image: "journey", caption: "《明皇幸蜀圖》：唐玄宗因安史之亂逃往蜀地的歷史題材畫作。" }],
+            next: "n7"
+          }),
+          n7: story("靈武・新帝", "在帳幕裡重建朝廷", "guo", [
+            "太子李亨北上靈武，被將士擁立為帝，是為唐肅宗。玄宗被尊為太上皇。新朝廷幾乎沒有完整機構，官員在臨時帳幕中辦公，軍士等待收復兩京的命令。",
+            "郭子儀沒有談天命，只問糧道、馬匹與回紇是否願意出兵。你呈上新整理的河西與朔方糧冊，明白這個朝廷最需要的是能撐過長期戰爭的後方。"
+          ], {
+            note: "756 年唐肅宗在靈武即位，開始組織平叛；唐廷其後向回紇借兵。",
+            choices: [
+              choice("先整理長期糧道與援軍條件，不向士兵承諾速勝。", "n8", 4, 3, 3, "你交出一個能支撐數年的糧食方案，代替空洞的必勝口號。", "longWar"),
+              choice("催促各路軍隊立即收復長安，以勝利安定人心。", "n8", -3, 0, 3, "命令鼓舞了人心，補給卻沒有同樣的速度。")
+            ]
+          }),
+          n8: story("回紇營地", "援軍也有代價", "guo", [
+            "郭子儀、李光弼在前線苦戰，唐廷決定向回紇借兵。回紇騎兵強大，代價是財物與戰後報酬。沿途州縣聽聞援軍將至，紛紛把糧食藏起。",
+            "你逐項核對唐朝能付出的糧、絹與承諾，並要求回紇軍接受唐軍節制。弱勢的一方不是沒有談判空間，只是每一項讓步都必須清楚記下。"
+          ], { note: "唐室借回紇兵平叛，付出財物與政治代價；回紇援軍同時帶來軍紀與補給問題。", next: "n9" }),
+          n9: story("洛陽前線", "敵人的內訌不是勝利的全部", "map", [
+            "安祿山稱帝後，叛軍內部相繼發生殺戮：安慶緒殺安祿山，史思明又殺安慶緒，史朝義其後殺史思明。唐軍得以逐步反擊。",
+            "軍中把這些變化稱為天亡逆賊，你卻提醒將領：叛軍仍有強大騎兵，唐軍也需要防止各路將領爭功。敵人的分裂提供機會，但不能代替自己的準備。"
+          ], {
+            note: "叛軍首領因內訌相繼被殺，削弱叛軍，但唐軍仍經歷多年苦戰才平定亂事。",
+            choices: [
+              choice("利用叛軍分裂，同時嚴明各軍軍紀，穩步收復城池。", "n10", 4, 2, 3, "唐軍把握敵軍內亂，也避免各軍因爭功再次失序。", "exploitDivision"),
+              choice("宣布叛軍大勢已去，讓各路軍隊自行爭取首功。", "n10", -3, -1, 3, "捷報先到，軍令與軍糧卻在混亂中失去次序。")
+            ]
+          }),
+          n10: story("公元 763 年・洛陽", "八年亂事的尾聲", "map", [
+            "史朝義兵敗自殺，安史部將陸續投降。歷時八年的安史之亂名義上結束。你走進洛陽，看到佛寺殘破、市場卻重新有人擺攤。",
+            "前來投降的叛將沒有全部被押走，有些仍保留部隊。朝廷需要他們停止戰爭，也要面對一個問題：和平是否可以用保留地方軍權來交換？"
+          ], { note: "763 年史朝義自殺，安史部將投降，唐廷以招撫與節度使職位安置部分降將。", next: "n11" }),
+          n11: story("戰後戶籍", "和平之後，誰來恢復生活", "map", [
+            "你整理戰後戶籍，發現北方大量人口死亡、逃亡或失去登記。田地荒廢，地方稅收大減。南方相對安定，吸引人口與生產南移。",
+            "有人主張立即削減所有節度使兵權；有人說中央還沒有足夠財力與軍力，若逼得太急，會引發新的叛亂。你需要決定先恢復民生，還是先追求完整的中央控制。"
+          ], {
+            note: "安史之亂嚴重破壞北方經濟，推動人口和經濟重心南移；同時藩鎮與宦官勢力上升。",
+            choices: [
+              choice("先重建戶籍、水利與糧食，透過地方治理逐步恢復中央影響。", "n12", 4, 4, 2, "部分州縣重新有田可耕、有糧可徵，百姓開始相信和平有實效。", "rebuildLocal"),
+              choice("立即剝奪所有藩鎮兵權，以最快速度恢復中央控制。", "n12", -4, -2, 3, "命令很快，地方節度使也立刻開始準備反抗。")
+            ]
+          }),
+          n12: story("藩鎮地圖", "名義上的臣服", "map", [
+            "投降的安史部將被任命為節度使，平亂功臣也掌握地方軍政。地圖上出現一個又一個自行收稅、任官的藩鎮。",
+            "你在地圖前明白，「統一」和「服從」不是同一個概念。唐廷仍是中央，但地方力量已經深深嵌入制度。恢復中央權威需要時間與實力，不是一道命令就能完成。"
+          ], { note: "唐廷招撫安史餘部，短期換來和平，卻形成延續至唐末的藩鎮割據。", next: "n13" }),
+          n13: story("長安晚鐘", "盛唐的背影", "xuanzong", [
+            "你回到長安時，玄宗已死，朝廷由新的皇帝與宦官、宰相競逐權力。藩鎮使者仍來朝貢，皇帝也仍舉行盛大儀式，但中央命令能否執行，要看地方力量是否愿意。",
+            "玄宗晚年的怠政、李林甫排斥異己、楊國忠與安祿山衝突、邊軍強大與中央兵弱，像多條河流同時沖下來，才造成這場災難。"
+          ], {
+            choices: [
+              choice("以制度、人物與民生多重原因記錄安史之亂。", "n14", 4, 4, 3, "你的史稿不替任何人掩飾，也不把所有責任交給一名女性。", "multiCause"),
+              choice("把亂事全部寫成楊貴妃誤國，讓故事簡單動人。", "n14", -4, -2, 1, "故事迎合了傳說，卻把真正的軍政結構藏在宮牆後。")
+            ]
+          }),
+          n14: story("一頁未完成的史稿", "由盛轉衰是甚麼意思", "guo", [
+            "唐朝沒有在安史之亂後立即滅亡，而是再延續一百多年。可是中央權威被藩鎮分割，宦官參與皇位繼承，北方殘破、南方發展，國家結構已與開元時代不同。",
+            "你寫下：「盛唐不是一天消失，而是在許多可以維持現狀的選擇裏，一點一點失去中央的力量。」"
+          ], { note: "安史之亂後唐朝延續至 907 年，但政治、經濟與社會格局已改變。", next: "n15" }),
+          n15: story("長安雨夜", "如何記住安史之亂", "guo", [
+            "你把玄宗、李林甫、楊國忠、安祿山與楊貴妃放回各自的權力位置，也寫下士兵、農民與地方官吏的經歷。沒有人能單獨承擔整個帝國的錯誤。",
+            "你需要為這段歷史選擇最後的解釋：是追求一個可以責備的人，還是承認制度、選擇與戰爭共同造成的後果？"
+          ], {
+            choices: [
+              choice("保存多重因果，說明唐朝延續與衰落並存。", "trueEnd", 4, 4, 3, "你讓後人既能看見盛唐的光，也能看見它熄滅的原因。", "balancedHistory"),
+              choice("只寫「皇帝昏庸、寵妃誤國」八個字。", "badEnd", -3, -2, 1, "答案短了，歷史也薄了。"),
+              choice("假設玄宗早退位，就一定不會爆發亂事。", "whatIfEnd", 0, 1, 1, "你提出另一種可能，但沒有把它宣稱成必然。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "八年亂火，盛唐不再",
+            lead: "安史之亂於 763 年平定；唐朝仍存在，但中央權威和社會經濟遭受長期改變。",
+            body: ["唐室在靈武重建朝廷，聯合郭子儀、李光弼及回紇軍隊反攻。叛軍內訌削弱自身，最終於 763 年結束亂事。", "戰後藩鎮割據、宦官專權、北方殘破與經濟重心南移延續深遠。安史之亂不是唐朝立即滅亡，而是國力與制度由盛轉衰的關鍵。"],
+            history: { verdict: "安史之亂平定後，唐朝延續但中央權威受損，藩鎮與宦官問題加深。", yourChoice: "你追查邊鎮兵額，保存地方民生，並拒絕以單一人物解釋亂事。", actual: "755 年安祿山起兵，763 年史朝義自殺，亂事結束。", facts: ["玄宗晚年怠政，李林甫、楊國忠專權。", "節度使掌邊鎮軍政財權。", "唐軍借回紇兵力平亂。"], impacts: ["藩鎮割據延續至唐末。", "宦官干政加深。", "經濟重心進一步南移。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "把所有責任交給一名女性",
+            lead: "你用最簡單的故事解釋最複雜的危機。",
+            body: ["楊貴妃身處權力核心，但不能單獨解釋玄宗怠政、宰相專權、節度使坐大與中央軍弱。", "若只責怪最容易看見的人，後人便無法從制度中找出防止危機再次發生的方法。"],
+            history: { verdict: "安史之亂由政治、軍事、財政和人物關係共同造成。", yourChoice: "你把亂事簡化為宮廷人物故事。", actual: "安祿山於 755 年叛唐，戰爭持續八年。", facts: ["節度使權力坐大。", "中央軍力不足。"], impacts: ["唐朝中央權威受到長期削弱。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果玄宗及早退位",
+            lead: "你設想一位更早掌權的皇帝會如何處理危機，但制度不會因此自動改變。",
+            body: ["新皇帝仍要面對邊軍、財政與宰相體制；提早退位可能改變決策，也可能令宮廷鬥爭更早爆發。", "史實中的安史之亂確實持續八年，假想不能取代實際結果。"],
+            history: { verdict: "玄宗施政是重要因素，但不是唯一因素。", yourChoice: "你假設換一位皇帝便能避免亂事。", actual: "755 至 763 年安史之亂爆發並持續八年。", facts: ["玄宗晚年失去納諫能力。", "節度使權力過大。"], impacts: ["唐朝由盛轉衰。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "jingkang",
+        grade: "S2",
+        gradeLabel: "中二級",
+        title: "靖康之難",
+        period: "公元 1126—1127 年",
+        dates: "北宋亡國・汴京失守・宋室南渡",
+        minutes: 14,
+        blurb: "宣和畫院的墨香仍在，汴京城外已布滿金軍營帳。你是太學抄書生周硯，將在戰、和、逃生與守城之間，見證北宋最後一年。",
+        role: "汴京太學生「周硯」，虛構見證者",
+        readingHint: "留意宋徽宗的文化成就與政治失誤如何並存。靖康之難不是一次偶然失守，而是外交、軍備、財政與決策長期累積的結果。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          huizong: wiki("Huizong.jpg", "宋徽宗趙佶傳統畫像，佚名畫家。", "公眾領域"),
+          qinzong: wiki("Songqinzong.jpg", "宋欽宗趙桓傳統畫像，佚名畫家。", "公眾領域"),
+          capital: wiki("Northern Song Capital Model.JPG", "北宋汴京城模型，展示城牆、宮城、河道與街巷布局。", "共享署名—相同方式共享 3.0"),
+          kaifeng: wiki("ChinaHenanKaifeng.png", "開封在河南的位置圖，維基共享資源用戶提供。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "汴京陷落，徽、欽二帝被擄，北宋滅亡；南宋在南方延續。", actual: "1127 年金軍攻破汴京，俘擄徽宗、欽宗及大批宗室、官員。趙構在應天府即位，建立南宋。", impact: "靖康之難成為宋人深重的亡國記憶，促進南宋對軍制與外交的長期反省。" },
+          bad: { lead: "你把亡國壓成單一罪人的故事，無法解釋整座城如何失去防守能力。", actual: "北宋末年政治、外交、軍制和決策共同失靈，汴京在兩次圍城後失守。", impact: "歷史責任需要仔細分析，不能只靠道德責備。" },
+          whatif: { lead: "你設想汴京第一次守城後能永久阻止金軍，但歷史結果並非如此。", actual: "北宋未能利用短暫和平改革軍備，金軍第二次南下後攻破汴京。", impact: "備戰能延長抵抗，但不能取代對整體制度的改革。" }
+        },
+        nodes: {
+          n1: story("宣和年間・汴京", "紙上的山河", "huizong", [
+            "太學窗紙新換，墨香與梅花香一同飄入講堂。你正在抄錄徽宗收藏的書畫目錄，紙上山河精緻得像不會被戰火觸及。",
+            "邸報卻記載北方遼國衰落、金國崛起、邊軍缺餉。皇帝寵信蔡京，花石綱從東南運送奇石，沿途百姓要拆屋讓路。你第一次感到，一幅畫中的太平與一座城的安危可以如此不同。"
+          ], {
+            note: "宋徽宗藝術成就突出，但後期奢侈怠政，寵信權臣，朝政與民生受到影響。",
+            choices: [
+              choice("保存邊防、災情和花石綱的邸報，開始整理危機紀錄。", "n2", 4, 3, 2, "你在畫中山水旁記下百姓失去的家園。", "readBoth"),
+              choice("相信汴京繁華足以解決一切，把警報視作地方官誇張。", "n2", -3, -1, 1, "札記只留下盛世，危機仍在紙外增長。")
+            ]
+          }),
+          n2: story("海盟與燕京", "聯金滅遼的風險", "capital", [
+            "北宋與金國約定夾擊遼國，希望收復燕雲十六州。使者在兩國之間來回，宋軍卻在實戰中暴露出裝備與指揮問題。",
+            "金軍在滅遼後看清宋軍虛弱，開始要求更多土地與財物。朝廷仍以為可以用外交討價還價，卻沒有建立足以保障承諾的軍力。"
+          ], { note: "北宋聯金滅遼，但其軍事弱點被金國看清，宋金衝突隨之加深。", next: "n3" }),
+          n3: story("1125 年冬・汴京", "新皇帝接手的危城", "huizong", [
+            "金軍南下，宋徽宗匆忙禪位給太子趙桓，是為宋欽宗。徽宗準備離京，朝廷卻沒有完整的守城計畫。",
+            "你被派去抄錄守軍名冊，發現禁軍人數與實際不符，弓弦因久放而脆裂。新皇帝即位並未自動修補舊制度，城牆需要的是糧食、軍官與明確命令。"
+          ], {
+            note: "金軍南下後徽宗禪位欽宗。北宋面對戰和不定、軍備不足與財政困難。",
+            choices: [
+              choice("把真實兵籍、軍械和糧倉數字呈交守城官員。", "n4", 4, 3, 3, "假數字被刪去，守城者終於能估算真正的缺口。", "trueNumbers"),
+              choice("照舊呈交漂亮名冊，避免皇帝在第一日便知道城防不足。", "n4", -3, -2, 1, "名冊完整，城牆上的空缺仍然存在。")
+            ]
+          }),
+          n4: story("第一次汴京保衛戰", "軍民把石塊搬上城牆", "capital", [
+            "金軍抵達汴京，李綱等官員組織軍民守城。百姓送來石塊、木材與糧食，太學生協助運送軍械。金軍攻城沒有立即成功，改而提出割地與巨額賠款。",
+            "朝廷再次在戰與和之間爭論。你看到城內銀器與布匹被徵收，百姓已經沒有更多可交。和議不是沒有代價，只是付出代價的人往往不能參加談判。"
+          ], { note: "李綱等組織汴京防禦，金軍一度退兵，但宋廷付出大量財物與割地承諾。", next: "n5" }),
+          n5: story("金軍暫退之後", "和平窗口如何使用", "capital", [
+            "金軍暫時退去，汴京沒有恢復真正的安全。朝廷恢復舊日黨爭，軍民要求修城，工料卻被調去修宮殿。",
+            "守軍說木料未到，百姓說稅已交完。你明白和平窗口很短，若沒有立即整軍、核糧與修城，下一次圍城只會更危險。"
+          ], {
+            note: "第一次圍城後，北宋未從根本改善軍備、財政與政治協調，金軍於 1126 年再南下。",
+            choices: [
+              choice("督促朝廷利用短暫和平修城、核糧與組織民兵。", "n6", 4, 3, 3, "新的城防名冊開始形成，至少每一段城牆都有負責人。", "repairDefense"),
+              choice("相信和議已結束戰爭，把資源撥回宮廷修繕。", "n6", -4, -2, 1, "宮牆煥然一新，汴京的城門卻仍在等待下一次箭雨。")
+            ]
+          }),
+          n6: story("第二次圍城前", "人心也是城防", "capital", [
+            "金軍再南下的消息傳來，汴京糧價急升。你協助各坊組織守城隊，要求軍民公開每日糧食配額。有人問為何士兵先領，你請守城將領當眾說明，讓百姓知道糧食沒有被暗中分走。",
+            "太學生輪流抄寫軍令與救護指引。一名老婦把僅餘的米交給守軍，只要求記下她的名字。守城不是城牆獨自完成的工作，也需要每個人相信城內還有明天。"
+          ], { note: "第二次圍城時，汴京面臨糧食短缺、援軍不足與朝廷戰和反覆。", next: "n7" }),
+          n7: story("金營中的康王", "王子、人質與皇位", "qinzong", [
+            "宋廷派康王趙構等人前往金營議和。趙構曾作為人質，其後被釋回。你在太學聽到使者回報，只知道「康王還」，不知道他在營中經歷了什麼。",
+            "第二次圍城前，趙構受命離開汴京組織勤王軍。你當時不知道，這次離開會使他成為北宋滅亡後唯一能延續宋室的政治中心。"
+          ], {
+            note: "康王趙構曾在宋金議和期間入金營，其後獲釋。1127 年北宋亡後，他在應天府即位。",
+            choices: [
+              choice("支持保留宗室與軍政聯絡，為最壞情況準備南方接續。", "n8", 4, 3, 2, "你協助抄寫宗室與州縣聯絡，準備城破後仍能維持政令。", "preserveLink"),
+              choice("認為皇帝仍在城內，不必考慮南遷或替代朝廷。", "n8", -3, -1, 1, "你拒絕思考失敗，失敗卻沒有因此停止。")
+            ]
+          }),
+          n8: story("1127 年・汴京", "城門失守", "capital", [
+            "金軍第二次圍城，宋軍糧盡援絕，城牆某段被攻破。你從太學趕往宣德門，看到官員抱着文書奔跑，宮人從側門離開。",
+            "守軍並非沒有抵抗，但各段城牆缺乏統一指揮，百姓也無法確定朝廷會不會保護他們。你奉命搶救太學典籍，決定同時帶走百姓名冊。"
+          ], { note: "1127 年金軍攻破汴京，北宋滅亡。城破後金軍索取大量財物並俘擄大批宗室、官員。", next: "n9" }),
+          n9: story("城破之後", "亡國不是一個瞬間", "qinzong", [
+            "金軍控制城門，向宋廷索取金銀、絹帛和人口。你協助登記被徵收的物資，發現名冊上既有人名，也有器物、牲畜與書籍。",
+            "徽宗、欽宗及大量宗室、后妃、官員被金軍擄走，史稱靖康之難。亡國不是城門打開的一刻，它在每一個被迫離開家園的人身上持續發生。"
+          ], {
+            note: "靖康之難中，徽、欽二帝及大量宗室、官員、工匠和百姓被俘北去。",
+            inline: [{ after: 1, image: "capital", caption: "北宋汴京城模型：從城牆、河道與街巷布局理解靖康之難的空間環境。" }],
+            next: "n10"
+          }),
+          n10: story("應天府・新朝", "北方失守後", "qinzong", [
+            "趙構在應天府即位，是為宋高宗，改元建炎。你隨着人群南下，抵達臨時朝廷時，官員正在爭論都城設在哪裡。",
+            "有人主張立即北伐，有人認為新朝廷應先保住江南。你帶來汴京守城名冊，許多名字已失散，也有一些將士在南下途中找到新朝廷。"
+          ], { note: "1127 年趙構在應天府即位，南宋開始，面對金軍繼續南下與內部戰和爭議。", next: "n11" }),
+          n11: story("長江防線", "新朝廷能保住甚麼", "kaifeng", [
+            "南宋逐步南遷，長江成為主要防線。北方移民帶來技術與文化，也令南方糧食、土地和住屋承受壓力。",
+            "你在地方整理流民與軍糧，明白新朝廷若不能安置百姓，也難以建立長期抵抗的基礎。"
+          ], {
+            note: "南宋建立後，北方人口南遷，南方經濟與文化繼續發展。",
+            choices: [
+              choice("先建立南方財政、軍隊與流民安置，保存日後恢復的基礎。", "n12", 4, 4, 3, "新的州縣開始有田、有糧、有守軍，南方朝廷站穩腳步。", "buildSouth"),
+              choice("立即號召全面北伐，不考慮新朝廷尚未穩定的財政。", "n12", -3, -1, 3, "號召鼓舞人心，軍餉卻仍在路上。")
+            ]
+          }),
+          n12: story("臨安・戰和之爭", "記得傷痛，也要判斷現實", "qinzong", [
+            "主戰者要求收復中原，主和者說江南財政脆弱。你手里的地方報告顯示，前線要糧，百姓要安定，兩者都不能只靠口號。",
+            "岳飛等將領在抗金戰事中取得勝利，朝廷卻擔心軍權與財政。戰爭與和平都離不開政治選擇。"
+          ], {
+            note: "南宋初年主戰與主和反覆角力，岳飛其後被召還並遇害，宋金簽訂和議。",
+            choices: [
+              choice("先整合軍政民生，保留抵抗能力，避免無準備的報復。", "n13", 4, 4, 3, "你讓亡國記憶進入政策，而不是只變成口號。", "strategicResistance"),
+              choice("接受任何代價的議和，假設不打仗便等於安全。", "n13", -4, -2, 1, "城內暫時沒有戰鼓，危機卻從另一扇門進入。")
+            ]
+          }),
+          n13: story("長江新城", "把北方帶到南方", "kaifeng", [
+            "你協助安置北方移民，劃出田地、修建學校，讓南北工匠與農民交換技術。有人稱這裡只是臨時避難所，你卻在名冊上寫下「新家」。",
+            "軍營送來受過戰亂的年輕人，他們想報仇，也害怕再次失去家園。抵抗不只是前線衝鋒，也包含讓社會能長期承受壓力。"
+          ], { note: "南宋在南方延續，北方人口南遷推動區域經濟與文化發展。", next: "n14" }),
+          n14: story("臨安書院", "如何講述亡國", "huizong", [
+            "學生問你：宋徽宗的書畫如此出色，為何仍會亡國？你讓他們先讀花石綱、聯金滅遼與兩次汴京圍城，再讀藝術成就。",
+            "你告訴他們，文化成就與政治失誤可以同時存在；要求他們分清歷史事實與後世忠義故事，不要只記住「靖康恥」四個字。"
+          ], {
+            note: "靖康之難是北宋亡國與南宋建立的關鍵，也是後世文學與政治記憶的重要來源。",
+            choices: [
+              choice("讓學生同時理解文化、政策、戰爭與平民經歷。", "n15", 4, 4, 3, "你把複雜交給下一代，也把判斷責任交給他們。", "teachComplexity"),
+              choice("只講忠臣與奸臣，省略外交、軍制與決策問題。", "n15", -3, -1, 1, "故事容易背誦，卻不能解釋城牆為何倒下。")
+            ]
+          }),
+          n15: story("靖康之後", "歷史最後一頁不是仇恨", "qinzong", [
+            "北宋滅亡後，南宋延續一百多年。靖康之難沒有使宋文化消失，卻令宋人長期背負失去北方的記憶。",
+            "你寫下最後問題：一個國家如何記得傷痛，又不被傷痛奪去判斷？"
+          ], {
+            choices: [
+              choice("保存多重原因與平民證言，完成歷史反省。", "trueEnd", 4, 4, 3, "你讓記憶同時具有感情、證據與判斷。", "completeJingkang"),
+              choice("把所有責任歸咎徽宗一人，忽略其他制度因素。", "badEnd", -3, -1, 1, "一個名字承擔太多，其餘原因因此逃走。"),
+              choice("假設第一次守城成功後，北宋必定永遠安全。", "whatIfEnd", 0, 1, 1, "你打開一條可能的路，也承認它不是歷史。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "城門既破，宋室南渡",
+            lead: "汴京陷落，徽、欽二帝被擄，北宋滅亡；趙構建立南宋。",
+            body: ["北宋末年徽宗怠政、蔡京專權，聯金滅遼又暴露軍力弱點。第一次圍城後未改善軍備，金軍再南下，汴京終於失守。", "趙構在應天府即位，南宋與金長期對峙。北方人口南遷，南方經濟文化繼續發展；靖康之難成為宋人深刻的亡國記憶。"],
+            history: { verdict: "靖康之難是北宋政治、外交、軍制和決策共同失敗的結果。", yourChoice: "你面對真實軍情，利用和平窗口備戰，並保存多重史料。", actual: "1127 年金軍攻破汴京，徽、欽二帝被擄，北宋滅亡。", facts: ["徽宗後期怠政，朝政敗壞。", "聯金滅遼暴露宋軍虛弱。", "趙構在應天府建立南宋。"], impacts: ["南宋與金長期對峙。", "北方人口南遷促進南方發展。", "靖康之難成為重要的亡國記憶。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "一個皇帝不能解釋一座城的失敗",
+            lead: "你把亡國縮成單一罪人，卻沒有看見制度整體失靈。",
+            body: ["徽宗有責任，但欽宗、朝臣、軍制、外交與財政同樣影響結果。", "只用道德責備取代分析，後人便無法從靖康之難學到有用的教訓。"],
+            history: { verdict: "靖康之難涉及多重政治、軍事與外交因素。", yourChoice: "你以單一人物道德取代制度分析。", actual: "1127 年汴京失守，北宋滅亡。", facts: ["第一次圍城後未有效改革。", "第二次圍城使汴京陷落。"], impacts: ["宋室南渡。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果第一次守城後真的整軍",
+            lead: "你設想北宋能利用和平窗口重建防務，但歷史沒有沿此發展。",
+            body: ["更充分的準備或可延長抵抗，卻不能保證消除金軍壓力與內部政治問題。", "史實中的汴京仍在第二次圍城後失守。"],
+            history: { verdict: "備戰重要，但靖康之難是多項弱點共同造成。", yourChoice: "你假設重整軍備便能永久阻止金軍。", actual: "1127 年汴京失守，北宋滅亡。", facts: ["第一次圍城後金軍暫退。", "宋廷未完成根本改革。"], impacts: ["南宋建立。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "ming-unification",
+        grade: "S2",
+        gradeLabel: "中二級",
+        title: "明太祖統一全國",
+        period: "公元 1351—1382 年",
+        dates: "元末群雄・明太祖建國・中央集權",
+        minutes: 14,
+        blurb: "黃河決堤、紙鈔貶值，天下群雄並起。你是一名從饑荒中逃出的糧吏沈稼，將跟隨朱元璋由應天走向北伐，見證統一功業如何與高度皇權同時形成。",
+        role: "應天糧吏「沈稼」，虛構見證者",
+        readingHint: "把統一與治國分開思考。朱元璋結束元末割據、恢復生產，也以廢相、錦衣衛與大獄加強皇權。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          emperor: wiki("A Seated Portrait of Ming Emperor Taizu.jpg", "明太祖朱元璋坐像，佚名宮廷畫師。", "公眾領域"),
+          statue: wiki("Statue of Emperor Hongwu.jpg", "明太祖朱元璋紀念像，維基共享資源用戶拍攝。", "共享署名—相同方式共享 4.0"),
+          robe: wiki("Left-facing dragon pattern on Hongwu Emperor's imperial robe.png", "明太祖御袍上的龍紋，維基共享資源用戶整理。", "共享署名—相同方式共享 4.0"),
+          poyang: wiki("明祖鄱陽滅友諒（廿一史通俗衍義）.jpg", "《明祖鄱陽滅友諒》歷史插圖，出自《廿一史通俗衍義》。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "朱元璋結束元末群雄割據，建立明朝；社會逐步恢復，皇權也高度集中。", actual: "1368 年朱元璋稱帝，明軍北伐攻占大都。明太祖其後平定各地、恢復生產，並廢相、設錦衣衛與嚴刑整肅。", impact: "明朝重建統一與戶籍賦役制度，但高度集權削弱制度制衡，影響深遠。" },
+          bad: { lead: "你只看見開國者的光，沒有記錄專制統治的陰影。", actual: "明太祖統一有功，同時以廢相、錦衣衛與大獄強化皇權。", impact: "評價歷史人物需要同時考慮功業與代價。" },
+          whatif: { lead: "你保住了根據地，卻把沒有發生的制度選擇寫成必然。", actual: "朱元璋最終建立明朝並推行高度集權措施。", impact: "假想可以幫助分析制度，但不能取代史實。" }
+        },
+        nodes: {
+          n1: story("元末・黃河以南", "河水沖毀的不只是堤岸", "robe", [
+            "黃河決堤後，田地變成泥灘，朝廷卻仍徵調民夫治河。官倉的米層層轉手，最後只剩發霉碎粒；紙鈔不斷貶值，百姓開始逃亡。",
+            "紅巾軍起事後，各地群雄並起。你帶着幾袋種糧和一本流民名冊離開村莊，決定加入糧務隊：先讓人吃上飯，再談天下屬於誰。"
+          ], {
+            note: "元末黃河泛濫、賦役沉重、紙鈔貶值與吏治敗壞，造成大規模民變和群雄割據。",
+            choices: [
+              choice("加入糧務隊，先安頓流民、恢復耕種，再選擇效忠對象。", "n2", 4, 4, 2, "你把有限的種糧分成軍用、民用與下一季播種三份。", "feedPeople"),
+              choice("留在元朝衙門，相信舊秩序終會恢復。", "n2", -3, -2, 1, "衙門仍在，治安卻一天比一天差。")
+            ]
+          }),
+          n2: story("濠州軍營", "孤兒如何建立自己的隊伍", "statue", [
+            "你第一次見到朱元璋時，他只是紅巾軍郭子興麾下的一名將領。軍中說他出身貧苦，曾為僧人，記憶力強，也對軍糧與軍紀十分嚴格。",
+            "朱元璋要求將士不得掠奪百姓，並派人整理屯田。你被分配記糧，發現他會親自查問一支部隊一天吃多少米。這支軍隊仍不強大，卻開始有制度。"
+          ], { note: "朱元璋投奔郭子興後逐步建立勢力，重視屯田、糧食與軍紀。", next: "n3" }),
+          n3: story("1356 年・集慶", "一座城能養多少兵", "emperor", [
+            "朱元璋攻取集慶，改名應天，作為根據地。周圍仍有陳友諒、張士誠等勢力，長江運輸方便，也代表戰線可能隨時伸展。",
+            "你清點城中糧倉與戶籍，發現戰亂令田地失登記。朱元璋命人修城、屯田、招攬讀書人。軍中有人主張立即擴張，他卻先問應天能養多少兵。"
+          ], {
+            note: "朱元璋以應天為根據地，重視屯田、戶籍與人才，不急於一次決戰。",
+            choices: [
+              choice("先整理屯田與戶籍，讓根據地能長期供養軍隊。", "n4", 4, 4, 3, "第一批荒田重新有人耕種，士兵也知道糧食不是無限量。", "stabilizeBase"),
+              choice("抽走全部壯丁南征北戰，趁敵未強先擴地。", "n4", -4, -2, 3, "兵員增加，田裏卻少了手，下一季糧冊開始變薄。")
+            ]
+          }),
+          n4: story("鄱陽湖戰雲", "巨船不一定帶來勝利", "poyang", [
+            "陳友諒率強大水軍順江而下，戰艦高大如樓。朱元璋的船隊較小，卻熟悉水道，也能利用火攻與分隊包抄。",
+            "你準備火具與糧食，看到將士在湖口反覆演練。你明白決戰不會只因一方船多便結束，補給、轉向速度和水手經驗都可能決定勝負。"
+          ], {
+            note: "1363 年朱元璋與陳友諒在鄱陽湖決戰，明軍最終憑火攻與機動戰術取勝。",
+            inline: [{ after: 1, image: "poyang", caption: "《明祖鄱陽滅友諒》：後世史書對鄱陽湖決戰的圖像化敘述。" }],
+            next: "n5"
+          }),
+          n5: story("應天軍議", "先南還是先北", "emperor", [
+            "擊敗陳友諒後，朱元璋控制長江中下游。張士誠仍據平江，方國珍掌握浙東，元朝在北方衰弱卻仍占據大都。",
+            "將領們意見分裂。你呈上糧冊，指出南方水路便於運輸，但張士誠經營多年；北方民心不穩，距離卻遙遠。朱元璋決定先問後方能否支持，再問北伐能走多遠。"
+          ], {
+            note: "朱元璋先平定南方群雄，再集中力量北伐，避免後方未穩時多線作戰。",
+            choices: [
+              choice("先平定南方群雄，建立可靠糧道與後方，再北伐。", "n6", 4, 3, 3, "北伐時間推遲，勝利的路卻變得可以計算。", "secureSouth"),
+              choice("立即全軍北伐，趁元廷衰弱奪取大都。", "n6", -4, -2, 4, "北伐軍旗先行，南方未平城池仍在背後觀察。")
+            ]
+          }),
+          n6: story("平江圍城", "得城之後", "statue", [
+            "明軍圍攻張士誠據守的平江。城內糧食耗盡，城外士兵也疲憊。城破後，軍中有人想報復多年血戰。",
+            "朱元璋命軍隊不得任意屠殺，你協助登記降卒與百姓。有人問為何不嚴懲所有抵抗者，你說若每個曾拿武器的人都不能回家，下一座城只會更堅決。"
+          ], { note: "朱元璋於 1367 年平定張士誠，進一步控制江南，為北伐準備後方。", next: "n7" }),
+          n7: story("1368 年・應天", "從糧倉到皇位", "emperor", [
+            "朱元璋在應天稱帝，國號明，年號洪武。典禮鼓樂齊鳴，你站在糧務官員隊列裏，想起軍營中為一碗粥爭執的夜晚。",
+            "新朝以「驅逐胡元，恢復中華」為北伐號召，命徐達、常遇春北上。你抄下登基文書，知道皇帝之後仍需有人修水利、登記戶口，讓百姓不再害怕敲門聲。"
+          ], {
+            note: "1368 年朱元璋在應天稱帝，國號明，派軍北伐。",
+            choices: [
+              choice("要求北伐軍守軍紀，並由地方官恢復糧食、戶籍與道路。", "n8", 4, 4, 3, "軍旗向前，後方縣衙也重新點亮燈火。", "civilizeConquest"),
+              choice("准許將士沿途取財，以獎勵多年苦戰。", "n8", -4, -3, 2, "軍心振奮，百姓卻開始把糧食藏起來。")
+            ]
+          }),
+          n8: story("北伐途中", "山河不是空白地圖", "robe", [
+            "明軍沿途遇到開城歸附，也遇到抵抗。你負責接收糧倉與文書，看到舊元官吏既害怕失去職位，又熟悉地方河道與田畝。",
+            "新朝需要人才，也擔心舊臣不忠。你在山東找來一名地方小吏說明水利，讓他協助向百姓公布新禁令。"
+          ], { note: "明軍北伐需同時處理軍事推進、地方行政與舊官員轉換。", next: "n9" }),
+          n9: story("1368 年・大都", "元帝北去", "emperor", [
+            "明軍逼近大都，元順帝帶着部分宗室與軍隊北逃。徐達入城，元朝在全國的核心統治結束。",
+            "你進入宮城，看到的不是最後一場決戰，而是一座匆忙空出的都城。北方仍有元朝殘餘，四川、雲南等地也未完全歸附。"
+          ], { note: "明軍於 1368 年攻占大都，元順帝北逃；明朝仍需多年整合全國。", next: "n10" }),
+          n10: story("北方與西南", "統一是漫長的收尾", "robe", [
+            "明朝建立後仍持續派兵平定各地。你在兵部核算糧餉，發現戰爭沒有因登基典禮停止。",
+            "部分地方願意歸附，部分必須戰鬥。朱元璋要求恢復農業、整頓戶籍，同時將新制度推行到新控制地區。"
+          ], {
+            note: "明太祖建國後仍繼續平定各地，統一經過多年軍事與行政整合。",
+            choices: [
+              choice("保留熟悉地方的治理人才，逐步推行新制。", "n11", 4, 4, 2, "地方有人能讀懂中央文書，中央也知道哪些制度不能一刀切。", "integrateLocals"),
+              choice("把所有舊元官吏一律驅逐，只留絕對忠誠者。", "n11", -3, -2, 3, "衙門空了出來，熟悉田畝與水利的人也被趕走。")
+            ]
+          }),
+          n11: story("洪武初年・戶籍", "數清一個王朝", "emperor", [
+            "朝廷鼓勵墾荒、興修水利，整理戶籍與賦役。你參與登記田地與丁口，發現豪強隱匿田地，普通農民害怕重稅。",
+            "一名縣官建議把無主田分給流民，另一人擔心地方豪族反抗。你決定把每塊爭議土地的來源與現耕者寫清楚。"
+          ], { note: "明初恢復墾荒、水利與戶籍賦役，社會經濟逐步恢復。", next: "n12" }),
+          n12: story("洪武十三年・胡惟庸案", "權力集中之後", "statue", [
+            "丞相胡惟庸被指謀反，朱元璋廢除丞相，由皇帝直接領導六部。朝中人人自危，錦衣衛巡查的消息令官員不敢議論政事。",
+            "廢相提高皇帝控制力，也令政務全部集中到一人案前。你在文書房看到堆積奏摺，知道再勤奮的皇帝也無法取代制度上的分工。"
+          ], {
+            note: "1380 年胡惟庸案後，明太祖廢除丞相，六部直接向皇帝負責，並以錦衣衛與嚴刑加強控制。",
+            choices: [
+              choice("支持建立清楚的六部協調與諫議程序，避免政務只靠皇帝一人。", "n13", 4, 3, 3, "試行後奏章數減少，重大問題至少有了明確審閱路線。", "institutionalBalance"),
+              choice("認為皇帝既已集權，任何限制皇權的建議都是不忠。", "n13", -4, -2, 1, "反對聲音消失，制度卻沒有變得更聰明。")
+            ]
+          }),
+          n13: story("洪武晚年・午門", "功績與陰影", "emperor", [
+            "明太祖恢復農業、重建戶籍、結束割據；另一方面，他屢興大獄，誅殺功臣，以廷杖和錦衣衛壓制官員。",
+            "有人問你如何評價他。你想到饑荒、軍糧與城防，也想到在恐懼中沉默的朝臣。功績不能抹去殺戮，殺戮也不能取消秩序恢復。"
+          ], {
+            note: "明太祖統治同時包含統一、社會恢復與高度君主集權。",
+            choices: [
+              choice("同時記錄統一功業、社會恢復與皇權過度的代價。", "n14", 4, 4, 3, "你讓後人看見光與影，而不只選其中一面。", "balancedMing"),
+              choice("因統一有功，便不再討論廢相、大獄與特務政治。", "n14", -4, -2, 1, "卷宗只剩功績，明代政治的另一半卻被留在門外。")
+            ]
+          }),
+          n14: story("一頁明史", "從應天糧倉到帝國中心", "emperor", [
+            "你翻回故事開頭，看到記錄流民的薄冊。朱元璋從紅巾軍中崛起，先取應天，再平陳友諒、張士誠，於 1368 年建明。",
+            "他結束元末割據，也建立高度集權的官僚體系。統一帶來秩序，專制帶來新的風險。"
+          ], { note: "明太祖統一全國是明朝建立的關鍵，其集權措施同時帶來長期制度影響。", next: "n15" }),
+          n15: story("明初之後", "一個王朝如何被記住", "emperor", [
+            "你在卷末寫下朱元璋的功與過。統一不是終點，而是決定誰有權制定規則的開始。",
+            "現在，你要為明太祖與明初政治寫下最後判斷。"
+          ], {
+            choices: [
+              choice("承認統一與重建的貢獻，同時指出集權的歷史代價。", "trueEnd", 4, 4, 3, "你完成了不只屬於勝者的歷史。", "fullMing"),
+              choice("把明朝建立寫成純粹英雄史，忽略功臣與百姓的代價。", "badEnd", -3, -1, 1, "英雄站在光裏，其他人的名字再次落進陰影。"),
+              choice("假設沒有廢相，明代一定不會出現宦官專權。", "whatIfEnd", 0, 1, 1, "你提出另一個制度可能，也承認結果不是必然。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "天下重歸一統，皇權走向極盛",
+            lead: "朱元璋建立明朝，結束元末割據；社會恢復與君主集權同時出現。",
+            body: ["朱元璋由應天根據地起步，先平定南方群雄，再於 1368 年北伐推翻元朝核心統治。明初重建戶籍、墾荒與水利，社會逐步恢復。", "同時，明太祖廢相、以錦衣衛監察臣民並屢興大獄，使皇權高度集中。統一與專制是同一段歷史的兩面。"],
+            history: { verdict: "明太祖結束元末割據並建立明朝，其統治同時帶來社會恢復與高度集權。", yourChoice: "你重視根據地與民心，也追問皇權集中的制度後果。", actual: "1368 年朱元璋稱帝，明軍北伐攻占大都，元順帝北逃。", facts: ["紅巾軍起事後群雄並立。", "朱元璋先平定陳友諒、張士誠。", "明太祖廢相並設立錦衣衛。"], impacts: ["明朝恢復全國統一。", "明初社會經濟逐步恢復。", "君主專權與特務政治留下長期影響。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "只看見開國者的光",
+            lead: "你完成了統一故事，卻沒有記錄權力集中造成的代價。",
+            body: ["明太祖結束亂世、恢復生產，也以嚴刑、錦衣衛與大獄壓制臣民。", "若只讚美開國功績，後人便無法看見制度制衡的重要。"],
+            history: { verdict: "評價明太祖需要同時考慮統一功業與專制代價。", yourChoice: "你刪去了政治壓迫的部分。", actual: "明太祖建立明朝並推行高度集權統治。", facts: ["明初恢復農業與戶籍。", "廢相後六部直接向皇帝負責。"], impacts: ["明代皇權高度集中。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果丞相制度被保留",
+            lead: "你設想另一種明代制度，但制度變化不會自動消除所有問題。",
+            body: ["保留丞相或可改善政務分工，卻也可能出現宰相專權。宦官問題還涉及皇帝信任與禁軍制度。", "史實中的明太祖在胡惟庸案後廢相，這是不能改寫的結果。"],
+            history: { verdict: "廢相是明太祖集權的重要措施，但政治結果由多項制度共同造成。", yourChoice: "你假設保留丞相便能避免宦官專權。", actual: "明朝在洪武年間廢除丞相。", facts: ["胡惟庸案後六部直接對皇帝負責。"], impacts: ["明初皇權高度集中。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "opium-war",
+        grade: "S2",
+        gradeLabel: "中二級",
+        title: "第一次鴉片戰爭",
+        period: "公元 1839—1842 年",
+        dates: "虎門銷煙・海防危機・南京條約",
+        minutes: 14,
+        blurb: "廣州十三行的茶葉與白銀之間，鴉片正改變整個帝國的財政與民生。你是林則徐隨行的文書陳澍，將由虎門銷煙走向海防、談判與南京條約。",
+        role: "廣東查禁鴉片隨員「陳澍」，虛構見證者",
+        readingHint: "把鴉片的社會禍害、英國的武力擴張與清朝海防外交弱點放在一起理解。南京條約與後續補充條約須分清楚。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          destroy: wiki("Destruction of opium in 1839.jpg", "1839 年虎門銷煙的景象，清代畫家作品。", "公眾領域"),
+          model: wiki("Model Showing Destruction of Opium, 1839 (10097957635).jpg", "虎門銷煙場景模型，維基共享資源用戶拍攝。", "公共領域貢獻"),
+          pool: wiki("Opium Destruction Pool.JPG", "虎門銷煙池遺址，維基共享資源用戶拍攝。", "共享署名 2.0"),
+          lin: wiki("Portrait of Lin Zexu.jpeg", "林則徐肖像，林官繪。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "清廷在鴉片戰爭中戰敗，簽訂《南京條約》，中國開始被納入不平等條約體系。", actual: "1842 年清廷簽訂《南京條約》，割讓香港島、賠款並開放五口通商；其後補充條約擴大領事裁判權與最惠國待遇。", impact: "中國主權、關稅與對外貿易格局受到長期衝擊，也促使部分士人開始關注世界與改革。" },
+          bad: { lead: "你把戰爭責任簡化為禁煙，忽略鴉片禍害、英國擴張與清廷弱點。", actual: "第一次鴉片戰爭由鴉片貿易爭議、英國武力和清朝制度弱點共同造成。", impact: "單一歸因無法幫助我們理解近代條約體系。" },
+          whatif: { lead: "你設想另一種海防結果，但歷史已沿戰敗與條約的方向發展。", actual: "清廷最終於 1842 年簽訂《南京條約》。", impact: "假想不能取代真實結果，但可幫助分析準備與制度的重要性。" }
+        },
+        nodes: {
+          n1: story("1838 年・廣州", "白銀流向海口", "destroy", [
+            "你第一次走進十三行，嗅到的是茶香，行商談的卻是銀價。外國商船帶來棉布與鴉片，運走茶葉、絲綢和白銀。銀錢比價一年比一年高。",
+            "清朝限制對外貿易，外商主要經公行交易。英國以鴉片平衡茶葉逆差，地方官雖有禁令，卻常因腐敗與利益而放鬆執行。你在碼頭看到一箱箱「洋藥」被搬入倉庫。"
+          ], {
+            note: "清朝限制對外貿易，鴉片大量輸入造成白銀外流、成癮與社會問題。",
+            choices: [
+              choice("記錄鴉片箱數、白銀流向與吸食者遭遇，為禁煙提供證據。", "n2", 4, 4, 2, "你把貿易帳與百姓的健康寫進同一份報告。", "documentOpium"),
+              choice("把鴉片收入視作地方財政，不必得罪有勢力的行商。", "n2", -4, -3, 1, "帳冊平衡了，百姓的健康卻沒有被記入成本。")
+            ]
+          }),
+          n2: story("廣州城內", "煙燈後面的家庭", "destroy", [
+            "你隨官員巡查煙館，看到挑夫用最後的工錢換一口煙，也看到士紳耗盡家產。煙販聲稱鴉片能提神止痛，卻不談戒斷的痛苦。",
+            "一名老婦拉着官員，問禁煙後她的兒子該怎樣生活。你明白單靠逮捕不能解決成癮與貧困，但繼續放任也只會令更多人走上同一條路。"
+          ], { note: "鴉片成癮造成健康、家庭與社會問題，清朝多次禁煙但執行不力。", next: "n3" }),
+          n3: story("1839 年・虎門", "兩萬箱毒物化為海水", "lin", [
+            "林則徐到廣東後包圍商館，要求外商交出鴉片。你核對箱數與封條，第一次看到如此龐大的違禁品堆在眼前。",
+            "1839 年 6 月，林則徐在虎門挖池，以海水和石灰分解鴉片。百姓歡呼，外國商人和領事則記錄這一幕。你知道禁煙得到道義支持，也知道英國不會因此放棄打開中國市場的目標。"
+          ], {
+            quote: { text: "若鴉片一日未絕，本大臣一日不回。", by: "林則徐查禁鴉片期間表達決心的名言" },
+            inline: [{ after: 1, image: "lin", caption: "林則徐肖像，林官繪；禁煙與海防改革的歷史人物圖像。" }],
+            choices: [
+              choice("支持禁煙，同時清查炮台、水師與糧餉，準備外交衝突。", "n4", 4, 4, 3, "禁煙決心與海防清冊同時送到總督衙門。", "prepareCoast"),
+              choice("只相信銷煙能解決問題，不必加強海防。", "n4", -4, -2, 1, "銷煙的煙霧散去，海面卻開始出現陌生戰艦。")
+            ]
+          }),
+          n4: story("1839 年冬・珠江口", "一封來自倫敦的命令", "model", [
+            "英商把鴉片被毀的消息送回本國，要求政府以武力保護貿易。清廷則把英國視為邊遠商夷，沒有完整掌握其海軍與外交制度。",
+            "你整理沿海軍報，發現炮台年久失修、火藥受潮。林則徐開始購買外國圖書和船炮資料，但改革才剛起步，英國遠征軍已在路上。"
+          ], { note: "虎門銷煙後，英國以貿易、外交與武力回應；清廷海防和外交準備不足。", next: "n5" }),
+          n5: story("1840 年・定海", "海軍差距", "pool", [
+            "英國遠征軍抵達中國，蒸氣船拖着帆船航行，火炮射程遠超清軍水師。英軍攻占定海，地方官員各自向朝廷稟報。",
+            "你在驛站收到互相矛盾的戰報。有人主張立即決戰，有人希望談判。你只知道若不整理可靠軍情，決策者便會在恐懼和幻想之間來回。"
+          ], {
+            note: "1840 年英軍擴大侵華，清廷海防、武器與指揮體系處於劣勢。",
+            choices: [
+              choice("集中防守關鍵港口與長江航運，整理可靠軍報。", "n6", 4, 3, 3, "你放棄同時守住所有口岸的幻想，把力量放在真正會影響戰局的節點。", "focusDefense"),
+              choice("把兵力分散到每個海口，阻止英軍在任何一處登陸。", "n6", -4, -1, 2, "每處都有人守，卻沒有一處有足夠力量。")
+            ]
+          }),
+          n6: story("1841 年・廣州", "戰爭、談判與撤職", "lin", [
+            "英軍沿海北上又南下，清廷戰和不定。林則徐其後被撤職，琦善被派往廣東談判。你整理林則徐留下的海防資料，發現許多警告都沒有被及時採用。",
+            "香港島被英軍佔領，成為進一步談判的據點。你第一次明白，港口、航道與海權會成為戰爭結束後仍然長久存在的問題。"
+          ], { note: "英軍於 1841 年佔領香港島；清廷戰和反覆，地方防守與中央決策難以協調。", next: "n7" }),
+          n7: story("1842 年・長江", "艦隊直逼南京", "pool", [
+            "英軍沿長江進攻，鎮江等地失守。長江連接江南財賦與內陸糧運，南京已受到直接威脅。",
+            "你在城內看到軍民搬石堵門，也知道炮台與艦炮差距難以用勇氣補足。清廷代表開始準備議和，而談判籌碼正隨每一座失守城市減少。"
+          ], {
+            note: "英軍利用海軍機動性沿長江施壓，清廷在南京議和。",
+            choices: [
+              choice("先保存可查證的軍情與條約資料，準備在談判中減少損失。", "n8", 4, 3, 3, "你把港口、關稅與軍費數字整理成冊，不再只靠傳聞談判。", "treatyAccuracy"),
+              choice("拒絕核對條約內容，認為所有外國要求都只是虛張聲勢。", "n8", -4, -2, 1, "談判桌上的文件卻不會因拒絕閱讀而消失。")
+            ]
+          }),
+          n8: story("1842 年 8 月・南京", "五口通商", "pool", [
+            "《南京條約》簽訂，清朝割讓香港島，賠款二千一百萬元，開放廣州、廈門、福州、寧波、上海五口通商，並廢除公行壟斷。",
+            "你抄錄條款時特別記下：領事裁判權、最惠國待遇等主要透過其後補充條約取得。歷史細節不能混成一句「南京條約所有條文」。"
+          ], { note: "《南京條約》與其後補充條約的內容須分開理解。", next: "n9" }),
+          n9: story("戰後廣州", "條約不是結束", "pool", [
+            "五口通商後，上海等口岸迅速發展，廣州不再獨佔對外貿易。賠款、鴉片問題與地方財政壓力仍然存在。",
+            "部分商人與士人開始學外語、買地圖，嘗試理解陌生的海洋世界。你意識到抵抗外侮需要決心，也需要知識與制度。"
+          ], {
+            note: "鴉片戰爭後，中國逐步進入近代條約體系，通商口岸與列強影響擴大。",
+            choices: [
+              choice("整理條約權利與主權損失，推動翻譯、海防和財政改革。", "n10", 4, 3, 3, "你把屈辱變成具體問題清單，讓改革有起點。", "reformResponse"),
+              choice("把外國人一概視為同一敵人，拒絕理解其技術和制度。", "n10", -4, -2, 2, "仇恨凝聚了人心，知識仍被鎖在門外。")
+            ]
+          }),
+          n10: story("廣州書院", "學夷技還是守舊制", "pool", [
+            "書院裏有人主張學習船炮、翻譯外國書籍，有人認為接受夷人技術會敗壞文化根本。兩派爭論尊嚴，卻很少討論誰能執行。",
+            "你把海防圖、賦稅冊與條約抄本放在一起。改革要從預算、人才、法律和教育開始，不是買幾件新武器便完成。"
+          ], { note: "鴉片戰爭後，部分中國官員與知識分子開始研究外國地理、語言與軍事技術。", next: "n11" }),
+          n11: story("戰後口岸", "世界不會退回原處", "pool", [
+            "數年後，你因公往來香港與上海。港口、商船、洋行與新式學校同時出現；中國與世界的接觸增加，列強在華特權也持續擴大。",
+            "你知道第一個條約不會是最後一個。若清廷不改革，列強會尋找新的理由擴大權利；但改革也不能只模仿強者，還要保護一般人的生活與尊嚴。"
+          ], {
+            note: "第一次鴉片戰爭後，中國逐步被納入條約體系，主權與社會承受長期壓力。",
+            choices: [
+              choice("以條約、海防與民生資料推動持續改革。", "n12", 4, 3, 3, "你開始把國家弱點整理成可以處理的問題。", "modernPreparation"),
+              choice("相信只要再封閉海口，便能回到戰前秩序。", "n12", -4, -2, 1, "海門可以關上，世界卻不會退回原來的樣子。")
+            ]
+          }),
+          n12: story("1842 年的回聲", "如何記住戰敗", "destroy", [
+            "你完成一卷紀錄：虎門銷煙、英軍海戰優勢、清廷戰和反覆、南京條約與補充條約。你沒有把戰爭只寫成鴉片買賣，也沒有把所有責任推給一名大臣。",
+            "鴉片的禍害、清廷海防與外交的落後、英國的武力擴張和百姓承受，共同造成失敗。這份紀錄要交給誰讀，決定它能否成為改革的起點。"
+          ], {
+            note: "第一次鴉片戰爭是中國近代史的重要起點。",
+            choices: [
+              choice("保留禁煙正義，也嚴格記錄英國武力與清廷制度弱點。", "n13", 4, 4, 3, "你把仇恨、責任與改革放在同一張紙上。", "documentAll"),
+              choice("把戰爭全部歸咎林則徐，說只要不禁煙便不會戰敗。", "n13", -4, -2, 1, "禁煙的正義被抹去，英國擴張也一起消失。")
+            ]
+          }),
+          n13: story("香港與上海", "通商口岸的城市", "pool", [
+            "你在香港看到轉口貿易和殖民管治，在上海看到華洋商人和新式碼頭。口岸帶來交流與技術，也帶來領事裁判權和海關限制。",
+            "你在旅途中記下：「第一個條約不是最後一個。」列強會擴大體系，清廷若不改革，地方社會要承受更多代價。"
+          ], { note: "五口通商改變中國對外貿易格局，上海等城市迅速發展。", next: "n14" }),
+          n14: story("譯館與海防圖", "知識也是防線", "pool", [
+            "你協助整理外國地圖、商船記錄與條約譯本。地名、官職和法律概念很難翻譯，錯一個字便可能改變權利。",
+            "地方試辦新炮台與水師訓練，卻遇到經費不足、官員推諉和士兵不識新技術。你把每筆支出和成果記錄下來，讓改革不只在奏摺上存在。"
+          ], { note: "近代軍事與外交需要知識、訓練、財政和制度配合。", next: "n15" }),
+          n15: story("史稿末頁", "如何評價鴉片戰爭", "destroy", [
+            "你整理卷宗，看到鴉片、戰艦、條約和百姓的證言。歷史沒有給清廷一個容易的選擇，但每個決定都有可追究的後果。",
+            "你準備寫下最後評價：禁煙為何正義、清廷為何戰敗、條約如何改變中國，以及後人應該從何處開始改革。"
+          ], {
+            choices: [
+              choice("完成區分道德、軍事、外交和條約細節的歷史紀錄。", "trueEnd", 4, 4, 3, "你把複雜真實交給後人，也留下改革方向。", "treatyTruth"),
+              choice("把所有責任歸於林則徐，說禁煙才是唯一原因。", "badEnd", -4, -2, 1, "一項正義行動被寫成罪狀，真正的弱點也隨之消失。"),
+              choice("假設清廷多買幾艘戰艦，就能完全避免南京條約。", "whatIfEnd", 0, 1, 1, "你提出技術上的可能，但沒有把假想當成結果。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "海口失守，條約寫下新的不平等",
+            lead: "清廷戰敗，1842 年簽訂《南京條約》，中國開始被納入不平等條約體系。",
+            body: ["清廷在軍備、海防和外交上處於劣勢，戰和反覆削弱抵抗。南京條約割讓香港島、賠款、開放五口通商並廢除公行。", "其後補充條約帶來領事裁判權、最片面最惠國待遇等。列強在華特權擴大，部分士人開始學習外國語言、地理與軍事技術。"],
+            history: { verdict: "第一次鴉片戰爭以清廷戰敗、簽訂南京條約告終。", yourChoice: "你支持禁煙，同時追蹤海防、條約與制度改革。", actual: "1839 年虎門銷煙；1842 年清廷簽訂南京條約。", facts: ["鴉片造成白銀外流與社會問題。", "英軍擁有海軍優勢。", "南京條約開放五口通商。"], impacts: ["中國主權與關稅自主受損。", "上海等口岸迅速發展。", "部分知識分子開始關注世界與改革。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "一場禁煙不能承擔所有責任",
+            lead: "你把戰爭責任全部推給林則徐，卻忽略鴉片、英國擴張與清廷弱點。",
+            body: ["禁煙是正義行動，但英國也希望打開中國市場並取得更多特權。", "清廷海防、外交和財政不足，令一次衝突擴大為戰敗與條約。單一責備不能幫助後人理解近代世界。"],
+            history: { verdict: "鴉片戰爭的爆發與結果涉及多方因素。", yourChoice: "你以單一人物承擔整個戰爭。", actual: "清廷戰敗並簽訂南京條約。", facts: ["鴉片危害嚴重。", "英軍海軍強大。"], impacts: ["條約體系開始形成。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果清廷早有強大海軍",
+            lead: "更強的海軍或可延長抵抗，但不能自動消除貿易、外交與制度問題。",
+            body: ["假想中的清廷可能以炮台阻止英軍深入，但沒有制度改革，武器仍可能無法有效使用。", "史實中的清廷在 1842 年戰敗並簽訂南京條約。"],
+            history: { verdict: "海軍重要，但戰爭結果由多項條件共同造成。", yourChoice: "你把勝利完全寄託在更多戰艦上。", actual: "清廷在鴉片戰爭中戰敗。", facts: ["英軍海軍優勢明顯。", "清廷海防分散。"], impacts: ["近代國防需要技術與制度配合。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "xinhai",
+        grade: "S3",
+        gradeLabel: "中三級",
+        title: "辛亥革命",
+        period: "公元 1911—1912 年",
+        dates: "武昌起義・民國建立・帝制終結",
+        minutes: 14,
+        blurb: "保路風潮令武漢兵力空虛，同盟會多年革命的宣傳終於化為槍聲。你是湖北新軍文書方競，將由武昌走向南京，見證共和建立與未完成的改革。",
+        role: "湖北新軍文書「方競」，虛構見證者",
+        readingHint: "辛亥革命結束清朝與君主專制，但軍閥政治、平均地權與社會改革仍未完成。革命成功與革命局限需要一起理解。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          memorial: wiki("Wuchang Uprising Memorial Oct 2017.jpg", "武昌起義紀念館，維基共享資源用戶拍攝。", "共享署名—相同方式共享 4.0"),
+          government: wiki("Hubei Military Government.jpg", "湖北軍政府舊址與起義相關圖像，歷史照片。", "公眾領域"),
+          map: wiki("Qing Dynasty Map durnig Xinhai Revolution.JPG", "辛亥革命期間清朝形勢圖，維基共享資源用戶繪製。", "公眾領域"),
+          minbao: wiki("The organ of Tongmen Hui.png", "中國同盟會機關刊物《民報》封面。", "公眾領域"),
+          tongmenghui: wiki("同盟會成立.jpg", "中國同盟會成立歷史照片，中國國家博物館藏品。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "武昌起義引發各省響應，中華民國成立，清帝退位，君主專制結束。", actual: "1911 年武昌起義爆發，1912 年中華民國成立，清帝退位。袁世凱其後掌握政權。", impact: "辛亥革命建立共和政體，推動思想解放與民族工業；革命後中央權力薄弱，軍閥政治延續。" },
+          bad: { lead: "你推翻了皇帝，卻沒有建立能約束新權力的制度。", actual: "共和制度建立，但袁世凱集權與地方軍閥使民主政治未能穩定。", impact: "國號改變不等於共和完成，制度需要持續建設。" },
+          whatif: { lead: "你設想起義能以更完美的方式完成，但政治分裂與制度建設不會自動消失。", actual: "武昌起義在準備不完全的情況下提前爆發，仍引起各省響應。", impact: "革命需要準備，也需要長期政治建設。" }
+        },
+        nodes: {
+          n1: story("1911 年・武昌", "新軍營中的兩種口號", "memorial", [
+            "你穿着湖北新軍制服，抄寫軍餉與訓練名冊。朝廷推動新政、編練新軍，軍官卻常剋扣軍餉，士兵也從報紙得知清廷外交與內政接連失敗。",
+            "革命黨人秘密在軍中宣傳三民主義，另一些人主張君主立憲。你不知道革命成功後誰來維持秩序，卻清楚舊制度已令許多人無法忍受。"
+          ], {
+            note: "清末新政未能挽回清廷威信，新軍成為革命宣傳與組織的重要對象。",
+            choices: [
+              choice("記錄軍餉、軍紀和士兵對改革的疑慮，把革命與生活連結。", "n2", 4, 4, 2, "你把共和寫在軍餉冊旁：新政體必須回答士兵如何生活。", "connectDailyLife"),
+              choice("只宣傳推翻滿族統治，不討論革命後如何治國。", "n2", -3, -1, 3, "口號激起勇氣，卻沒有回答誰來維持秩序。")
+            ]
+          }),
+          n2: story("東京與香港", "革命不是突然發生", "minbao", [
+            "你讀到孫中山在同盟會刊物《民報》闡述民族、民權、民生三民主義，也讀到黃花崗起義失敗的消息。革命黨人在香港求學、籌款、辦報與轉運物資。",
+            "多次起義失敗使同志悲痛，也讓更多人明白清廷不會輕易交出權力。革命需要組織、宣傳和資金，不能只靠一次槍聲。"
+          ], {
+            note: "同盟會於 1905 年成立，以《民報》宣傳三民主義，並多次發動武裝起義。",
+            inline: [{ after: 1, image: "minbao", caption: "同盟會機關刊物《民報》封面：三民主義傳播的重要媒介。" }],
+            next: "n3"
+          }),
+          n3: story("1911 年・四川保路", "一條鐵路點燃全國", "map", [
+            "清廷宣布鐵路國有，準備向外國借款。四川投資者未獲合理補償，成立保路同志會，罷市、請願。",
+            "清廷調湖北新軍入川鎮壓，武昌守備因此空虛。革命黨人注意到機會，你則把四川局勢與湖北營房調動寫在同一張表上。"
+          ], {
+            note: "鐵路國有政策激起保路運動，清廷調湖北新軍入川，造成武昌起義的兵力空隙。",
+            choices: [
+              choice("記錄保路民怨與守備變化，準備把機會交給革命黨人。", "n4", 4, 3, 3, "四川的地圖與武昌名冊第一次被放在一起。", "spotOpening"),
+              choice("認為保路只是商人糾紛，不必理會。", "n4", -3, -1, 1, "你錯過了一條足以改變兵力對比的街頭消息。")
+            ]
+          }),
+          n4: story("10 月 9 日・漢口", "一枚炸彈改寫時間", "government", [
+            "革命黨人在漢口租界製彈時意外爆炸，巡捕搜走名冊與文件。瑞澂立即下令按名單搜捕，軍營陷入恐慌。",
+            "有人主張等領袖回來再起義，有人說今晚不動手便會逐一被捕。你握著名冊，知道沒有完美時機，只有正在關閉的窗口。"
+          ], { note: "製彈意外與名冊洩露迫使革命黨人提前在 1911 年 10 月 10 日武昌起義。", next: "n5" }),
+          n5: story("10 月 10 日・武昌", "槍聲從工程第八營響起", "government", [
+            "工程第八營的革命士兵首先發難，奪取軍械並攻向總督衙門。你沿街傳遞聯絡命令，各營在猶豫後陸續加入。",
+            "瑞澂逃走，革命軍控制武昌。天亮時，街頭旗幟已變，但軍餉、治安與臨時政府都還沒有完整答案。"
+          ], {
+            note: "1911 年 10 月 10 日武昌起義成功，湖北新軍革命黨人控制武昌。",
+            choices: [
+              choice("立即聯絡各營，在清廷全面搜捕前起事。", "n6", 4, 3, 4, "你把意外變成行動，把行動變成新的政治可能。", "seizeMoment"),
+              choice("勸同志暫時解散，等領袖回來後再起義。", "n6", -4, -2, 1, "同志散去，搜捕隊卻已進城。")
+            ]
+          }),
+          n6: story("湖北軍政府", "革命者為何推舉舊軍官", "government", [
+            "起義軍成立湖北軍政府，推舉黎元洪為都督。黎元洪不是起義策劃者，革命黨人希望借他的軍中威望穩定局勢。",
+            "基層革命者不滿：革命不是要推翻舊體制嗎？你負責整理軍政收支，主張公開帳目、保留不同人員合作，但讓革命原則受到監督。"
+          ], { note: "武昌起義後成立湖北軍政府，推舉黎元洪為都督，吸納部分舊軍人與地方士紳。", next: "n7" }),
+          n7: story("各省電報", "武昌不是孤島", "map", [
+            "武昌起義消息經電報傳遍各省。湖南、陝西、江西等地相繼響應，部分省份宣布獨立。",
+            "各地革命力量背景不同：有新軍、士紳、諮議局與地方官僚。你無法要求所有人理念一致，只能設法建立共同目標和代表制度。"
+          ], {
+            note: "武昌起義後多省宣布獨立，清朝統治迅速動搖。",
+            choices: [
+              choice("公開軍政府收支與革命原則，讓不同力量在制度下合作。", "n8", 4, 4, 3, "都督的命令和軍費明細一同貼出，革命不再只是密室分配。", "openGovernment"),
+              choice("為求穩定，把所有職位交給地方原有權貴。", "n8", -4, -2, 1, "軍政府很快穩定，基層革命者卻開始懷疑自己換來了甚麼。")
+            ]
+          }),
+          n8: story("1912 年 1 月・南京", "共和國的第一天", "map", [
+            "孫中山在南京就任中華民國臨時大總統，各省代表組成臨時政府。國號和旗幟改變，但軍隊、財政和地方控制仍薄弱。",
+            "袁世凱掌握清朝最強大的北洋軍，同時與南方談判。你明白共和政府需要軍事安全和政治制度，不能只靠就職典禮。"
+          ], { note: "1912 年中華民國臨時政府成立，孫中山任臨時大總統。", next: "n9" }),
+          n9: story("南北議和", "妥協與制度", "government", [
+            "南方要求清帝退位、建立共和；袁世凱掌握北洋軍，既能迫使清廷退位，也可能成為新的權力中心。",
+            "孫中山表示若清帝退位、袁世凱贊成共和，可以讓出總統職位。你支持妥協，但要求新政府受約法和議會約束。"
+          ], {
+            note: "辛亥革命期間南北議和，袁世凱以軍權和清帝退位安排成為關鍵人物。",
+            choices: [
+              choice("以共和制度和清帝退位優先，同時要求約法與議會制衡。", "n10", 4, 3, 3, "妥協被寫進制度條件，而不只是一句承諾。", "constitutionalCompromise"),
+              choice("相信袁世凱個人承諾足以維持共和，不必設置制衡。", "n10", -4, -2, 1, "共和有了總統，卻沒有足夠力量約束總統。")
+            ]
+          }),
+          n10: story("1912 年 2 月・北京", "清帝退位", "government", [
+            "清帝溥儀退位，清朝結束，二千多年君主專制終結。街頭有人剪辮、放鞭炮，也有人擔心新政局。",
+            "袁世凱其後在北京就任臨時大總統。你發現革命勝利並沒有消除軍權分散，地方將領仍控制稅收與軍隊。"
+          ], { note: "1912 年清帝退位，清朝滅亡；袁世凱其後在北京掌權。", next: "n11" }),
+          n11: story("民初政局", "沒有皇帝之後", "map", [
+            "民國建立後，議會、政黨與法治開始出現，但軍隊仍掌握在袁世凱和地方將領手中。革命黨與袁世凱在總統權限上衝突。",
+            "你被調去整理裁軍與地方軍餉。革命軍官不願交出有功部隊，地方商人則希望減少軍費辦學修路。"
+          ], {
+            note: "民國初年議會政治發展，但軍閥勢力與袁世凱集權使共和制度不穩。",
+            choices: [
+              choice("支持議會、政黨競爭和軍隊國家化，接受不同意見分享權力。", "n12", 4, 4, 3, "你把革命功勞與長久制度分開，開始接受新的規則。", "republicRules"),
+              choice("革命有功者應繼續掌握軍政，不必讓別人分享權力。", "n12", -4, -2, 2, "軍隊保住了革命者地位，也保住了未來政變的基礎。")
+            ]
+          }),
+          n12: story("廣州與香港", "革命思想的家鄉", "memorial", [
+            "你隨孫中山的舊友整理香港革命史料。香港的學校、自由港與報刊，曾讓青年孫中山接觸西方制度，也方便革命黨人籌款、辦報和轉運物資。",
+            "但革命不能只靠海外支持。地方民眾、商人、學生與新軍都在不同環節付出，沒有他們，宣言無法變成政治行動。"
+          ], { note: "香港在革命宣傳、籌款、交通與組織方面扮演重要角色。", next: "n13" }),
+          n13: story("共和之後", "革命完成了嗎", "memorial", [
+            "清朝與君主專制結束，民族工業和新式教育發展，剪辮、改稱呼、辦報推動思想解放。",
+            "可是平均地權、婦女參政、工人權益與基層民主仍未完成。軍閥混戰與袁世凱集權使共和制度繼續受到考驗。"
+          ], {
+            note: "辛亥革命推動制度與思想變革，但其社會和政治目標沒有全部實現。",
+            choices: [
+              choice("承認革命成就，也把共和、軍隊和社會改革視為未完工作。", "n14", 4, 4, 3, "你讓革命成為開始，而不是慶典上的完成證明。", "unfinishedRevolution"),
+              choice("認為清朝已亡，革命便已完成。", "n14", -4, -2, 1, "舊皇帝消失，不受約束的新權力仍在軍營裏。")
+            ]
+          }),
+          n14: story("1912 年之後", "共和需要每天練習", "government", [
+            "地方議會開始討論學校、稅收與道路。會議緩慢而吵鬧，你一度懷念軍政府的效率。",
+            "一名老革命者問：共和究竟有甚麼用？你回答，若沒有公開討論和接受失敗，新的領袖仍可能成為沒有皇帝稱號的專制者。"
+          ], { note: "民國初年民主制度需要持續建設，卻受政局和軍權限制。", next: "n15" }),
+          n15: story("辛亥史稿", "如何評價辛亥革命", "memorial", [
+            "你寫下武昌起義、各省響應、南京建府與清帝退位，也寫下袁世凱掌權和軍閥政治的伏筆。",
+            "革命推翻舊制度，建立共和，卻沒有自動完成新制度。現在輪到你為辛亥革命的成就與局限下結論。"
+          ], {
+            choices: [
+              choice("肯定革命突破，同時說明共和制度建設尚未完成。", "trueEnd", 4, 4, 3, "你給革命準確的位置：它是起點，不是終點。", "xinhaiBalance"),
+              choice("把民國成立說成所有革命目標已經實現。", "badEnd", -3, -1, 1, "慶典結束後，軍閥與社會問題仍在城外。"),
+              choice("假設延後起義數月，便能立即建立穩定民主。", "whatIfEnd", 0, 1, 1, "你思考時機，也承認制度不會自動生成。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "帝制落幕，共和仍在建造",
+            lead: "辛亥革命結束清朝與君主專制，建立中華民國；共和建設仍有巨大挑戰。",
+            body: ["1911 年武昌起義爆發，各省響應；1912 年中華民國成立，清帝退位。革命結束千年帝制，推動思想解放與民族工業。", "袁世凱掌握北洋軍，地方軍權分散，平均地權和社會改革未完成。革命成功打開新政治可能，卻沒有立即建立穩定共和。"],
+            history: { verdict: "辛亥革命推翻清朝與君主專制，建立共和，但制度與社會改革仍未完成。", yourChoice: "你勇於行動，並重視共和制度的長期建設。", actual: "1911 年武昌起義，1912 年中華民國成立並清帝退位。", facts: ["同盟會長期宣傳三民主義。", "保路運動造成湖北兵力空虛。", "袁世凱其後掌握共和政府。"], impacts: ["君主專制結束。", "共和與思想解放發展。", "軍閥政治延續。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "共和只是換了一塊匾",
+            lead: "你推翻了皇帝，卻沒有建立能約束新權力的制度。",
+            body: ["民國建立後袁世凱掌權，地方軍閥仍控制軍隊和稅收。", "若把國號改變當成革命完成，共和仍可能被新的專權架空。"],
+            history: { verdict: "辛亥革命建立共和，但制度建設仍未完成。", yourChoice: "你把推翻清朝視作全部目標。", actual: "民國成立後袁世凱和軍閥影響政局。", facts: ["清帝退位。", "袁世凱掌握北洋軍。"], impacts: ["共和發展困難。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果起義準備得更完美",
+            lead: "更完整的準備可能減少混亂，但不能自動建立穩定共和。",
+            body: ["武昌起義實際在製彈意外後提前爆發，仍引發全國響應。", "革命後仍要面對袁世凱、軍閥、財政與社會改革；假想不能取代實際政治。"]
+            , history: { verdict: "革命成功受偶然事件和組織應變共同影響。", yourChoice: "你假設更完美時機能直接帶來穩定民主。", actual: "1911 年武昌起義爆發並引發各省響應。", facts: ["製彈意外迫使提前起事。", "各省獨立推動清朝崩解。"], impacts: ["共和制度開始，但未穩定。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "northern-expedition",
+        grade: "S3",
+        gradeLabel: "中三級",
+        title: "國民革命軍北伐",
+        period: "公元 1926—1928 年",
+        dates: "軍閥割據・國共合作・形式統一",
+        minutes: 14,
+        blurb: "廣州誓師後，國民革命軍沿長江推進。你是政治部文書程望，將在軍閥、工農運動、寧漢分裂與東北易幟之間，理解 1928 年「形式統一」的真正含義。",
+        role: "國民革命軍政治部文書「程望」，虛構見證者",
+        readingHint: "北伐是軍事行動，也是政治聯盟。清黨、寧漢分裂與地方軍閥歸附，使北伐勝利和中央實際控制之間存在距離。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          advance: wiki("北伐軍賀耀祖部越過鐵路攻克濟南.png", "北伐軍賀耀祖部越過鐵路進攻濟南的歷史圖像。", "公共領域貢獻"),
+          chiang: wiki("Chiang Kai-shek leaving for the Northern Expedition.png", "蔣介石出發參加北伐的歷史照片。", "公眾領域")
+        },
+        endings: {
+          true: { lead: "北伐軍擊敗主要軍閥，東北易幟，全國形式上統一；南京國民政府成為主要中央政權。", actual: "1926 年北伐開始，1927 年寧漢分裂後中斷，1928 年恢復並完成形式統一。", impact: "北伐結束北洋軍閥主導中央的局面，但地方軍權、國共對抗與外國壓力仍限制中央統治。" },
+          bad: { lead: "你只看見旗幟統一，忽略地方軍閥與政治裂痕。", actual: "1928 年全國形式統一，但南京政府未能立即有效控制所有地方。", impact: "軍事勝利不等於國家整合完成。" },
+          whatif: { lead: "你設想一條沒有分裂的北伐道路，但政治分歧不會自動消失。", actual: "北伐在國共合作下展開，因清黨與寧漢分裂一度中斷。", impact: "合作與衝突共同塑造北伐結果。" }
+        },
+        nodes: {
+          n1: story("1920 年代・中國", "被軍閥切碎的地圖", "advance", [
+            "袁世凱死後，北洋軍閥分裂。地方軍閥任意徵稅、擴軍，列強又扶植不同派系。你在報紙上看到百姓被拉伕、鈔票貶值與連年混戰。",
+            "孫中山改組國民黨，提出打倒軍閥與反帝國主義。你決定南下廣州加入革命政府，希望統一能真正改善普通人的生活。"
+          ], {
+            note: "袁世凱死後軍閥割據，孫中山改組國民黨並推動國民革命。",
+            choices: [
+              choice("加入宣傳與地方調查，記錄軍閥統治對百姓的實際影響。", "n2", 4, 4, 2, "你帶着一疊訪談南下，決心不讓統一變成沒有人民位置的口號。", "peopleFirst"),
+              choice("相信只要武力夠強，就能解決一切，不必理會地方民情。", "n2", -3, -2, 3, "你相信速度能壓過混亂，卻沒有記錄混亂如何形成。")
+            ]
+          }),
+          n2: story("1925 年・廣州", "黃埔軍校與新軍隊", "chiang", [
+            "孫中山於 1925 年逝世，廣州國民政府成立國民革命軍。蔣介石任總司令，周恩來曾任軍校政治部主任，蘇聯顧問參與訓練。",
+            "政治教育讓士兵知道為何作戰，也使不同政治立場聚集在同一支軍隊。你相信合作能擴大力量，也察覺軍中對群眾運動和權力分配已有分歧。"
+          ], { note: "孫中山逝世後，廣州國民政府成立國民革命軍，為北伐作準備。", next: "n3" }),
+          n3: story("1926 年 7 月・廣州", "先打誰", "advance", [
+            "北伐主要對手是華中的吳佩孚、華東的孫傳芳與北方的張作霖。軍委會決定集中力量先擊敗吳佩孚，暫時聯絡孫傳芳，不立即與張作霖決戰。",
+            "你記錄部署時發現，鐵路、水路、工人與農民支持都會影響軍隊能否前進。革命軍不能只計算槍炮數量。"
+          ], {
+            note: "北伐以集中兵力、逐個擊破軍閥為策略，地方交通與群眾支持也十分重要。",
+            choices: [
+              choice("把軍運、宣傳、工人與農民支援一併規劃。", "n4", 4, 4, 3, "北伐路線圖上不再只有軍隊箭頭，也有糧道與民心。", "mobilizeSupport"),
+              choice("只計算軍隊數量，不准工農運動干擾軍事。", "n4", -3, -3, 2, "部隊前進更快，地方卻不知道新政權是否會保護他們。")
+            ]
+          }),
+          n4: story("湖南與湖北", "汀泗橋與武昌", "advance", [
+            "北伐軍利用鐵路與地方支持快速推進。汀泗橋、賀勝橋戰役傷亡慘重，武昌被圍後城內糧食短缺。",
+            "你運送宣傳品和救護物資，看到工人罷工、農民帶路，也看到居民在炮火中失去家園。北伐勝利不是沒有代價。"
+          ], { note: "北伐前期不到十個月收復長江以南大片地區，工農運動與地方支持發揮作用。", next: "n5" }),
+          n5: story("江西前線", "向東或向北", "chiang", [
+            "吳佩孚敗退後，北伐軍準備進攻孫傳芳。上海與南京有財政和國際交通優勢，也有外國租界與列強駐軍。",
+            "軍中有人主張迅速東進，有人認為應先穩定湖南、湖北。政治部也擔心工農運動與地方士紳衝突。你要決定速度與秩序的優先次序。"
+          ], {
+            note: "北伐軍其後在華東擊敗孫傳芳，上海等地涉及外國利益和政治分歧。",
+            choices: [
+              choice("先取南京與上海，同時整頓地方行政與工人運動。", "n6", 4, 3, 3, "東進軍同時帶着軍令與地方調解方案。", "eastOrder"),
+              choice("允許部隊自行徵用地方資源，以最快速度推進。", "n6", -4, -3, 3, "行軍加快，地方卻開始把革命軍與軍閥比較。")
+            ]
+          }),
+          n6: story("1927 年・上海", "工人歡迎革命軍", "advance", [
+            "北伐軍接近上海，工人罷工並協助維持城市。你進城時看到商鋪重新開門，也看到不同政治團體爭奪工會控制權。",
+            "國民政府需要上海財政與國際聯繫，又害怕工人運動影響軍事指揮。革命勝利的城市把各種矛盾集中到同一條街道。"
+          ], { note: "上海工人運動與國民黨內部政治分歧在北伐期間同時發展。", next: "n7" }),
+          n7: story("寧漢分裂", "同一個革命，兩個政府", "chiang", [
+            "蔣介石在上海實行清黨，清除共產黨員與部分工會力量；汪精衛為首的武漢政府一度繼續聯俄聯共。雙方各自成立中心，史稱寧漢分裂。",
+            "宣傳隊被迫選邊，昨天一起寫北伐消息的同事今天互相指責。北伐因此一度中斷。你記錄失蹤者與被捕者，拒絕讓革命歷史只剩勝利者名單。"
+          ], {
+            note: "1927 年清黨與寧漢分裂使國共第一次合作破裂，北伐中斷。",
+            choices: [
+              choice("記錄分裂造成的社會後果，主張恢復政治協商與基本秩序。", "n8", 4, 3, 3, "你把不同立場者的遭遇留在檔案中。", "recordSplit"),
+              choice("以清黨徹底排除所有反對者，認為一致比聯盟重要。", "n8", -4, -2, 2, "隊伍更整齊，卻更少有人敢報告真實情報。")
+            ]
+          }),
+          n8: story("1928 年・徐州", "繼續北伐", "chiang", [
+            "寧漢復合後，北伐於 1928 年恢復。馮玉祥、閻錫山等地方軍政力量歸附，革命軍力量大增，也保留原有部隊與地盤。",
+            "你在名冊上逐一標明部隊來源。旗幟相同不代表命令相同，中央若不知道誰控制軍隊，統一可能只是好看的名稱。"
+          ], { note: "1928 年北伐恢復，地方軍政力量歸附，增強聲勢但保留地方軍權。", next: "n9" }),
+          n9: story("1928 年・濟南", "外國勢力阻撓統一", "advance", [
+            "北伐軍進入山東，日本派兵阻撓，在濟南造成大量中國軍民傷亡。南京政府為避免全面對日戰爭，命部隊繞道。",
+            "你在救護站記錄傷亡，知道北伐不只與軍閥作戰，也受列強干預。繞道是策略，但不能等於遺忘。"
+          ], {
+            note: "1928 年濟南慘案中，日軍阻撓北伐，國民政府選擇繞道繼續。",
+            choices: [
+              choice("保存事件紀錄與外交證據，完成北伐的同時追究責任。", "n10", 4, 3, 3, "你把時間、死傷與日軍行動寫清楚，沒有讓繞道變成沉默。", "documentJinan"),
+              choice("把濟南事件當成地方衝突，不影響全國統一談判。", "n10", -4, -2, 1, "北伐繼續，外國干預卻沒有進入整體戰略。")
+            ]
+          }),
+          n10: story("北京與東北", "最後的軍閥", "chiang", [
+            "北伐軍逼近北京，張作霖準備退回東北。日本關東軍在皇姑屯將他炸死，張學良接管東北軍政。",
+            "日本希望張學良維持獨立，南京政府希望他歸附。1928 年 12 月，張學良宣布東北易幟，改掛青天白日旗。"
+          ], { note: "1928 年張作霖被日本炸死，張學良其後宣布東北易幟。", next: "n11" }),
+          n11: story("1928 年 12 月・南京", "形式統一", "advance", [
+            "東北易幟後，國民政府宣布全國統一。街頭舉行慶典，青天白日旗升起，北伐軍事目標大致完成。",
+            "你在財政和軍政名冊裏看到另一面：地方軍閥仍控制軍隊、稅收與人事，共產黨轉向農村建立根據地，社會分裂沒有消失。"
+          ], {
+            note: "東北易幟使全國形式上統一，但地方軍權、財政分散與國共對抗仍限制南京政府。",
+            choices: [
+              choice("利用和平時期推動財政、教育、行政和軍隊國家化。", "n12", 4, 4, 3, "你把旗幟更換後的工作逐項列出，讓統一開始有內容。", "stateBuilding"),
+              choice("依靠地方軍閥維持秩序，不急著改革。", "n12", -4, -2, 2, "地方很快安穩，中央命令卻仍走不出南京。")
+            ]
+          }),
+          n12: story("北伐的另一面", "誰被寫進國家故事", "chiang", [
+            "官方紀念冊稱北伐掃除軍閥、完成統一。你訪問地方時聽到另一面：工人與農民曾支持北伐，也在清黨和衝突中受傷；軍閥換旗後仍保有權力。",
+            "你把官方文件與訪談放在一起。只有兩種聲音同時存在，讀者才能理解統一既是成果，也是仍在進行的過程。"
+          ], { note: "北伐結束北洋軍閥主導局面，但國共分裂和地方軍權使統一基礎不穩。", next: "n13" }),
+          n13: story("1929 年・南京", "統一之後", "advance", [
+            "中央希望統一稅制、建立學校與現代行政，地方軍政勢力卻不願交出收入。同一個縣可能同時收到省政府、駐軍和中央命令。",
+            "你明白，北伐最大的成果是建立新的政治中心；最大的難題是讓這個中心真正能夠治理全國。"
+          ], {
+            note: "南京國民政府推動現代化，但地方軍權、軍費和政治分裂限制成效。",
+            choices: [
+              choice("把軍事勝利轉化為財政、教育和地方行政制度。", "n14", 4, 4, 3, "你讓統一從旗幟走向具體行政。", "institutionalState"),
+              choice("繼續依靠地方軍閥，不與既得利益衝突。", "n14", -4, -2, 2, "中央得到短暫安穩，地方仍各守其政。")
+            ]
+          }),
+          n14: story("1930 年代・南京", "新的政治中心", "chiang", [
+            "南京政府推行部分建設和新生活運動，仍受軍費、地方勢力和外國壓力限制。共產黨在農村的根據地則與南京政府對抗。",
+            "你把北伐檔案整理成三部分：軍事推進、政治分裂、地方整合。三者缺一，都無法解釋 1928 年的中國。"
+          ], { note: "北伐後南京政府成為主要中央政權，但國家整合仍然是長期工程。", next: "n15" }),
+          n15: story("北伐檔案末頁", "如何評價形式統一", "chiang", [
+            "北伐擊敗主要軍閥，北洋政府失去全國核心地位，東北易幟完成形式統一。清黨與寧漢分裂同時改變革命陣營。",
+            "你想為北伐寫下結論：它改變了政治中心，卻沒有立即完成國家整合。現在請作出最後判斷。"
+          ], {
+            choices: [
+              choice("區分北伐的統一成果與實際治理限制，完成完整評價。", "trueEnd", 4, 4, 3, "你讓北伐既不被神化，也不被完全否定。", "northernTruth"),
+              choice("認為東北易幟代表中央已完全控制全國。", "badEnd", -3, -1, 1, "地圖一色，命令卻未必到達每一處。"),
+              choice("假設沒有清黨便必定建立穩定民主共和。", "whatIfEnd", 0, 1, 1, "你思考另一條路，也知道政治分歧不會自動消失。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "旗幟一統，國家仍在整合",
+            lead: "北伐擊敗主要軍閥，1928 年東北易幟，全國形式上統一。",
+            body: ["國民革命軍先擊敗吳佩孚、孫傳芳，再向北方推進。寧漢分裂使北伐一度中斷，1928 年恢復後地方軍政力量歸附，張學良宣布東北易幟。", "北伐結束北洋軍閥主導中央政府的局面，但地方軍權、財政分散與國共對抗使南京政府難以完全控制全國。"],
+            history: { verdict: "北伐完成形式統一，但中央實際治理仍受地方與政治分裂限制。", yourChoice: "你重視群眾與地方實況，也要求軍事勝利轉化成制度。", actual: "1926 年北伐開始，1927 年分裂中斷，1928 年東北易幟完成形式統一。", facts: ["北伐先集中力量擊敗吳佩孚。", "清黨與寧漢分裂使合作破裂。", "地方軍閥歸附後保留部分軍權。"], impacts: ["南京國民政府成為主要中央政權。", "國共對抗延續。", "地方軍權限制中央治理。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "地圖一色，命令未達",
+            lead: "你以旗幟判斷統一，卻沒有追問中央能否治理地方。",
+            body: ["地方軍閥歸附後仍保軍隊與稅收，南京中央權力有限。", "清黨與群眾運動受壓也使新政權失去部分社會基礎。"],
+            history: { verdict: "北伐完成形式統一，但沒有立即建立全國有效控制。", yourChoice: "你把象徵統一當成治理完成。", actual: "1928 年東北易幟，全國形式上統一。", facts: ["地方軍權仍存在。", "國共對抗延續。"], impacts: ["南京政府面對長期整合困難。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果革命陣營沒有分裂",
+            lead: "你設想北伐保持合作，但國共與國民黨內部仍有深層政治分歧。",
+            body: ["更團結的北伐可能減少中斷，卻仍要解決地方軍閥與中央財政。", "史實中的清黨與寧漢分裂確實使北伐一度停頓，不能從假想中刪除。"],
+            history: { verdict: "北伐受合作與分裂共同影響。", yourChoice: "你假設沒有分裂便會自然建立穩定民主。", actual: "北伐於 1927 年因寧漢分裂中斷，1928 年完成形式統一。", facts: ["國共合作支持北伐初期。", "清黨使合作破裂。"], impacts: ["國共對抗延續。"], sources: [] }
+          }
+        }
+      },
+      {
+        id: "war-of-resistance",
+        grade: "S3",
+        gradeLabel: "中三級",
+        title: "抗日戰爭",
+        period: "公元 1931—1945 年",
+        dates: "九一八・全面抗戰・日本投降",
+        minutes: 15,
+        blurb: "香港報館收到瀋陽的消息，十四年抗戰由此逐步展開。你是學生記者林瀾，將從盧溝橋走到南京、重慶與淪陷香港，記錄戰爭、平民苦難與最後勝利。",
+        role: "香港學生記者「林瀾」，虛構見證者",
+        readingHint: "抗戰包括 1931 年後的局部抗戰與 1937 年後的全面抗戰。勝利來自全國抵抗、持久戰略與國際援助，但代價極其沉重。",
+        truthThreshold: 60,
+        start: "n1",
+        images: {
+          bridgeMap: wiki("Marco Polo Bridge Incident 1.jpg", "1937 年盧溝橋事變兵力配置圖，圖中以中文標示。", "共享署名—相同方式共享 3.0"),
+          bridgeAir: wiki("Marco Polo Bridge air view.PNG", "盧溝橋航空俯瞰圖。", "公眾領域"),
+          declaration: wiki("Declaration of the Red Army of Chinese Workers and Peasants Going North to Resist Japan.jpg", "紅軍北上抗日宣言歷史文獻，全圖以中文刊印。", "共享署名—相同方式共享 4.0"),
+          taierzhuang: wiki("Battle of Taierzhuang.jpg", "台兒莊戰役歷史照片，攝影者不詳。", "公眾領域"),
+          memorial: wiki("Memorial Hall of the Chinese People's War of Resistance Against Japanese Aggression 9.jpg", "中國人民抗日戰爭紀念館展覽，維基共享資源用戶拍攝。", "公共領域貢獻")
+        },
+        endings: {
+          true: { lead: "1945 年日本無條件投降，中國取得抗日戰爭勝利，但付出巨大生命與經濟代價。", actual: "1937 年七七事變後全面抗戰展開，國共合作與全國各界抵抗日軍；1945 年日本投降。", impact: "抗戰勝利提升中國國際地位，廢除部分不平等條約；戰後重建、國共衝突與社會創傷成為新課題。" },
+          bad: { lead: "你保住了短暫安穩，卻沒有記錄侵略規模與全民抵抗的必要。", actual: "中國經過長期抗戰，於 1945 年取得勝利。", impact: "面對強大侵略者，投降或速勝幻想都無法保護國家。" },
+          whatif: { lead: "你設想一條沒有發生的抗戰道路。", actual: "中國軍民與盟國共同抵抗，最終於 1945 年戰勝日本。", impact: "假想不能取代歷史，也不能抹去中國人民的犧牲。" }
+        },
+        nodes: {
+          n1: story("1931 年 9 月・香港", "瀋陽夜色的電報", "declaration", [
+            "你在香港報館值夜，電報機吐出關東軍在瀋陽製造爆炸、進攻中國東北的消息。編輯室裏的人先是沉默，隨即開始爭論是否加印號外。",
+            "香港離東北很遠，但僑胞、貿易與新聞使它與中國局勢相連。你決定整理九一八事變的日期、地點與侵略行動，不讓它成為一則很快被忘記的地方新聞。"
+          ], {
+            note: "1931 年九一八事變後日本侵占中國東北，局部抗戰開始。",
+            choices: [
+              choice("核實日期與侵略事實，向香港讀者說明戰爭的長期危險。", "n2", 4, 4, 2, "你把新聞寫得更準確，也讓更多人知道東北不是遙遠傳聞。", "informPublic"),
+              choice("認為香港距離戰場很遠，不必關注。", "n2", -4, -2, 1, "報紙恢復平靜，侵略卻沒有停止。")
+            ]
+          }),
+          n2: story("1937 年 7 月 7 日・盧溝橋", "失蹤士兵與全面戰爭", "bridgeMap", [
+            "日軍在盧溝橋附近演習，藉口一名士兵失蹤，要求進入宛平城搜查。中國守軍拒絕，日軍炮轟城池，七七事變爆發。",
+            "你在香港加印號外，看到學生、工人與海外華人開始募捐。日本企圖控制華北，這不再只是東北的局部衝突。"
+          ], {
+            note: "1937 年七七事變標誌全面抗戰開始，國共合作與全國各界投入抗日。",
+            inline: [{ after: 1, image: "bridgeAir", caption: "盧溝橋航空俯瞰圖：連接北平與華北的重要交通節點。" }],
+            choices: [
+              choice("前往內地採訪，核實平民遭遇並避免散布未經證實的傳言。", "n3", 4, 4, 3, "你帶着採訪本與相機出發，決心先記下事實。", "witnessWar"),
+              choice("留在安全報館，只轉載官方公報，不接觸戰爭。", "n3", -3, -1, 1, "稿件安全而整齊，卻離戰場上的人越來越遠。")
+            ]
+          }),
+          n3: story("1937 年 8 月・南京", "合作抗日", "declaration", [
+            "國共兩黨宣布合作，停止內戰，共同抗日。紅軍改編為八路軍，南方游擊隊改編為新四軍。學生、工人與婦女救護隊紛紛成立。",
+            "你在南京訪問不同立場的人。有人希望合作消除過去仇恨，有人提醒兩黨仍有深刻分歧。團結不是假裝沒有矛盾，而是在共同敵人面前找到共同行動。"
+          ], { note: "全面抗戰後國共第二次合作，擴大抵抗力量，但內部分歧仍在。", next: "n4" }),
+          n4: story("1937 年 8 月・上海", "四行倉庫與三個月", "taierzhuang", [
+            "日本原以為三個月即可迫使中國投降，卻在上海遭遇頑強抵抗。中國軍隊在淞滬堅守多月，謝晉元率部守衛四行倉庫，掩護主力撤退。",
+            "你在安全距離外採訪逃難市民。有人說第一次覺得中國軍隊會為城市留下來。淞滬最終失守，卻粉碎日本速勝計畫，也讓國際看見中國的抵抗。"
+          ], { note: "八一三淞滬抗戰粉碎日本短期速勝計畫，但中國軍民付出重大代價。", next: "n5" }),
+          n5: story("1937 年 12 月・南京", "記錄暴行", "memorial", [
+            "日軍攻陷南京，展開持續六星期的屠殺、強暴與搶掠，大量平民和戰俘遇害。你沒有進入最危險的城區，只在城外救護站記錄逃出的傷者。",
+            "你小心核對姓名、時間與地點。戰爭宣傳會利用數字，否認暴行同樣傷害受害者。你要保存可查證的記憶，而不是製造更可怕的文字。"
+          ], {
+            note: "南京淪陷後發生南京大屠殺。研究和紀念須重視史料核實與對受害者的尊重。",
+            choices: [
+              choice("嚴謹保存受害者證言、時間和地點，避免傳聞變成假事實。", "n6", 4, 4, 3, "你讓證言有了姓名與日期，也讓傷痛不再只是數字。", "preserveTestimony"),
+              choice("把所有聽到的傳聞寫成確定事實，以激起更大仇恨。", "n6", -4, -2, 1, "文字更煽情，卻可能令真正證言失去可信度。")
+            ]
+          }),
+          n6: story("1938 年・徐州與台兒莊", "勝利與撤退", "taierzhuang", [
+            "中國軍隊在台兒莊包圍日軍並取得勝利，日軍傷亡一萬多人。消息傳出，全國士氣大振。",
+            "日軍增援後，中國軍隊因兵力不足撤離，徐州最終失守。勝利沒有結束戰爭，卻證明日軍不是不可戰勝。"
+          ], { note: "台兒莊大捷提升抗戰士氣，但其後日軍增援，徐州失守。", next: "n7" }),
+          n7: story("1938 年・武漢", "以空間換時間", "declaration", [
+            "日軍進攻武漢，國軍激戰四個多月後撤退。工廠、學校和難民沿長江遷往西南，武漢最終失守。",
+            "武漢會戰的意義不只在守住城池，也在消耗日軍、遷移工業和保存長期抗戰能力。你看到甲板上堆滿機器和書箱。"
+          ], {
+            note: "1938 年武漢會戰後，中國保存西南後方，戰爭轉入相持階段。",
+            choices: [
+              choice("協助工廠與學校遷移，保存長期抗戰的生產與教育能力。", "n8", 4, 4, 3, "機器重新運轉，學生在後方復課，抗戰有了明天的基礎。", "preserveCapacity"),
+              choice("命令所有人留在武漢決戰，不考慮撤退與遷移。", "n8", -4, -2, 3, "決心很堅定，工廠與平民卻可能一起被戰火吞沒。")
+            ]
+          }),
+          n8: story("1938—1941 年・相持階段", "正面與敵後", "declaration", [
+            "日軍占領城市和交通線，卻無法控制廣大農村。國軍在正面戰場抵抗，八路軍、新四軍在敵後破壞鐵路和據點。",
+            "1940 年汪精衛在南京成立偽國民政府，協助日軍管理淪陷區；八路軍發動百團大戰，攻擊華北日軍交通線。你採訪難民，知道占領不等於所有人都服從。"
+          ], { note: "抗戰相持階段，正面與敵後戰場共同牽制日軍。", next: "n9" }),
+          n9: story("1941 年 12 月・香港", "太平洋戰爭來到家門", "memorial", [
+            "日軍進攻香港，空襲警報響遍街頭。12 月 25 日，香港淪陷，日軍占領持續三年零八個月。",
+            "你曾以為香港是遠離戰場的觀察站，如今自己也在歷史之中。報紙受到審查，東江縱隊等抗日力量在港九營救文化人士、幫助難民。"
+          ], {
+            note: "1941 年香港淪陷，抗日活動與三年零八個月的占領經歷成為抗戰史的一部分。",
+            choices: [
+              choice("秘密保存淪陷紀錄，協助把難民與文化人士資料交給抗日組織。", "n10", 4, 4, 3, "你把名字和證言藏進報紙夾層，讓抵抗不只依靠槍聲。", "hongKongResistance"),
+              choice("接受日軍審查，只刊登對占領者有利的消息。", "n10", -4, -2, 1, "你暫時安全，紙上的城市卻被改寫成另一個模樣。")
+            ]
+          }),
+          n10: story("1942—1944 年・重慶與淪陷區", "世界戰場", "memorial", [
+            "珍珠港事變後，美國加入第二次世界大戰，中國與英、美、蘇等同盟國共同抗日。蔣介石出任中國戰區最高統帥。",
+            "盟國援助經滇緬公路運入中國，中國遠征軍亦赴緬甸作戰。你在重慶看到外國記者和軍官，也看到物價高漲、空襲與難民擠滿街巷。"
+          ], { note: "太平洋戰爭後中國加入同盟國，取得援助，但國內生活仍十分艱苦。", next: "n11" }),
+          n11: story("1944 年・西南", "最艱難的一年", "declaration", [
+            "日軍在中國發動大規模攻勢，一度攻陷長沙、桂林等地。中國軍隊在失利後穩住陣腳，逐步反攻。",
+            "你隨救護隊從一個臨時醫院撤到另一個，看到戰爭不是一條直線勝利的曲線，而是長期消耗後力量的此消彼長。"
+          ], {
+            note: "1944 年日軍在中國發動大規模攻勢，中國抗戰仍持續至 1945 年。",
+            choices: [
+              choice("保存後方交通與醫療記錄，支援難民和仍在作戰的部隊。", "n12", 4, 4, 3, "你讓後方知道前線真正需要甚麼，也讓傷者不至於被遺忘。", "supportRear"),
+              choice("因局部失利便宣布抗戰必敗，停止救援與記錄。", "n12", -4, -2, 1, "士氣受到打擊，傷者與難民也失去一條補給線。")
+            ]
+          }),
+          n12: story("1945 年 8 月", "日本投降", "memorial", [
+            "德國投降後，歐洲戰事結束。美國在廣島、長崎投下原子彈，蘇聯對日本宣戰並進攻東北關東軍。8 月 15 日，日本宣布無條件投降。",
+            "重慶街頭有人放鞭炮，也有人抱着家人痛哭。你看到燈火與空襲廢墟同時存在。戰爭結束，許多人卻再也回不了家。"
+          ], { note: "1945 年 8 月日本宣布無條件投降，9 月中國戰區受降。", next: "n13" }),
+          n13: story("戰後・香港與內地", "回家的人", "memorial", [
+            "你回到香港與內地，看到村莊焚毀、鐵路中斷、家庭失散。抗戰期間，大量軍民死亡，數以千萬計的人流離失所。",
+            "政府與民間組織開始救濟、遣返難民、重建學校與醫院。你寫下戰後第一組報導，標題不是「勝利萬歲」，而是「回家的人」。"
+          ], { note: "抗日戰爭造成巨大生命與經濟損失，戰後重建極為艱難。", next: "n14" }),
+          n14: story("抗戰紀念館", "記憶與和平", "memorial", [
+            "你協助整理南京大屠殺、香港淪陷、細菌戰與強制勞工的史料，也記錄中國軍民、海外華人與國際友人的援助。",
+            "你拒絕把歷史變成單純英雄頌歌。記住侵略不是把仇恨交給所有後代，而是防止軍國主義與侵略被否認、美化。"
+          ], {
+            note: "抗戰記憶包含侵略罪行、軍民抵抗、國際援助與戰後審判。",
+            choices: [
+              choice("以事實、證言和審判記錄建立和平教育，區分歷史與文學加工。", "n15", 4, 4, 3, "你讓紀念館既能保存傷痛，也能教人辨認侵略。", "truthfulMemory"),
+              choice("只展示最振奮的戰役，刪去平民傷亡與戰後混亂。", "n15", -4, -2, 1, "紀念冊漂亮了，戰爭的代價卻再次被藏在背後。")
+            ]
+          }),
+          n15: story("1945 年之後", "抗戰留下了甚麼", "memorial", [
+            "中國因抗戰貢獻成為聯合國安理會常任理事國，部分不平等條約被廢除，東北、台灣與澎湖按戰後安排回歸中國。",
+            "但戰後國共衝突很快升級，和平建國未能實現。你整理完整採訪冊：勝利、苦難、國際地位與未完成的和平都在其中。"
+          ], {
+            choices: [
+              choice("完整記錄抗戰勝利、平民苦難與國際背景，以和平為記憶目的。", "trueEnd", 4, 4, 3, "你讓歷史不只記住勝利，也記住必須被保護的人。", "rememberWithTruth"),
+              choice("只寫英勇勝利，刪去平民傷亡、國共矛盾與戰後混亂。", "badEnd", -4, -2, 1, "紀念冊更光明，戰爭的代價卻再次消失。"),
+              choice("假設沒有國際援助也能以完全相同方式獲勝。", "whatIfEnd", 0, 1, 1, "你提出另一種可能，也沒有抹去中國軍民的犧牲。")
+            ]
+          }),
+          trueEnd: {
+            ending: "true", scene: "史實結局", title: "山河浴血，終於重光",
+            lead: "日本於 1945 年無條件投降，中國取得抗日戰爭勝利，但代價極為沉重。",
+            body: ["1931 年局部抗戰發展為 1937 年全面抗戰。國共合作、正面與敵後戰場、民眾支持及盟國援助共同抵抗日本。", "抗戰勝利提升中國國際地位，部分不平等條約被廢除，東北、台灣與澎湖回歸。但巨大傷亡、經濟破壞與國共衝突成為新的難題。"],
+            history: { verdict: "抗日戰爭勝利由中國長期抵抗與國際局勢共同促成，並帶來巨大社會代價。", yourChoice: "你保存平民證言、記錄香港抵抗，並拒絕以勝利掩蓋苦難。", actual: "1937 年全面抗戰爆發，1945 年日本無條件投降。", facts: ["淞滬抗戰粉碎日本速勝計畫。", "南京淪陷後發生南京大屠殺。", "太平洋戰爭後中國加入同盟國。"], impacts: ["中國國際地位提升。", "部分不平等條約廢除。", "戰後和平建國未能實現。"], sources: [] }
+          },
+          badEnd: {
+            ending: "bad", scene: "假想失敗結局", title: "只有勝利的紀念",
+            lead: "你刪去苦難，便無法說明勝利為何如此艱難。",
+            body: ["抗戰勝利包含戰場犧牲、平民苦難、敵後抵抗和國際援助。", "若只留下英勇故事，南京大屠殺、香港淪陷與戰後創傷便會被淡化。"],
+            history: { verdict: "抗戰勝利與巨大犧牲同時存在。", yourChoice: "你以光明敘事覆蓋戰爭代價。", actual: "中國在 1945 年迎來日本投降，但戰後重建困難。", facts: ["南京大屠殺造成嚴重平民傷亡。", "香港曾淪陷三年零八個月。"], impacts: ["戰後社會創傷延續。"], sources: [] }
+          },
+          whatIfEnd: {
+            ending: "whatif", scene: "假想結局", title: "如果沒有國際援助",
+            lead: "你設想中國在更孤立的情況下作戰，但盟國援助不能取代中國自身的抵抗。",
+            body: ["沒有太平洋戰爭與盟國援助，戰爭可能延長，物資更短缺。", "歷史上中國軍民長期抵抗仍是勝利基礎，假想不能抹去他們的犧牲。"],
+            history: { verdict: "抗戰勝利是國內外多種力量共同作用的結果。", yourChoice: "你開始思考國際因素，但沒有忽略中國自身抵抗。", actual: "1941 年後中國獲得更多盟國援助，1945 年日本投降。", facts: ["中國抗戰早於第二次世界大戰全面爆發。", "盟國援助增強戰力。"], impacts: ["中國國際地位提升。"], sources: [] }
+          }
+        }
+      }
+    ];
+
+    const STORAGE_KEY = "chinese-history-stories-progress-v1";
+    const OUTCOME_KEY = "chinese-history-stories-outcomes-v1";
+    const MUSIC_KEY = "chinese-history-stories-music-muted-v1";
+    const state = {
+      storyId: null,
+      nodeId: null,
+      truth: 50,
+      people: 50,
+      resolve: 50,
+      flags: [],
+      log: [],
+      visited: [],
+      ending: null,
+      branch: null,
+      dynamicEnding: null,
+      diverged: false
+    };
+    let activeFilter = "all";
+    let introStoryId = null;
+    let toastTimer = 0;
+    let lastFocused = null;
+
+    const music = {
+      ctx: null,
+      master: null,
+      timer: 0,
+      active: false,
+      ambient: [],
+      muted: localStorage.getItem(MUSIC_KEY) === "true",
+
+      ensure() {
+        if (this.ctx) return;
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        this.ctx = new AudioCtx();
+        this.master = this.ctx.createGain();
+        this.master.gain.value = 0.0001;
+        this.master.connect(this.ctx.destination);
+      },
+
+      async start() {
+        if (this.muted) return;
+        this.ensure();
+        if (!this.ctx) return;
+        await this.ctx.resume();
+        if (this.active) return;
+        this.active = true;
+        this.master.gain.cancelScheduledValues(this.ctx.currentTime);
+        this.master.gain.setValueAtTime(Math.max(0.0001, this.master.gain.value), this.ctx.currentTime);
+        this.master.gain.exponentialRampToValueAtTime(0.72, this.ctx.currentTime + 1.4);
+        this.createAmbient();
+        this.schedulePhrase(0);
+        updateMusicControl();
+      },
+
+      stop() {
+        this.active = false;
+        clearTimeout(this.timer);
+        this.timer = 0;
+        if (!this.ctx || !this.master) return;
+        this.master.gain.cancelScheduledValues(this.ctx.currentTime);
+        this.master.gain.setValueAtTime(Math.max(0.0001, this.master.gain.value), this.ctx.currentTime);
+        this.master.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 0.45);
+        this.ambient.forEach(node => {
+          try { node.stop(this.ctx.currentTime + 0.5); } catch {}
+        });
+        this.ambient = [];
+        updateMusicControl();
+      },
+
+      createAmbient() {
+        const now = this.ctx.currentTime;
+        [73.42, 110.0].forEach((frequency, index) => {
+          const oscillator = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          const filter = this.ctx.createBiquadFilter();
+          oscillator.type = index ? "sine" : "triangle";
+          oscillator.frequency.value = frequency;
+          filter.type = "lowpass";
+          filter.frequency.value = 420;
+          gain.gain.value = index ? 0.008 : 0.012;
+          oscillator.connect(filter).connect(gain).connect(this.master);
+          oscillator.start(now);
+          this.ambient.push(oscillator);
+        });
+      },
+
+      pluck(frequency, when, duration = 2.3, strength = 0.15) {
+        const oscillator = this.ctx.createOscillator();
+        const harmonic = this.ctx.createOscillator();
+        const envelope = this.ctx.createGain();
+        const harmonicGain = this.ctx.createGain();
+        const filter = this.ctx.createBiquadFilter();
+        oscillator.type = "triangle";
+        harmonic.type = "sine";
+        oscillator.frequency.setValueAtTime(frequency, when);
+        oscillator.frequency.exponentialRampToValueAtTime(frequency * 0.996, when + duration);
+        harmonic.frequency.setValueAtTime(frequency * 2.01, when);
+        filter.type = "lowpass";
+        filter.frequency.setValueAtTime(2400, when);
+        filter.frequency.exponentialRampToValueAtTime(650, when + duration);
+        envelope.gain.setValueAtTime(0.0001, when);
+        envelope.gain.exponentialRampToValueAtTime(strength, when + 0.018);
+        envelope.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+        harmonicGain.gain.value = 0.12;
+        oscillator.connect(filter).connect(envelope).connect(this.master);
+        harmonic.connect(harmonicGain).connect(envelope);
+        oscillator.start(when);
+        harmonic.start(when);
+        oscillator.stop(when + duration + 0.05);
+        harmonic.stop(when + duration + 0.05);
+      },
+
+      schedulePhrase(delay = 0) {
+        clearTimeout(this.timer);
+        if (!this.active) return;
+        const now = this.ctx.currentTime + delay;
+        const pentatonic = [293.66, 329.63, 369.99, 440.0, 493.88, 587.33, 659.25, 739.99, 880.0];
+        const pattern = [2, 4, 3, 5, 1, 3, 0, 4, 2, 5, 3, 1];
+        const offset = Math.floor(Math.random() * 3);
+        this.pluck(146.83, now, 3.2, 0.055);
+        pattern.forEach((note, index) => {
+          if (index % 2 === 0 || index === pattern.length - 1) {
+            this.pluck(pentatonic[(note + offset) % pentatonic.length], now + index * 0.58, 2.45, index === 0 ? 0.12 : 0.075);
+          }
+        });
+        const phraseLength = pattern.length * 0.58 + 1.5;
+        this.timer = setTimeout(() => this.schedulePhrase(0), phraseLength * 1000);
+      },
+
+      async toggle() {
+        if (this.active) {
+          this.muted = true;
+          localStorage.setItem(MUSIC_KEY, "true");
+          this.stop();
+        } else {
+          this.muted = false;
+          localStorage.removeItem(MUSIC_KEY);
+          await this.start();
+        }
+      }
+    };
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+    const clamp = (value, min = 0, max = 100) => Math.max(min, Math.min(max, value));
+    const getStory = id => STORIES.find(item => item.id === id);
+    const getProgress = () => {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+      catch { return {}; }
+    };
+    const getOutcomes = () => {
+      try { return JSON.parse(localStorage.getItem(OUTCOME_KEY) || "{}"); }
+      catch { return {}; }
+    };
+    const saveProgress = () => {
+      if (!state.storyId) return;
+      const all = getProgress();
+      all[state.storyId] = {
+        nodeId: state.nodeId,
+        truth: state.truth,
+        people: state.people,
+        resolve: state.resolve,
+        flags: state.flags,
+        log: state.log,
+        visited: state.visited,
+        ending: state.ending,
+        branch: state.branch,
+        dynamicEnding: state.dynamicEnding,
+        diverged: state.diverged
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+    };
+    const saveOutcome = type => {
+      if (!state.storyId) return;
+      const outcomes = getOutcomes();
+      const rank = { bad: 1, whatif: 2, true: 3 };
+      if (!outcomes[state.storyId] || rank[type] > rank[outcomes[state.storyId]]) {
+        outcomes[state.storyId] = type;
+        localStorage.setItem(OUTCOME_KEY, JSON.stringify(outcomes));
+      }
+    };
+
+    function svgIcon(name) {
+      const icons = {
+        arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>',
+        home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
+        restart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 6.3M20 4v7h-7"/></svg>'
+      };
+      return icons[name] || "";
+    }
+
+    function escapeHTML(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function withoutEndPunctuation(value) {
+      return String(value).replace(/[。！？；，]$/u, "");
+    }
+
+    function localizedSource(url) {
+      try {
+        const parsed = new URL(url);
+        if (parsed.hostname.endsWith("wikimedia.org") || parsed.hostname.endsWith("wikipedia.org")) {
+          parsed.searchParams.set("uselang", "zh-hant");
+        }
+        return parsed.href;
+      } catch {
+        return url;
+      }
+    }
+
+    function outcomeName(type) {
+      return ({ true: "史實結局", bad: "假想失敗結局", whatif: "假想結局" })[type] || "";
+    }
+
+    function updateMusicControl() {
+      const button = $("#musicToggle");
+      if (!button) return;
+      const enabled = music.active && !music.muted;
+      button.setAttribute("aria-pressed", String(enabled));
+      button.setAttribute("aria-label", enabled ? "暫停背景音樂" : "播放背景音樂");
+      button.title = enabled ? "暫停古風配樂" : "播放古風配樂";
+      button.querySelector("span").textContent = enabled ? "音樂" : "靜音";
+    }
+
+    function inlineFigureHTML(current, spec) {
+      const image = current.images[spec.image];
+      if (!image) return "";
+      return `
+        <figure class="inline-figure" data-inline-figure>
+          <div class="inline-figure__image-wrap">
+            <img src="${escapeHTML(image.src)}" alt="${escapeHTML(spec.caption || image.credit)}" loading="lazy" decoding="async">
+            <div class="inline-figure__fallback">此插圖暫時未能載入；可按圖說末端的原始館藏連結查看。</div>
+          </div>
+          <figcaption>
+            <span>${escapeHTML(spec.caption || image.credit)}</span>
+            <a href="${escapeHTML(image.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(image.license)} · 查看完整圖片</a>
+          </figcaption>
+        </figure>`;
+    }
+
+    function bodyWithInlineFigures(current, node) {
+      const figures = node.inline || [];
+      return node.body.map((paragraph, index) => {
+        const after = figures
+          .filter(figure => figure.after === index)
+          .map(figure => inlineFigureHTML(current, figure))
+          .join("");
+        return `<p>${escapeHTML(paragraph)}</p>${after}`;
+      }).join("");
+    }
+
+    function fitImageToFrame(image, frame, kind = "scene") {
+      if (!image || !frame) return;
+      const apply = () => {
+        if (!image.naturalWidth || !image.naturalHeight) return;
+        const compact = window.innerWidth <= 680;
+        const limits = {
+          scene: compact ? [190, 520] : [240, 640],
+          intro: compact ? [220, 420] : [300, 560],
+          inline: compact ? [190, 460] : [220, 520]
+        }[kind] || [220, 560];
+        const availableWidth = Math.max(220, frame.clientWidth || image.clientWidth || 320);
+        const naturalHeight = availableWidth * (image.naturalHeight / image.naturalWidth);
+        const fittedHeight = Math.round(Math.max(limits[0], Math.min(limits[1], naturalHeight)));
+        frame.style.minHeight = "0";
+        frame.style.height = `${fittedHeight}px`;
+        image.style.height = `${fittedHeight}px`;
+        image.style.maxHeight = `${limits[1]}px`;
+        image.style.objectFit = "contain";
+      };
+      image.addEventListener("load", apply, { once: true });
+      if (image.complete) apply();
+    }
+
+    function bindImageFallbacks(root) {
+      $$(".inline-figure", root).forEach(figure => {
+        const image = $("img", figure);
+        image.addEventListener("error", () => figure.classList.add("image-error"));
+        fitImageToFrame(image, $(".inline-figure__image-wrap", figure), "inline");
+      });
+      const introImage = $("#introImage");
+      if (introImage && root === document) {
+        introImage.addEventListener("error", () => $("#introVisual").classList.add("image-error"));
+        fitImageToFrame(introImage, $("#introVisual"), "intro");
+      }
+    }
+
+    function openStoryIntro(id) {
+      const selected = getStory(id);
+      const intro = STORY_INTROS[id];
+      if (!selected || !intro) return;
+      introStoryId = id;
+      const saved = getProgress()[id];
+      const outcome = getOutcomes()[id];
+      const canResume = Boolean(saved && !saved.ending && (selected.nodes[saved.nodeId] || saved.branch));
+      const image = selected.images[selected.introImage] || selected.images[Object.keys(selected.images)[0]];
+      $("#homeView").hidden = true;
+      $("#gameView").hidden = true;
+      $("#introView").hidden = false;
+      $("#introDates").textContent = `${selected.gradeLabel} · ${selected.period}`;
+      $("#introTitle").textContent = selected.title;
+      $("#introPersona").textContent = `你的角色：${selected.role.split("，")[0]}`;
+      $("#introCopy").innerHTML = intro.background.map(paragraph => `<p>${escapeHTML(paragraph)}</p>`).join("");
+      $("#introFacts").innerHTML = intro.facts.map(fact => `<li>${escapeHTML(fact)}</li>`).join("");
+      $("#introQuestion").textContent = intro.question;
+      $("#introImage").src = image.src;
+      $("#introImage").alt = `${selected.title}：${image.credit}`;
+      $("#introVisual").classList.remove("image-error");
+      $("#introImageCredit").textContent = image.credit;
+      $("#introImageSource").href = image.source;
+      $("#introImageSource").textContent = `${image.license} · 查看完整圖片`;
+      $("#introPrimary").innerHTML = `${canResume ? "繼續旅程" : "開始閱讀"}${svgIcon("arrow")}`;
+      $("#introRestart").hidden = !canResume;
+      $("#introCompletion").hidden = !outcome;
+      $("#introCompletion").textContent = outcome ? `你已探索此卷的${outcomeName(outcome)}。可重新進入，嘗試另一條路線。` : "";
+      bindImageFallbacks(document);
+      document.title = `${selected.title}｜歷史背景`;
+      window.scrollTo({ top: 0, behavior: "auto" });
+      setTimeout(() => $("#introPrimary").focus({ preventScroll: true }), 20);
+    }
+
+    function renderHome() {
+      const grid = $("#storyGrid");
+      const outcomes = getOutcomes();
+      const progress = getProgress();
+      grid.innerHTML = "";
+      STORIES.filter(item => activeFilter === "all" || item.grade === activeFilter).forEach((item, index) => {
+        const outcome = outcomes[item.id];
+        const saved = progress[item.id];
+        const card = document.createElement("article");
+        card.className = "story-card";
+        card.dataset.grade = item.grade;
+        card.dataset.number = String(STORIES.indexOf(item) + 1).padStart(2, "0");
+        card.innerHTML = `
+          <div class="story-card__top">
+            <span class="grade-tag" data-grade="${item.grade}">${item.gradeLabel}</span>
+            <span class="story-card__time">約 ${item.minutes} 分鐘</span>
+          </div>
+          <h3>${escapeHTML(item.title)}</h3>
+          <p class="story-card__period">${escapeHTML(item.period)}</p>
+          <p class="story-card__blurb">${escapeHTML(item.blurb)}</p>
+          <div class="story-card__footer">
+            <span class="story-card__status ${outcome ? "is-complete" : ""}">${outcome ? `已探索：${outcomeName(outcome)}` : saved && !saved.ending ? "有未完成的旅程" : "尚未進入此卷"}</span>
+            <button class="story-card__button" type="button" data-story-id="${item.id}">${saved && !saved.ending ? "繼續閱讀" : "揭開史卷"}</button>
+          </div>`;
+        grid.appendChild(card);
+        card.style.transitionDelay = `${Math.min(index * 45, 240)}ms`;
+      });
+      $$(".filter-button").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.filter === activeFilter));
+      });
+    }
+
+    function showHome() {
+      closeModal(false);
+      music.stop();
+      introStoryId = null;
+      $("#homeView").hidden = false;
+      $("#introView").hidden = true;
+      $("#gameView").hidden = true;
+      document.title = "歷史風雲錄｜中國歷史互動故事";
+      window.scrollTo({ top: 0, behavior: "auto" });
+      renderHome();
+    }
+
+    function startStory(id, resume = true) {
+      const selected = getStory(id);
+      if (!selected) return;
+      const saved = getProgress()[id];
+      const canResume = Boolean(resume && saved && !saved.ending &&
+        (selected.nodes[saved.nodeId] || saved.branch));
+      state.storyId = id;
+      state.nodeId = canResume ? saved.nodeId : selected.start;
+      state.truth = canResume ? saved.truth : 50;
+      state.people = canResume ? saved.people : 50;
+      state.resolve = canResume ? saved.resolve : 50;
+      state.flags = canResume ? [...saved.flags] : [];
+      state.log = canResume ? [...saved.log] : [];
+      state.visited = canResume ? [...saved.visited] : [];
+      state.ending = canResume ? saved.ending : null;
+      state.branch = canResume ? saved.branch || null : null;
+      state.dynamicEnding = canResume ? saved.dynamicEnding || null : null;
+      state.diverged = canResume
+        ? Boolean(saved.diverged ?? state.log.some(entry => Number(entry.truth) <= 0))
+        : false;
+      $("#homeView").hidden = true;
+      $("#introView").hidden = true;
+      $("#gameView").hidden = false;
+      $("#storyGrade").textContent = `${selected.gradeLabel} · ${selected.dates}`;
+      $("#gameStoryTitle").textContent = selected.title;
+      $("#personaBadge").textContent = `你的身份：${selected.role.split("，")[0]}`;
+      $("#readingHint").innerHTML = `<p>${escapeHTML(selected.readingHint)}</p><p>每次選擇會同時影響史識、民心與決斷。史識不是「猜標準答案」的分數，而是你對當時制度、資源與人物處境的理解程度。</p>`;
+      document.title = `${selected.title}｜歷史風雲錄`;
+      music.start();
+      if (state.branch) renderChoiceConsequence();
+      else renderNode();
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
+    function enterIntroStory(restart = false) {
+      if (!introStoryId) return;
+      startStory(introStoryId, !restart);
+    }
+
+    function renderStats() {
+      const values = [
+        ["Truth", state.truth],
+        ["People", state.people],
+        ["Resolve", state.resolve]
+      ];
+      values.forEach(([name, value]) => {
+        $(`#mini${name}`).textContent = Math.round(value);
+        $(`#stat${name}`).textContent = Math.round(value);
+        $(`#bar${name}`).style.width = `${clamp(value)}%`;
+      });
+    }
+
+    function renderLog() {
+      const log = $("#routeLog");
+      if (!state.log.length) {
+        log.innerHTML = '<li class="empty">尚未作出抉擇。你的路線會記錄在這裡。</li>';
+        return;
+      }
+      log.innerHTML = state.log.map((entry, index) => `
+        <li><strong>${index + 1}.</strong> ${escapeHTML(entry.choice)}</li>
+      `).join("");
+    }
+
+    function renderProgress() {
+      const current = getStory(state.storyId);
+      const nodeIndex = state.visited.indexOf(state.nodeId);
+      const percent = state.ending ? 100 : clamp(((Math.max(0, nodeIndex) + 1) / 16) * 100, 5, 96);
+      $("#progressBar").style.width = `${percent}%`;
+      $("#progressBar").parentElement.setAttribute("aria-valuenow", String(Math.round(percent)));
+      return current;
+    }
+
+    function renderNode() {
+      const current = getStory(state.storyId);
+      const node = state.nodeId === "__choiceEnding"
+        ? state.dynamicEnding
+        : current.nodes[state.nodeId];
+      if (!node) {
+        startStory(state.storyId, false);
+        return;
+      }
+      if (!state.visited.includes(state.nodeId)) state.visited.push(state.nodeId);
+      const image = current.images[node.image];
+      const stage = $("#storyStage");
+      const isEnding = Boolean(node.ending);
+      const routeReflection = (node.reflect || [])
+        .filter(item => state.flags.includes(item.flag))
+        .map(item => `<p>${escapeHTML(item.text)}</p>`)
+        .join("");
+      const firstDivergence = state.log.find(entry => Number(entry.truth) <= 0);
+
+      if (isEnding) {
+        state.ending = node.ending;
+        saveOutcome(node.ending);
+        const history = node.history || {};
+        const isHistoricalEnding = node.ending === "true";
+        const hypotheticalDevelopment = history.hypothetical || node.hypothetical || node.lead || current.endings[node.ending]?.lead || "";
+        const hypotheticalImpact = history.hypotheticalImpact || node.hypotheticalImpact ||
+          "這條路線只存在於剛才作出的選擇之中，並未在真實歷史中發生。";
+        const divergenceEntries = node.ending === "true"
+          ? []
+          : state.log.filter(entry => Number(entry.truth) <= 0);
+        const divergenceReview = divergenceEntries.length
+          ? `<section class="divergence-review" aria-labelledby="divergenceReviewTitle">
+              <h3 id="divergenceReviewTitle">偏離史實的關鍵決定</h3>
+              <ol>${divergenceEntries.map(entry => `<li><strong>${escapeHTML(current.nodes[entry.nodeId]?.title || "較早一幕")}</strong>：${escapeHTML(entry.echo || entry.choice)}</li>`).join("")}</ol>
+            </section>`
+          : "";
+        stage.innerHTML = `
+          <article class="ending-stage" aria-labelledby="endingTitle">
+            <span class="ending-badge" data-type="${node.endingTone || node.ending}">${node.endingLabel || outcomeName(node.ending)}</span>
+            <p class="section-kicker">${escapeHTML(node.scene)} · 你的身份：${escapeHTML(current.role.split("，")[0])}</p>
+            <h2 id="endingTitle">${escapeHTML(node.title)}</h2>
+            <p class="ending-lead">${escapeHTML(node.lead || current.endings[node.ending]?.lead || "")}</p>
+            ${routeReflection}
+            <div class="story-prose">${node.body.map(paragraph => `<p>${escapeHTML(paragraph)}</p>`).join("")}</div>
+            <div class="truth-compare">
+              <div>
+                <h3>你的選擇</h3>
+                <p>${escapeHTML(history.yourChoice || "你沿著自己的判斷，走到這一段歷史的出口。")}</p>
+              </div>
+              <div>
+                <h3>${isHistoricalEnding ? "史實走向" : "假想發展"}</h3>
+                <p>${escapeHTML(isHistoricalEnding ? (history.actual || current.endings[node.ending]?.actual || "") : hypotheticalDevelopment)}</p>
+              </div>
+            </div>
+            ${divergenceReview}
+            <div class="history-note">
+              <span class="history-note__mark" aria-hidden="true">${isHistoricalEnding ? "史" : "想"}</span>
+              <div><strong>${isHistoricalEnding ? "深遠影響" : "假想世界的後果"}</strong><p>${escapeHTML(isHistoricalEnding ? (history.impact || current.endings[node.ending]?.impact || "") : hypotheticalImpact)}</p></div>
+            </div>
+            ${!isHistoricalEnding && history.actual ? `
+              <details class="history-reference">
+                <summary>另看真實歷史</summary>
+                <div class="history-reference__body">
+                  <p>${escapeHTML(history.actual)}</p>
+                  ${(history.facts || []).length ? `<ul class="fact-list">${history.facts.map(item => `<li>${escapeHTML(item)}</li>`).join("")}</ul>` : ""}
+                </div>
+              </details>` : ""}
+            <div class="outcome-actions">
+              <button class="button button--primary" type="button" id="retryButton">${svgIcon("restart")}重新遊玩本關</button>
+              <button class="button button--secondary" type="button" id="endingHomeButton">${svgIcon("home")}返回主選單</button>
+            </div>
+          </article>`;
+        stage.querySelector("#retryButton").addEventListener("click", () => startStory(state.storyId, false));
+        stage.querySelector("#endingHomeButton").addEventListener("click", showHome);
+        openTruthModal(node);
+        renderStats();
+        renderLog();
+        renderProgress();
+        saveProgress();
+        return;
+      }
+
+      stage.innerHTML = `
+        <div class="scene-frame" id="sceneFrame">
+          <img class="scene-image" id="sceneImage" src="${escapeHTML(image.src)}" alt="${escapeHTML(node.title)}：${escapeHTML(image.credit)}" loading="eager" decoding="async">
+          <div class="image-fallback" aria-hidden="true">這幅歷史圖像暫時未能載入。<br>下方可按連結前往原始館藏頁。</div>
+          <div class="scene-caption">
+            <p>${escapeHTML(image.credit)}</p>
+            <a href="${escapeHTML(image.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(image.license)} · 查看完整圖片</a>
+          </div>
+        </div>
+        <div class="story-panel">
+          <div class="scene-meta"><span>${escapeHTML(node.scene)}</span><span>角色 · ${escapeHTML(current.role.split("，")[0])}</span><span>第 ${state.visited.length} 幕</span></div>
+          <h2 class="node-title" id="nodeTitle" tabindex="-1">${escapeHTML(node.title)}</h2>
+          ${firstDivergence ? `<aside class="divergence-banner"><strong>偏離史實路線已鎖定</strong>你在「${escapeHTML(current.nodes[firstDivergence.nodeId]?.title || "較早一幕")}」選擇了偏離史實的方向。此後即使選回常見做法，也只能走向假想結局。</aside>` : ""}
+          ${state.log.length ? `<p class="story-carry"><strong>承前：</strong>${escapeHTML(state.log[state.log.length - 1].echo || `你選擇了「${withoutEndPunctuation(state.log[state.log.length - 1].choice)}」。`)}</p>` : ""}
+          <div class="story-prose">${bodyWithInlineFigures(current, node)}</div>
+          ${node.quote ? `<blockquote class="story-quote">${escapeHTML(node.quote.text)}<cite>${escapeHTML(node.quote.by)}</cite></blockquote>` : ""}
+          ${node.note ? `<aside class="history-note"><span class="history-note__mark" aria-hidden="true">註</span><div><strong>歷史旁註</strong><p>${escapeHTML(node.note)}</p></div></aside>` : ""}
+          <div class="choice-section">
+            <div class="choice-section__head">
+              <h3>${node.choices ? `作為${escapeHTML(current.role.split("，")[0])}，你會怎樣做？` : `作為${escapeHTML(current.role.split("，")[0])}，繼續前行`}</h3>
+              ${node.choices ? "<span>選擇後不能撤回</span>" : ""}
+            </div>
+            <div class="choices" id="choices"></div>
+          </div>
+        </div>`;
+
+      const imageElement = $("#sceneImage", stage);
+      imageElement.addEventListener("error", () => $("#sceneFrame", stage).classList.add("image-error"));
+      fitImageToFrame(imageElement, $("#sceneFrame", stage), "scene");
+      bindImageFallbacks(stage);
+
+      const choicesContainer = $("#choices", stage);
+      const availableChoices = node.choices || [{ label: "繼續前進", next: node.next, isContinue: true }];
+      availableChoices.forEach((item, index) => {
+        const button = document.createElement("button");
+        button.className = "choice-button";
+        button.type = "button";
+        button.innerHTML = `
+          <span class="choice-button__num">${index + 1}</span>
+          <span class="choice-button__text">${escapeHTML(item.label)}</span>
+          <span class="choice-button__arrow">${svgIcon("arrow")}</span>`;
+        button.addEventListener("click", () => makeChoice(item, index));
+        choicesContainer.appendChild(button);
+      });
+
+      renderStats();
+      renderLog();
+      renderProgress();
+      saveProgress();
+      setTimeout(() => $("#nodeTitle", stage)?.focus({ preventScroll: true }), 20);
+    }
+
+    function renderChoiceConsequence() {
+      const current = getStory(state.storyId);
+      const branch = state.branch;
+      if (!current || !branch) {
+        renderNode();
+        return;
+      }
+      const image = current.images[branch.image];
+      const persona = current.role.split("，")[0];
+      const branchLabels = {
+        historical: "史實分支",
+        divergent: "偏離史實分支",
+        speculative: "假想取捨分支"
+      };
+      const branchKind = branch.kind || (branch.truth < 0 ? "divergent" : branch.truth === 0 ? "speculative" : "historical");
+      const stage = $("#storyStage");
+      stage.innerHTML = `
+        <div class="scene-frame" id="sceneFrame">
+          <img class="scene-image" id="sceneImage" src="${escapeHTML(image.src)}" alt="${escapeHTML(branch.sourceTitle)}：${escapeHTML(image.credit)}" loading="eager" decoding="async">
+          <div class="image-fallback" aria-hidden="true">這幅歷史圖像暫時未能載入。<br>下方可按連結前往原始館藏頁。</div>
+          <div class="scene-caption">
+            <p>${escapeHTML(image.credit)}</p>
+            <a href="${escapeHTML(image.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(image.license)} · 查看完整圖片</a>
+          </div>
+        </div>
+        <article class="consequence-stage" data-branch="${branchKind}" aria-labelledby="consequenceTitle">
+          <p class="consequence-kicker">${branchLabels[branchKind]} · ${escapeHTML(branch.scene)} · 身份：${escapeHTML(persona)} · 分支 ${escapeHTML(branch.branchId || "未編號")}</p>
+          <h2 id="consequenceTitle" tabindex="-1">選擇之後：${escapeHTML(branch.sourceTitle)}</h2>
+          <div class="consequence-choice">你選擇了「${escapeHTML(withoutEndPunctuation(branch.label))}」。<br>${escapeHTML(branch.echo || "你決定沿著自己的判斷前進。")}</div>
+          ${branchKind === "divergent" ? '<p class="branch-note">這項決定偏離史實。此卷其後不能再取得「史實結局」，只會沿假想路線發展。</p>' : ""}
+          <p class="consequence-next">下一步，你將前往「${escapeHTML(branch.nextTitle)}」。</p>
+          <div class="consequence-stats" aria-label="選擇影響">
+            <span>史識 ${branch.truth >= 0 ? "+" : ""}${branch.truth}</span>
+            <span>民心 ${branch.people >= 0 ? "+" : ""}${branch.people}</span>
+            <span>決斷 ${branch.resolve >= 0 ? "+" : ""}${branch.resolve}</span>
+          </div>
+          <div class="consequence-actions">
+            <button class="button button--primary" type="button" id="continueChoice">前往下一幕${svgIcon("arrow")}</button>
+          </div>
+        </article>`;
+      $("#sceneImage").addEventListener("error", () => $("#sceneFrame").classList.add("image-error"));
+      fitImageToFrame($("#sceneImage"), $("#sceneFrame"), "scene");
+      $("#continueChoice").addEventListener("click", () => {
+        const next = state.branch?.next;
+        state.branch = null;
+        state.nodeId = next;
+        saveProgress();
+        renderNode();
+        window.scrollTo({ top: $("#gameView").offsetTop, behavior: "auto" });
+      });
+      renderStats();
+      renderLog();
+      renderProgress();
+      saveProgress();
+      setTimeout(() => $("#consequenceTitle")?.focus({ preventScroll: true }), 20);
+    }
+
+    function createChoiceEnding(current, sourceNode, item, choiceIndex, branchId) {
+      const base = current.nodes.whatIfEnd || current.nodes.badEnd;
+      const baseHistory = base?.history || {};
+      const shortLead = item.echo
+        ? item.echo.split(/[。；]/)[0].slice(0, 26)
+        : withoutEndPunctuation(item.label).slice(0, 26);
+      const facts = [];
+      if (sourceNode.note) facts.push(sourceNode.note);
+      for (const fact of (baseHistory.facts || []).slice(0, 4)) {
+        if (!facts.includes(fact)) facts.push(fact);
+      }
+      const consequenceFocus = item.people <= -3
+        ? "百姓的生活與信任被放在勝負之後，地方更難恢復合作。"
+        : item.truth <= -4
+          ? "這個決定迅速削弱了原本可以維持局勢的條件，使反對力量得到新的藉口。"
+          : "這個決定擴大了原有矛盾，使接下來的局勢更難按史實方向修補。";
+      return {
+        ending: "whatif",
+        endingTone: "bad",
+        endingLabel: "假想結局",
+        scene: `假想結局・分支 ${branchId}`,
+        title: `假想結局：${shortLead}`,
+        lead: `你在「${sourceNode.title}」作出第 ${choiceIndex + 1} 個選擇，歷史從此離開原有道路。`,
+        hypothetical: `在「${sourceNode.title}」的局勢中，你選擇了「${withoutEndPunctuation(item.label)}」。${item.echo || "這一步使原本的歷史條件失去平衡。"}`,
+        hypotheticalImpact: `${consequenceFocus}這條分支只存在於剛才的選擇，並未在真實歷史中發生。`,
+        body: [
+          `你選擇「${withoutEndPunctuation(item.label)}」。${item.echo || "這個決定改變了接下來可供選擇的空間。"}`,
+          `依照史實，${baseHistory.actual || current.endings.whatif.actual}`,
+          "這個結果是根據你的選擇推演的假想歷史，並不是已經發生的史實。你可以重新遊玩本關，嘗試另一條選擇路線。"
+        ],
+        history: {
+          verdict: `這是一個由「${withoutEndPunctuation(item.label)}」直接引出的假想結局；真實歷史沒有沿著這條分支發展。`,
+          yourChoice: item.echo || item.label,
+          actual: baseHistory.actual || current.endings.whatif.actual,
+          facts,
+          impacts: baseHistory.impacts || [current.endings.whatif.impact],
+          sources: baseHistory.sources || []
+        }
+      };
+    }
+
+    function makeChoice(item, choiceIndex = 0) {
+      if (item.isContinue) {
+        state.nodeId = item.next;
+        renderNode();
+        window.scrollTo({ top: $("#gameView").offsetTop, behavior: "auto" });
+        return;
+      }
+      const current = getStory(state.storyId);
+      const sourceNode = current.nodes[state.nodeId];
+      const branchId = `${current.id}-${state.nodeId}-${String(choiceIndex + 1).padStart(2, "0")}`;
+      state.truth = clamp(state.truth + item.truth);
+      state.people = clamp(state.people + item.people);
+      state.resolve = clamp(state.resolve + item.resolve);
+      if (item.truth <= 0) state.diverged = true;
+      if (item.flag && !state.flags.includes(item.flag)) state.flags.push(item.flag);
+      state.log.push({
+        choice: item.label,
+        nodeId: state.nodeId,
+        echo: item.echo || "",
+        truth: item.truth,
+        people: item.people,
+        resolve: item.resolve,
+        branchId
+      });
+      let next = item.next;
+      if (next === "trueEnd") {
+        const requiredFlags = TRUE_REQUIREMENTS[state.storyId] || [];
+        const missingHistoryChoice = requiredFlags.some(flag => !state.flags.includes(flag));
+        if (state.diverged || state.truth < current.truthThreshold || missingHistoryChoice) {
+          next = "whatIfEnd";
+        }
+      }
+      if (current.nodes[next]?.ending) {
+        state.dynamicEnding = null;
+        state.branch = null;
+        state.nodeId = next;
+        saveProgress();
+        renderNode();
+        window.scrollTo({ top: $("#gameView").offsetTop, behavior: "auto" });
+        return;
+      }
+      if (item.truth <= 0) {
+        state.branch = null;
+        state.dynamicEnding = createChoiceEnding(current, sourceNode, item, choiceIndex, branchId);
+        state.nodeId = "__choiceEnding";
+        state.ending = "whatif";
+        saveOutcome("whatif");
+        saveProgress();
+        renderNode();
+        window.scrollTo({ top: $("#gameView").offsetTop, behavior: "auto" });
+        return;
+      }
+      state.branch = {
+        sourceId: state.nodeId,
+        sourceTitle: sourceNode.title,
+        scene: sourceNode.scene,
+        image: sourceNode.image,
+        branchId,
+        kind: item.truth < 0 ? "divergent" : item.truth === 0 ? "speculative" : "historical",
+        next,
+        nextTitle: current.nodes[next]?.title || "歷史的出口",
+        label: item.label,
+        echo: item.echo || "",
+        truth: item.truth,
+        people: item.people,
+        resolve: item.resolve
+      };
+      renderChoiceConsequence();
+      window.scrollTo({ top: $("#gameView").offsetTop, behavior: "auto" });
+    }
+
+    function showToast(message) {
+      clearTimeout(toastTimer);
+      const toast = $("#toast");
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 3300);
+    }
+
+    function openTruthModal(node) {
+      const history = node.history || {};
+      const current = getStory(state.storyId);
+      const isHistoricalEnding = node.ending === "true";
+      const divergenceEntries = isHistoricalEnding
+        ? []
+        : state.log.filter(entry => Number(entry.truth) <= 0);
+      const hypotheticalDevelopment = history.hypothetical || node.hypothetical || node.lead || history.verdict || node.title;
+      const hypotheticalImpact = history.hypotheticalImpact || node.hypotheticalImpact ||
+        "這條路線由剛才的錯誤決定推演而來，只存在於假想歷史，並不是史實。";
+      lastFocused = document.activeElement;
+      $("#truthModalTitle").textContent = isHistoricalEnding ? "歷史真相解說" : "假想結局解說";
+      $("#modalBody").innerHTML = isHistoricalEnding ? `
+          <div class="truth-callout">
+            <strong>歷史真相解說</strong>
+            <p>${escapeHTML(history.verdict || node.title)}</p>
+          </div>
+          <p>${escapeHTML(history.actual || "")}</p>
+          <h3 class="modal__section-title">真實歷史的關鍵事實</h3>
+          <ul class="fact-list">${(history.facts || []).map(item => `<li>${escapeHTML(item)}</li>`).join("")}</ul>
+          <h3 class="modal__section-title">對後世的深遠影響</h3>
+          <ul class="impact-list">${(history.impacts || []).map(item => `<li>${escapeHTML(item)}</li>`).join("")}</ul>
+          ${(history.sources || []).length ? `<p class="modal__sources">延伸查看：${history.sources.map(source => `<a href="${escapeHTML(localizedSource(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.label)}</a>`).join("")}</p>` : ""}
+        ` : `
+          <div class="truth-callout">
+            <strong>錯誤選擇下的假想發展</strong>
+            <p>${escapeHTML(hypotheticalDevelopment)}</p>
+          </div>
+          <h3 class="modal__section-title">令歷史分岔的決定</h3>
+          <ul class="fact-list">${divergenceEntries.map(entry => `<li><strong>${escapeHTML(current?.nodes[entry.nodeId]?.title || "較早一幕")}</strong>：${escapeHTML(entry.echo || entry.choice)}</li>`).join("")}</ul>
+          <h3 class="modal__section-title">假想世界的後果</h3>
+          <p>${escapeHTML(hypotheticalImpact)}</p>
+          <p class="modal__sources">這是遊戲推演的假想結局，並非真實歷史結果。</p>
+        `;
+      $("#truthModal").hidden = false;
+      document.body.style.overflow = "hidden";
+      setTimeout(() => $("#modalClose").focus(), 20);
+    }
+
+    function closeModal(restoreFocus = true) {
+      const modal = $("#truthModal");
+      if (!modal || modal.hidden) return;
+      modal.hidden = true;
+      document.body.style.overflow = "";
+      if (restoreFocus) {
+        const fallback = $("#retryButton") || $("#homeButton");
+        if (lastFocused && lastFocused !== document.body && document.contains(lastFocused)) lastFocused.focus();
+        else fallback?.focus({ preventScroll: true });
+      }
+    }
+
+    function trapFocus(event) {
+      if ($("#truthModal").hidden || event.key !== "Tab") return;
+      const focusable = $$('#truthModal button, #truthModal a, #truthModal [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    $("#storyGrid").addEventListener("click", event => {
+      const button = event.target.closest("[data-story-id]");
+      if (button) openStoryIntro(button.dataset.storyId);
+    });
+    $$(".filter-button").forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        renderHome();
+      });
+    });
+    $("#beginJourney").addEventListener("click", () => openStoryIntro(STORIES[0].id));
+    $("#brandHome").addEventListener("click", showHome);
+    $("#homeButton").addEventListener("click", showHome);
+    $("#introPrimary").addEventListener("click", () => enterIntroStory(false));
+    $("#introRestart").addEventListener("click", () => enterIntroStory(true));
+    $("#introHome").addEventListener("click", showHome);
+    $("#musicToggle").addEventListener("click", async () => {
+      await music.toggle();
+      updateMusicControl();
+    });
+    $("#modalClose").addEventListener("click", () => closeModal());
+    $$("[data-close-modal]").forEach(element => element.addEventListener("click", () => closeModal()));
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeModal();
+      trapFocus(event);
+    });
+    let resizeTimer = 0;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (!$("#introView").hidden) fitImageToFrame($("#introImage"), $("#introVisual"), "intro");
+        if (!$("#gameView").hidden) {
+          fitImageToFrame($("#sceneImage"), $("#sceneFrame"), "scene");
+          $$(".inline-figure").forEach(figure => {
+            fitImageToFrame($("img", figure), $(".inline-figure__image-wrap", figure), "inline");
+          });
+        }
+      }, 120);
+    });
+
+    document.addEventListener("visibilitychange", async () => {
+      if (!music.ctx || music.muted || !music.active) return;
+      if (document.hidden) await music.ctx.suspend();
+      else if (!$("#gameView").hidden) await music.ctx.resume();
+    });
+
+    updateMusicControl();
+    renderHome();
+  </script>
+</body>
+</html>
